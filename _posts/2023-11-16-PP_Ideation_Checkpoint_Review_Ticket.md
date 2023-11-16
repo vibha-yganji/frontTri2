@@ -9,23 +9,23 @@ layout: default
 ## Create Frontend Design
 My team members and I used Canva to build a frontend design with one page and a description of input and output.  Here is the product.
 
-![CreateUse](https://raw.githubusercontent.com/jplip/frontTri2/main/images/CreateUserPage.png)
+![Login](https://raw.githubusercontent.com/jplip/frontTri2/main/images/Login.png)
+
+![Home](https://raw.githubusercontent.com/jplip/frontTri2/main/images/HomePage.png)
+
+![Ecercise](https://raw.githubusercontent.com/jplip/frontTri2/main/images/ExerciseTracker.png)
 
 ![Sleep](https://raw.githubusercontent.com/jplip/frontTri2/main/images/SleepTracker.png)
 
 ![Stress](https://raw.githubusercontent.com/jplip/frontTri2/main/images/StressTracker.png)
 
+![Info](https://raw.githubusercontent.com/jplip/frontTri2/main/images/InformationalPage.png)
+
+![CreateUse](https://raw.githubusercontent.com/jplip/frontTri2/main/images/CreateUserPage.png)
+
 ![Water](https://raw.githubusercontent.com/jplip/frontTri2/main/images/WaterTracker.png)
 
-![Login](https://raw.githubusercontent.com/jplip/frontTri2/main/images/Login.png)
-
-![Ecercise](https://raw.githubusercontent.com/jplip/frontTri2/main/images/ExerciseTracker.png)
-
 ![Food](https://raw.githubusercontent.com/jplip/frontTri2/main/images/FoodTracker.png)
-
-![Home](https://raw.githubusercontent.com/jplip/frontTri2/main/images/HomePage.png)
-
-![Info](https://raw.githubusercontent.com/jplip/frontTri2/main/images/InformationalPage.png)
 
 
 
