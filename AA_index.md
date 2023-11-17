@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: base
 title: Fitness Tracker
 search_exclude: false
 ---
