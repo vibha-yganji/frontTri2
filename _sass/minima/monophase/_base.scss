@@ -3,10 +3,11 @@
   box-sizing: border-box;
 }
 
+$light-blue: deepskyblue; 
 
 body {
   color: var(--body-color);
-  background-color:deepskyblue !important;
+  background-color:$light-blue !important;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
