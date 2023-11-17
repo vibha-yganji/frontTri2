@@ -6,7 +6,7 @@
 $light-blue: #ADD8E6;
 
 body {
-  color: $light-blue;
+  color: $light-blue !important;
   background-color: var(--body-bg-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
