@@ -4,11 +4,9 @@
 }
 
 
-
-
 body {
   color: var(--body-color);
-  background-color:deepskyblue;
+  background-color:deepskyblue !important;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
