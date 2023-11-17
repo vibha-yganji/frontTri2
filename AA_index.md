@@ -1,5 +1,6 @@
 ---
 layout: home
+title: Fitness Tracker
 search_exclude: false
 ---
 <html lang="en">
