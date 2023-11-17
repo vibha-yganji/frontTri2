@@ -49,7 +49,9 @@ Our team members used Canva to build a frontend design with one page and a descr
 ## Build a Data Model(s) using UML
 Bella used draw.io to easily build a basic data model while dicussing with her team mates about one-to-many and many-to-one relationships (crow's feet diagram:) and primary keys (that are unique) and foreign keys!
 
-![Data](https://raw.githubusercontent.com/jplip/frontTri2/main/images/datamodel.png)
+<center>
+    <img src="https://raw.githubusercontent.com/jplip/frontTri2/main/images/datamodel.png" width="300">
+</center>
 
 To set up the login and password, we will use Mortensen's code 2.4a SQL/2.4b SQL B as a guide.
 
