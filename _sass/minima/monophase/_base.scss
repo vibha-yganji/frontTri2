@@ -3,6 +3,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --body-color: #333; /* Change text color if needed */
+  --body-bg-color: #f0f5f9; /* Light blue background color */
+  --link-color: #007bff; /* Link color */
+  --link-hover-color: #0056b3; /* Link hover color */
+  --border-color: #ccc; /* Border color */
+  --code-bg-color: #f8f9fa; /* Code background color */
+  --info-color: #cce5ff; /* Mark or highlight color */
+  /* Other variables remain unchanged */
+}
+
+
+
+
+
+
+
+
 body {
   color: var(--body-color);
   background-color: var(--body-bg-color);
@@ -127,3 +145,5 @@ abbr {
     border-bottom: 1px dotted var(--border-color);
   }
 }
+
+
