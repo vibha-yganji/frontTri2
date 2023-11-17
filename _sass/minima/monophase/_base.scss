@@ -7,7 +7,7 @@ $light-blue: deepskyblue;
 
 body {
   color: var(--body-color);
-  background-color:$light-blue !important;
+  background-color: $light-blue !important;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
   line-height: var(--body-line-height);
@@ -130,4 +130,17 @@ abbr {
   }
 }
 
+.btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.btn:hover {
+  background-color: darkred;
+}
