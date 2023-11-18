@@ -20,16 +20,19 @@ permalink: /Register/
     </form>
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-            // Get form data
-            // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            uid: document.getElementById('uid').value,
-            password: document.getElementById('password').value,
-            dob: document.getElementById('dob').value
-            // Add other form fields as needed
-        };
+            event.preventDefault(); // Prevent form submission          
+            // Get form field values when the form is submitted
+            const name = document.getElementById('name').value;
+            const uid =  document.getElementById('uid').value;
+            const password = document.getElementById('password').value;
+            const dob = document.getElementById('dob').value;
+            const formData = {
+                "name": name,
+                "uid": uid,
+                "password": password,
+                "dob": dob
+                // Add other form fields as needed
+            };            
             fetch('http://127.0.0.1:8240/api/users/create', {
                 method: 'POST',
                 headers: {
@@ -44,11 +47,11 @@ permalink: /Register/
                 } else {
                     // Handle failed user creation (show error message, etc.)
                     console.error('User creation failed');
-                            }
-                        })
-                .catch(error => {
-                     console.error('Error:', error);
-                        });
-                    });
-                </script>
-            </html>
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</html>
