@@ -22,24 +22,33 @@ permalink: /Register/
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
             // Get form data
-            const formData = new FormData(this);           
-            // Make POST request to backend API endpoint for user creation
+            // Get form data
+        const formData = {
+            name: document.getElementById('name').value,
+            uid: document.getElementById('uid').value,
+            password: document.getElementById('password').value,
+            dob: document.getElementById('dob').value
+            // Add other form fields as needed
+        };
             fetch('http://127.0.0.1:8240/api/users/create', {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
             })
-            .then(response => {
-                if (response.ok) {
+             .then(response => {
+                 if (response.ok) {
                     // Redirect to login page or dashboard upon successful user creation
                     window.location.href = '/frontTri2/login/'; // Replace with your desired URL
                 } else {
                     // Handle failed user creation (show error message, etc.)
                     console.error('User creation failed');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    </script>
-</html>
+                            }
+                        })
+                .catch(error => {
+                     console.error('Error:', error);
+                        });
+                    });
+                </script>
+            </html>
