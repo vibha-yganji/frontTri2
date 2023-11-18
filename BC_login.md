@@ -10,7 +10,7 @@ permalink: /login/
 <body>
     <h1>Login</h1>
     <form id="loginForm">
-        <label for="username">Username:</label>
+        <label for="uid">Username:</label>
         <input type="text" id="uid" name="uid" required><br><br>        
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>       
