@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Fitness Tracker
-permalink: 
+permalink: "/"
 search_exclude: false
 ---
 <html lang="en">
