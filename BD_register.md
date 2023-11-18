@@ -12,6 +12,7 @@ permalink: /Register/
         <input type="text" id="name" name="name" required><br><br>     
         <label for="uid">Username</label>  
         <input type="username" id="uid" name="username" required><br><br>
+        <label for="password">Password</label> 
         <input type="password" id="password" name="password" required><br><br>
         <label for="dob">Date of Birth</label>
         <input type="text" id="dob" name="dob" required><br><br>
