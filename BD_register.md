@@ -9,9 +9,12 @@ permalink: /Register/
     <h1>User Registration</h1>
     <form id="registrationForm">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>       
-        <label for="password">Password:</label>
+        <input type="text" id="name" name="name" required><br><br>     
+        <label for="uid">Username</label>  
+        <input type="username" id="uid" name="username" required><br><br>
         <input type="password" id="password" name="password" required><br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="text" id="dob" name="dob" required><br><br>
         <input type="submit" value="Create User">
     </form>
     <script>
