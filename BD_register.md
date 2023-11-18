@@ -13,6 +13,8 @@ permalink: /Register/
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
         <input type="submit" value="Create User">
+        <label for="dob">Date of Birth:</label>
+        <input type="dob" id="dob" name="dob" required><br><br>
     </form>
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
@@ -20,7 +22,7 @@ permalink: /Register/
             // Get form data
             const formData = new FormData(this);           
             // Make POST request to backend API endpoint for user creation
-            fetch('http://127.0.0.1:8240/api/users', {
+            fetch('http://127.0.0.1:8240/api/users/create', {
                 method: 'POST',
                 body: formData
             })
