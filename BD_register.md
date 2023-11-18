@@ -13,8 +13,6 @@ permalink: /Register/
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
         <input type="submit" value="Create User">
-        <label for="dob">Date of Birth:</label>
-        <input type="dob" id="dob" name="dob" required><br><br>
     </form>
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
