@@ -31,7 +31,7 @@ permalink: /Register/
             .then(response => {
                 if (response.ok) {
                     // Redirect to login page or dashboard upon successful user creation
-                    window.location.href = '/'; // Replace with your desired URL
+                    window.location.href = '/frontTri2/login/'; // Replace with your desired URL
                 } else {
                     // Handle failed user creation (show error message, etc.)
                     console.error('User creation failed');
