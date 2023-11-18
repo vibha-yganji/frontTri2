@@ -24,7 +24,7 @@ permalink: /login/
             })
             .then(response => {
                 if (response.ok) {
-                    window.location.href = '/AA_index.html'; 
+                    window.location.href = '/'; 
                 } else {
                     // Handle failed login (show error message, etc.)
                     console.error('Login failed');
