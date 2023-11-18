@@ -12,7 +12,7 @@ permalink: /login/
     <h1>Login</h1>
     <form id="loginForm">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>        
+        <input type="text" id="uid" name="uid" required><br><br>        
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>       
         <input type="submit" value="Login">
@@ -21,11 +21,11 @@ permalink: /login/
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission           
             // Get form input values
-            const username = document.getElementById('username').value;
+            const uid = document.getElementById('uid').value;
             const password = document.getElementById('password').value;          
             // Create a JSON object with login data
             const loginData = {
-                username: username,
+                uid: uid,
                 password: password
             };
             // Make POST request to backend API endpoint for login
