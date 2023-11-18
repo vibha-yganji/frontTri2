@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Login
-permalink: /about/
+permalink: /login/
 ---
 
 <h1>Login</h1>
