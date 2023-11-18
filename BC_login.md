@@ -3,7 +3,7 @@ layout: base
 title: Login
 permalink: /login/
 ---
-
+<html>
 <h1>Login</h1>
     <form id="loginForm">
         <label for="username">Username:</label>
@@ -35,3 +35,4 @@ permalink: /login/
             });
         });
     </script>
+    <html>
