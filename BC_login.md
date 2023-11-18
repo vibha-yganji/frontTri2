@@ -3,7 +3,6 @@ layout: base
 title: Login
 permalink: /login/
 ---
-<!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
