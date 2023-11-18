@@ -41,5 +41,4 @@ permalink: /Register/
             });
         });
     </script>
-</body>
 </html>
