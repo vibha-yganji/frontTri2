@@ -38,9 +38,7 @@ permalink: /login/
                     return response.json();
                 } else {
                     if (response.status === 401) {
-                        throw new Error('Wrong username or password');
-                    } else if (response.status === 400) {
-                        throw new Error('Please retype your password');
+                        throw new Error('Wrong username or password.Please retype.');
                     } else if (response.status === 404) {
                         throw new Error('Username or password not found. Please register first.');
                     } else {
