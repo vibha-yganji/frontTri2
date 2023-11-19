@@ -3,6 +3,7 @@ layout: base
 title: Login
 permalink: /login/
 ---
+<!-- Your login form HTML -->
 <html>
 <head>
     <title>Login</title>
@@ -16,18 +17,16 @@ permalink: /login/
         <input type="password" id="password" name="password" required><br><br>       
         <input type="submit" value="Login">
     </form>
+    <div id="userDisplayName"></div>
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission           
-            // Get form input values
+            event.preventDefault();
             const uid = document.getElementById('uid').value;
-            const password = document.getElementById('password').value;          
-            // Create a JSON object with login data
+            const password = document.getElementById('password').value;
             const loginData = {
                 uid: uid,
                 password: password
             };
-            // Make POST request to backend API endpoint for login
             fetch('http://127.0.0.1:8240/api/users/login', {
                 method: 'POST',
                 headers: {
@@ -37,17 +36,21 @@ permalink: /login/
             })
             .then(response => {
                 if (response.ok) {
-                    // Redirect to the home page
-                    const loggedInUserName = data.user.name; // Adjust according to your backend response
-                    // Storing user's name in local storage
-                    localStorage.setItem('loggedInUserName', loggedInUserName);
-                    // Displaying the user's name in the UI
-                    document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
-                    window.location.href = '/frontTri2/'; 
+                    return response.json(); // Parse response JSON
                 } else {
-                    // Handle failed login (show error message, etc.)
                     console.error('Login failed');
+                    throw new Error('Login failed');
                 }
+            })
+            .then(data => {
+                // Assuming the backend sends the user object with a 'name' property
+                const loggedInUserName = data.user.name; // Extract the user's name
+                // Storing user's name in local storage
+                localStorage.setItem('loggedInUserName', loggedInUserName);
+                // Displaying the user's name in the UI
+                document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
+                // Redirect to the desired page upon successful login
+                window.location.href = '/frontTri2/';
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -56,5 +59,3 @@ permalink: /login/
     </script>
 </body>
 </html>
-
-
