@@ -3,7 +3,8 @@ layout: base
 title: Login
 permalink: /login/
 ---
-<!-- Your login form HTML -->
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
@@ -20,7 +21,7 @@ permalink: /login/
     <div id="userDisplayName"></div>
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent form submission
             const uid = document.getElementById('uid').value;
             const password = document.getElementById('password').value;
             const loginData = {
@@ -36,26 +37,31 @@ permalink: /login/
             })
             .then(response => {
                 if (response.ok) {
-                    return response.json(); // Parse response JSON
+                    return response.json();
                 } else {
-                    console.error('Login failed');
-                    throw new Error('Login failed');
+                    if (response.status === 401) {
+                        throw new Error('Wrong username or password');
+                    } else if (response.status === 400) {
+                        throw new Error('Please retype your password');
+                    } else if (response.status === 404) {
+                        throw new Error('Username or password not found. Please register first.');
+                    } else {
+                        throw new Error('Login failed');
+                    }
                 }
             })
             .then(data => {
-                // Assuming the backend sends the user object with a 'name' property
-                const loggedInUserName = data.user.name; // Extract the user's name
-                // Storing user's name in local storage
+                const loggedInUserName = data.user.name;
                 localStorage.setItem('loggedInUserName', loggedInUserName);
-                // Displaying the user's name in the UI
                 document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
-                // get rid of form
                 document.getElementById('loginForm').style.display = 'none';
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.error('Error:', error.message);
+                alert(error.message);
             });
         });
     </script>
 </body>
 </html>
+
