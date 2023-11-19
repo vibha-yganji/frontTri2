@@ -38,7 +38,7 @@ permalink: /login/
             .then(response => {
                 if (response.ok) {
                     // Redirect to the home page
-                    const loggedInUserName = data.name; // Adjust according to your backend response
+                    const loggedInUserName = data.user.name; // Adjust according to your backend response
                     // Storing user's name in local storage
                     localStorage.setItem('loggedInUserName', loggedInUserName);
                     // Displaying the user's name in the UI
@@ -56,4 +56,5 @@ permalink: /login/
     </script>
 </body>
 </html>
+
 
