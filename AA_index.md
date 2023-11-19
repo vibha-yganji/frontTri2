@@ -9,26 +9,26 @@ search_exclude: false
     <a href="https://jplip.github.io/frontTri2/Register/"><button class="btn">Register</button></a>
     <div class="top-container">
         <div class="element">
-            <h2>Element 1</h2>
-            <p>Content for Element 1</p>
+            <h2><strong> Exercise </strong> </h2>
+            <p>Track your exercise. </p>
         </div>
         <div class="element">
-            <h2>Element 2</h2>
-            <p>Content for Element 2</p>
+            <h2><strong> Sleep </strong></h2>
+            <p>Track your sleep. </p>
         </div>
     </div>
     <div class="bottom-container">
         <div class="element">
-            <h2>Element 3</h2>
-            <p>Content for Element 3</p>
+            <h2> Stress </h2>
+            <p>Manage Stress Levels. </p>
         </div>
         <div class="element">
-            <h2>Element 4</h2>
-            <p>Content for Element 4</p>
+            <h2> Food </h2>
+            <p>How healthy are you eating? </p>
         </div>
         <div class="element">
-            <h2>Element 5</h2>
-            <p>Content for Element 5</p>
+            <h2> Water </h2>
+            <p>Are you hydrated enough</p>
         </div>
     </div>
 </html>

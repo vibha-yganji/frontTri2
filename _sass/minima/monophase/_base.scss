@@ -144,7 +144,7 @@ abbr {
 .btn:hover {
   background-color: darkred;
 }
-
+/* Styling for top elements of home page */
 .top-container {
   display: flex;
   justify-content: space-between;
@@ -153,18 +153,18 @@ abbr {
   padding: 20px;
 }
 
-/* Styling for bottom elements */
+/* Styling for bottom elements of home page */
 .bottom-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50vh; /* Set the height of the bottom half */
+  height: 50vh; 
   padding: 20px;
 }
 
-/* Style for individual elements */
+/* Style for individual elements on page */
 .element {
-  width: 30%; /* Adjust width as needed */
+  width: 30%; 
   padding: 10px;
   border: 1px solid #ccc;
   text-align: center;
