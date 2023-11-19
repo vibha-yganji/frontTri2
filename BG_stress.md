@@ -1,5 +1,5 @@
 ---
 layout: base
-title: stress
+title: Stress
 permalink: /stress/
 ---
