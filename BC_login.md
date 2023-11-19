@@ -50,7 +50,6 @@ permalink: /login/
                 // Displaying the user's name in the UI
                 document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
                 // Redirect to the desired page upon successful login
-                window.location.href = '/frontTri2/';
             })
             .catch(error => {
                 console.error('Error:', error);
