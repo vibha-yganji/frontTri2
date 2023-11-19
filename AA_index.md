@@ -24,11 +24,11 @@ search_exclude: false
             <h2>Element 3</h2>
             <p>Content for Element 3</p>
         </div>
-        <div class="element">
+    <div class="element">
             <h2>Element 4</h2>
             <p>Content for Element 4</p>
         </div>
-        <div class="element">
+    <div class="element">
             <h2>Element 5</h2>
             <p>Content for Element 5</p>
         </div>
