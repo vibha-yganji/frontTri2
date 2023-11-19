@@ -144,3 +144,29 @@ abbr {
 .btn:hover {
   background-color: darkred;
 }
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh; /* Set the height of the top half */
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Styling for bottom elements */
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh; /* Set the height of the bottom half */
+  padding: 20px;
+}
+
+/* Style for individual elements */
+.element {
+  width: 30%; /* Adjust width as needed */
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
