@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Fitness Tracker
+title: Home
 permalink: "/"
 search_exclude: false
 ---
