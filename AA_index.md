@@ -22,7 +22,7 @@ search_exclude: false
     <div class="bottom-container">
         <div class="element">
             <a href="https://jplip.github.io/frontTri2/stress/">
-        <img src="images/StressHome.png">
+        <img src="images/RealStress.png">
             </a>
         </div>
         <div class="element">
