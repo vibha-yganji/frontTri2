@@ -9,8 +9,9 @@ search_exclude: false
     <a href="https://jplip.github.io/frontTri2/Register/"><button class="btn">Register</button></a>
     <div class="top-container">
         <div class="element">
-            <h2><strong> Exercise </strong> </h2>
-            <p>Track your exercise. </p>
+            <a href="https://jplip.github.io/frontTri2/exercise/">
+        <img src="images/ExerciseHome.png">
+            </a>
         </div>
         <div class="element">
             <h2><strong> Sleep </strong></h2>
