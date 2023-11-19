@@ -14,22 +14,26 @@ search_exclude: false
             </a>
         </div>
         <div class="element">
-            <h2><strong> Sleep </strong></h2>
-            <p>Track your sleep. </p>
+            <a href="https://jplip.github.io/frontTri2/sleep/">
+        <img src="images/SleepHome.png">
+            </a>
         </div>
     </div>
     <div class="bottom-container">
         <div class="element">
-            <h2> Stress </h2>
-            <p>Manage Stress Levels. </p>
+            <a href="https://jplip.github.io/frontTri2/stress/">
+        <img src="images/StressHome.png">
+            </a>
         </div>
         <div class="element">
-            <h2> Food </h2>
-            <p>How healthy are you eating? </p>
+            <a href="https://jplip.github.io/frontTri2/food/">
+        <img src="images/FoodHome.png">
+            </a>
         </div>
         <div class="element">
-            <h2> Water </h2>
-            <p>Are you hydrated enough</p>
+            <a href="https://jplip.github.io/frontTri2/water/">
+        <img src="images/WaterHome.png">
+            </a>
         </div>
     </div>
 </html>
