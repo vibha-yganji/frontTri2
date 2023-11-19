@@ -49,7 +49,8 @@ permalink: /login/
                 localStorage.setItem('loggedInUserName', loggedInUserName);
                 // Displaying the user's name in the UI
                 document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
-                // Redirect to the desired page upon successful login
+                // get rid of form
+                document.getElementById('loginForm').style.display = 'none';
             })
             .catch(error => {
                 console.error('Error:', error);
