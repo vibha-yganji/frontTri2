@@ -38,7 +38,7 @@ permalink: /login/
             .then(response => {
                 if (response.ok) {
                     // Redirect to the desired page upon successful login
-                    window.location.href = '/'; 
+                    window.location.href = '/fronttri2/'; 
                 } else {
                     // Handle failed login (show error message, etc.)
                     console.error('Login failed');
