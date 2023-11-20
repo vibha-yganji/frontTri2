@@ -50,11 +50,11 @@ permalink: /login/
                 const loggedInUserName = data.user.name;
                 const loggedInUserId = data.user.id;
                 localStorage.setItem('loggedInUserName', loggedInUserName);
-                localStorage.setItem('loggedInUserId', loggedInUserNameId);
+                localStorage.setItem('loggedInUserId', loggedInUserId);
                 document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
                 document.getElementById('loginForm').style.display = 'none';
-                 const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
-                 console.log(userIDFromLocalStorage)
+                const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
+                console.log(userIDFromLocalStorage)
                 
                 
             })
