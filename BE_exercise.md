@@ -47,7 +47,7 @@ permalink: /exercise/
                     "dob": "10/12/13",
                     "age": "16",
                     "exercise": exercise,
-                    "tracking": ''
+                    "tracking": exercise
                 };
             var jsonData = JSON.stringify(data2);
             // Here you can perform an API request to send this data to your backend
