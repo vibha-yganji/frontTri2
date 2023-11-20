@@ -6,6 +6,8 @@ permalink: /exercise/
 ![Alt text](images/exerciseheader.png)
 
 <script>
+    const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
+    console.log(userIDFromLocalStorage)
 
 </script>
 
