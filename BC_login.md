@@ -53,6 +53,10 @@ permalink: /login/
                 localStorage.setItem('loggedInUserId', loggedInUserNameId);
                 document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
                 document.getElementById('loginForm').style.display = 'none';
+                 const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
+                 console.log(userIDFromLocalStorage)
+                
+                
             })
             .catch(error => {
                 console.error('Error:', error.message);
