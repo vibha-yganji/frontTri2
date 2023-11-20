@@ -5,12 +5,63 @@ permalink: /exercise/
 ---
 ![Alt text](images/exerciseheader.png)
 
+<html lang="en">
+    <form id="exerciseForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="exerciseType">Exercise Type:</label>
+            <input type="text" id="exerciseType" name="exerciseType" placeholder="Enter exercise type" required>
+            <label for="duration">Duration (in minutes):</label>
+            <input type="number" id="duration" name="duration" placeholder="Enter duration" required>
+            <label for="exerciseDate">Date of Exercise:</label>
+            <input type="date" id="exerciseDate" name="exerciseDate" required>
+            <input type="submit" value="Submit">
+        </form>
+
+
+
 <script>
     const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
     console.log(userIDFromLocalStorage)
+     document.getElementById('exerciseForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const exerciseType = document.getElementById('exerciseType').value;
+            const duration = document.getElementById('duration').value;
+            const exerciseDate = document.getElementById('exerciseDate').value;
+            // Displaying collected data (you can modify this section)
+            console.log('Name:', name);
+            console.log('Exercise Type:', exerciseType);
+            console.log('Duration:', duration);
+            console.log('Exercise Date:', exerciseDate);
+            // Here you can perform an API request to send this data to your backend
+            // Modify this section to send the collected data to your backend API
+            // Example API call using fetch (modify as per your backend endpoint)
+            fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    exerciseType: exerciseType,
+                    duration: duration,
+                    exerciseDate: exerciseDate
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Server response:', data);
+                // Handle response or perform additional actions after sending data
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle error if the request fails
+            });
+        });
 
 </script>
-
+</html>
 
 <!-- <html lang="en">
     <meta charset="UTF-8">
@@ -24,7 +75,7 @@ permalink: /exercise/
             margin: 0;
             padding: 20px;
         }
-        .container {
+        .formcontainer {
             max-width: 600px;
             margin: 20px auto;
             background-color: #fff;
