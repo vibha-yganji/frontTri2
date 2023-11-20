@@ -34,6 +34,22 @@ permalink: /exercise/
             console.log('Exercise Type:', exerciseType);
             console.log('Duration:', duration);
             console.log('Exercise Date:', exerciseDate);
+            const exercise = {
+                    "name": name,
+                    "exerciseType" : exerciseType,
+                    "duration": duration,
+                    "exerciseDate": exerciseDate
+                }
+            const data2 = {
+                    "id": userIDFromLocalStorage,
+                    "name": name,
+                    "uid": "life",
+                    "dob": "10/12/13",
+                    "age": "16",
+                    "exercise": exercise,
+                    "tracking": ''
+                };
+            var jsonData = JSON.stringify(data2);
             // Here you can perform an API request to send this data to your backend
             // Modify this section to send the collected data to your backend API
             // Example API call using fetch (modify as per your backend endpoint)
@@ -42,12 +58,7 @@ permalink: /exercise/
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    name: name,
-                    exerciseType: exerciseType,
-                    duration: duration,
-                    exerciseDate: exerciseDate
-                })
+                body: jsonData
             })
             .then(response => response.json())
             .then(data => {
