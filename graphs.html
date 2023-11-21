@@ -4,6 +4,7 @@ permalink: /exercisegraph/
 title: Graphs
 search_exclude: true
 ---
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,15 +36,19 @@ search_exclude: true
                 }
                 return response.json();
             })
-            .then(exerciseData => {
-                // Check if the fetched data is an array
-                if (!Array.isArray(exerciseData)) {
+            .then(userData => {
+                // Log the fetched data to the console for inspection
+                console.log('Fetched User Data:', userData);
+
+                // Check if the 'exercise' array exists within the nested structure
+                if (!userData.user || !Array.isArray(userData.user.exercise)) {
                     throw new Error('Exercise data is not in the expected format');
                 }
 
-                // Extract dates and durations for Chart.js
-                const exerciseDates = exerciseData.map(data => data.date);
-                const exerciseDurations = exerciseData.map(data => data.duration);
+                // Extract dates and durations from the nested 'exercise' array
+                const exerciseData = userData.user.exercise;
+                const exerciseDates = exerciseData.map(exercise => exercise.date);
+                const exerciseDurations = exerciseData.map(exercise => exercise.duration);
 
                 // Create the chart
                 const ctx = document.getElementById('exerciseChart').getContext('2d');
