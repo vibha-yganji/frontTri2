@@ -5,7 +5,7 @@ title: Graphs
 search_exclude: true
 ---
 <html lang="en">
-
+<head>
     <meta charset="UTF-8">
     <title>User Exercise Graph</title>
     <!-- Chart.js library -->
@@ -18,13 +18,14 @@ search_exclude: true
             margin: 20px auto;
         }
     </style>
-
+</head>
+<body>
     <!-- Chart container -->
     <canvas id="exerciseChart"></canvas>
 
     <script>
         // Replace 'userID' with the ID of the specific user you want to fetch data for
-        const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');  // Replace 'user123' with an actual user ID
+        const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); // Replace 'user123' with an actual user ID
 
         // Fetch exercise data for the specific user from the server API
         fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`)
@@ -35,6 +36,11 @@ search_exclude: true
                 return response.json();
             })
             .then(exerciseData => {
+                // Check if the fetched data is an array
+                if (!Array.isArray(exerciseData)) {
+                    throw new Error('Exercise data is not in the expected format');
+                }
+
                 // Extract dates and durations for Chart.js
                 const exerciseDates = exerciseData.map(data => data.date);
                 const exerciseDurations = exerciseData.map(data => data.duration);
@@ -42,14 +48,14 @@ search_exclude: true
                 // Create the chart
                 const ctx = document.getElementById('exerciseChart').getContext('2d');
                 const exerciseChart = new Chart(ctx, {
-                    type: 'bar', // Change the chart type as needed (e.g., 'line', 'bar', 'pie', etc.)
+                    type: 'bar',
                     data: {
-                        labels: exerciseDates, // X-axis labels (dates)
+                        labels: exerciseDates,
                         datasets: [{
                             label: 'Daily Exercise Duration',
-                            data: exerciseDurations, // Y-axis data (exercise durations)
-                            backgroundColor: 'rgba(54, 162, 235, 0.5)', // Bar color
-                            borderColor: 'rgba(54, 162, 235, 1)', // Border color
+                            data: exerciseDurations,
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
                             borderWidth: 1
                         }]
                     },
