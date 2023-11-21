@@ -78,78 +78,11 @@ permalink: /exercise/
                 });
             });
      });
+</script>
 
-<html lang="en">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
- <style>
-        /* Style the chart container */
-        #exerciseChart {
-            width: 800px;
-            height: 400px;
-            margin: 20px auto;
-        }
-</style>
-</head>
-<body>
-    <!-- Chart container -->
-    <canvas id="exerciseChart"></canvas>
- <script>
-        // Replace 'userID' with the ID of the specific user you want to fetch data for
-         const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); // Replace 'user123' with an actual user ID
-        // Fetch exercise data for the specific user from the server API
-        fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(exerciseData => {
-                // Extract dates and durations for Chart.js
-                const exerciseDates = exerciseData.map(data => data.date);
-                const exerciseDurations = exerciseData.map(data => data.duration);
-                // Create the chart
-                const ctx = document.getElementById('exerciseChart').getContext('2d');
-                const exerciseChart = new Chart(ctx, {
-                    type: 'line', 
-                    data: {
-                        labels: exerciseDates, // X-axis labels (dates)
-                        datasets: [{
-                            label: 'Daily Exercise Duration',
-                            data: exerciseDurations, // Y-axis data (exercise durations)
-                            backgroundColor: 'rgba(54, 162, 235, 0.5)', // Bar color
-                            borderColor: 'rgba(54, 162, 235, 1)', // Border color
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Duration (minutes)'
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Date'
-                                }
-                            }
-                        }
-                    }
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                // Handle error if the request fails
-            });
-    </script>
-</body>
-</html>
+<iframe src="_includes/graphs.html" width="800" height="600" frameborder="0"></iframe>
+
+<html>
 
 
 
