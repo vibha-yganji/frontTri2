@@ -79,7 +79,6 @@ permalink: /exercise/
             });
      });
 
-
 <html lang="en">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
  <style>
@@ -98,7 +97,7 @@ permalink: /exercise/
         // Replace 'userID' with the ID of the specific user you want to fetch data for
          const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); // Replace 'user123' with an actual user ID
         // Fetch exercise data for the specific user from the server API
-        fetch(`http://your-api-url/users/${userIDFromLocalStorage}/exercises`)
+        fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -153,7 +152,6 @@ permalink: /exercise/
 </html>
 
 
-</script>
-</html>
+
 
 
