@@ -80,7 +80,7 @@ permalink: /exercise/
      });
 </script>
 
-<iframe src="_includes/graphs.html" width="800" height="600" frameborder="0"></iframe>
+<iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
 
 <html>
 
