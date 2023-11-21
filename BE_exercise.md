@@ -76,6 +76,7 @@ permalink: /exercise/
                     // Handle error if the request fails
                 });
             });
+     });
 
 </script>
 </html>
