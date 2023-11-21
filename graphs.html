@@ -12,7 +12,7 @@ search_exclude: true
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         /* Style the chart container */
-        #exerciseChart {
+        #exerciseChartContainer {
             width: 800px;
             height: 400px;
             margin: 20px auto;
@@ -21,7 +21,9 @@ search_exclude: true
 </head>
 <body>
     <!-- Chart container -->
-    <canvas id="exerciseChart"></canvas>
+    <div id="exerciseChartContainer">
+        <canvas id="exerciseChart"></canvas>
+    </div>
 
     <script>
         // Replace 'userID' with the ID of the specific user you want to fetch data for
@@ -61,8 +63,8 @@ search_exclude: true
                         }]
                     },
                     options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
+                        responsive: false, // Ensure responsiveness is turned off
+                        maintainAspectRatio: false, // Avoid maintaining aspect ratio
                         scales: {
                             y: {
                                 beginAtZero: true,
@@ -88,4 +90,3 @@ search_exclude: true
     </script>
 </body>
 </html>
-
