@@ -5,7 +5,6 @@ title: Graphs
 search_exclude: true
 ---
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,8 +52,40 @@ search_exclude: true
                 const exerciseDates = combinedExerciseData.map(exercise => exercise.date);
                 const exerciseDurations = combinedExerciseData.map(exercise => exercise.duration);
 
-                // Create the chart using Chart.js...
-                // (Rest of the chart creation code remains the same)
+                // Create the chart using Chart.js
+                const ctx = document.getElementById('exerciseChart').getContext('2d');
+                const exerciseChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: exerciseDates,
+                        datasets: [{
+                            label: 'Exercise Duration',
+                            data: exerciseDurations,
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Duration (minutes)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Date'
+                                }
+                            }
+                        }
+                    }
+                });
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
