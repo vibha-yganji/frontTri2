@@ -4,7 +4,6 @@ permalink: /exercisegraph/
 title: Graphs
 search_exclude: true
 ---
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,17 +39,12 @@ search_exclude: true
                 // Log the fetched data to the console for inspection
                 console.log('Fetched User Data:', userData);
 
-                // Combine multiple arrays of exercise data into a unified array
-                let combinedExerciseData = [];
+                // Extract exercise data from the user's exercise array
+                const exerciseData = userData.exercise || [];
 
-                // Assuming 'exercise' attribute contains multiple arrays
-                for (let item of Object.values(userData.exercise)) {
-                    combinedExerciseData = combinedExerciseData.concat(item);
-                }
-
-                // Extract dates and durations from the combined exercise data
-                const exerciseDates = combinedExerciseData.map(exercise => exercise.date);
-                const exerciseDurations = combinedExerciseData.map(exercise => exercise.duration);
+                // Extract dates and durations from the exercise data
+                const exerciseDates = exerciseData.map(exercise => exercise.exerciseDate);
+                const exerciseDurations = exerciseData.map(exercise => parseInt(exercise.duration)); // Parse duration to an integer
 
                 // Create the chart using Chart.js
                 const ctx = document.getElementById('exerciseChart').getContext('2d');
@@ -94,3 +88,4 @@ search_exclude: true
     </script>
 </body>
 </html>
+
