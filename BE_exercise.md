@@ -38,7 +38,7 @@ permalink: /exercise/
             })
             .then(data => {
                 // Combine old and new exercise data
-                const originalExerciseData = Array.isArray(data.exercise) ? data exercise : [];
+                const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
                 const exercise = {
                         "name": name,
                         "exerciseType" : exerciseType,
