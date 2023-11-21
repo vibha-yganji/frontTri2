@@ -168,3 +168,48 @@ abbr {
   padding: 10px;
   text-align: center;
 }
+
+/* Form styles WE WILL USE THIS ONE FOR ALL FORMS SO WE DON'T REPEAT CODE */
+
+.purple-form {
+  background-color: lavender;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.purple-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.purple-form label,
+.purple-form input {
+  margin-bottom: 10px;
+}
+
+.purple-form label {
+  color: white;
+}
+
+.purple-form input[type="text"],
+.purple-form input[type="number"],
+.purple-form input[type="date"],
+.purple-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.purple-form input[type="submit"] {
+  background-color: white;
+  color: purple;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.purple-form input[type="submit"]:hover {
+  background-color: #fff7f7;
+  color: #a040a0;
+}

@@ -6,6 +6,7 @@ permalink: /exercise/
 ![Alt text](images/exerciseheader.png)
 
 <html lang="en">
+  <div class="purple-form">
     <form id="exerciseForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -17,7 +18,7 @@ permalink: /exercise/
             <input type="date" id="exerciseDate" name="exerciseDate" required>
             <input type="submit" value="Submit">
         </form>
-
+</div>
 
 
 <script>
