@@ -1,0 +1,99 @@
+---
+layout: base
+title: Food Tracker
+permalink: "/food/"
+search_exclude: false
+---
+<html lang="en">
+<head>
+  <title>User Food Ratios Pie Chart</title>
+</head>
+<body>
+  <div>
+    <label for="proteinRatio">Protein Ratio:</label>
+    <input type="number" id="proteinRatio" value="20">
+  </div>
+  <div>
+    <label for="vegetableRatio">Vegetable Ratio:</label>
+    <input type="number" id="vegetableRatio" value="30">
+  </div>
+  <div>
+    <label for="fruitRatio">Fruit Ratio:</label>
+    <input type="number" id="fruitRatio" value="15">
+  </div>
+  <div>
+    <label for="dairyRatio">Dairy Ratio:</label>
+    <input type="number" id="dairyRatio" value="20">
+  </div>
+  <div>
+    <label for="grainRatio">Grain Ratio:</label>
+    <input type="number" id="grainRatio" value="15">
+  </div>
+  <button onclick="createPieChart()">Create Chart</button>
+  
+  <svg id="chart" width="300" height="300"></svg>
+  
+  <div id="legend"></div>
+  
+  <script>
+    function createPieChart() {
+      const protein = parseFloat(document.getElementById('proteinRatio').value);
+      const vegetable = parseFloat(document.getElementById('vegetableRatio').value);
+      const fruit = parseFloat(document.getElementById('fruitRatio').value);
+      const dairy = parseFloat(document.getElementById('dairyRatio').value);
+      const grain = parseFloat(document.getElementById('grainRatio').value);
+
+      const total = protein + vegetable + fruit + dairy + grain;
+
+      const proteinAngle = (protein / total) * 360;
+      const vegetableAngle = (vegetable / total) * 360;
+      const fruitAngle = (fruit / total) * 360;
+      const dairyAngle = (dairy / total) * 360;
+      const grainAngle = (grain / total) * 360;
+
+      const chart = document.getElementById('chart');
+      const legend = document.getElementById('legend');
+      
+      chart.innerHTML = '';
+      legend.innerHTML = '';
+
+      drawSegment(chart, 150, 150, 100, 0, proteinAngle, '#FFC3BD');
+      drawSegment(chart, 150, 150, 100, proteinAngle, proteinAngle + vegetableAngle, '#C1E1C1');
+      drawSegment(chart, 150, 150, 100, proteinAngle + vegetableAngle, proteinAngle + vegetableAngle + fruitAngle, '#ADD8E6');
+      drawSegment(chart, 150, 150, 100, proteinAngle + vegetableAngle + fruitAngle, proteinAngle + vegetableAngle + fruitAngle + dairyAngle, '#FFD700');
+      drawSegment(chart, 150, 150, 100, proteinAngle + vegetableAngle + fruitAngle + dairyAngle, 360, '#E6A8D7');
+
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFC3BD;"></span> Protein</div>';
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#C1E1C1;"></span> Vegetable</div>';
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#ADD8E6;"></span> Fruit</div>';
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFD700;"></span> Dairy</div>';
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#E6A8D7;"></span> Grain</div>';
+    }
+
+    function drawSegment(svg, x, y, radius, startAngle, endAngle, color) {
+      const startRadians = (startAngle - 90) * Math.PI / 180;
+      const endRadians = (endAngle - 90) * Math.PI / 180;
+
+      const x1 = x + radius * Math.cos(startRadians);
+      const y1 = y + radius * Math.sin(startRadians);
+      const x2 = x + radius * Math.cos(endRadians);
+      const y2 = y + radius * Math.sin(endRadians);
+
+      const largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1';
+
+      const pathData = [
+        `M ${x},${y}`,
+        `L ${x1},${y1}`,
+        `A ${radius},${radius} 0 ${largeArcFlag},1 ${x2},${y2}`,
+        'Z'
+      ].join(' ');
+
+      const segment = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      segment.setAttribute('d', pathData);
+      segment.setAttribute('fill', color);
+
+      svg.appendChild(segment);
+    }
+  </script>
+</body>
+</html>
