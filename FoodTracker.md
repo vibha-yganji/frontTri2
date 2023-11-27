@@ -5,36 +5,39 @@ permalink: "/food/"
 search_exclude: false
 ---
 <html lang="en">
-<head>
-  <title>User Food Ratios Pie Chart</title>
 </head>
 <body>
   <div>
-    <label for="proteinRatio">Protein Ratio:</label>
+    <label for="proteinRatio" class="label">Cups of Protein:</label>
     <input type="number" id="proteinRatio" value="20">
   </div>
   <div>
-    <label for="vegetableRatio">Vegetable Ratio:</label>
+    <label for="vegetableRatio" class="label">Cups of Vegetables:</label>
     <input type="number" id="vegetableRatio" value="30">
   </div>
   <div>
-    <label for="fruitRatio">Fruit Ratio:</label>
+    <label for="fruitRatio" class="label">Cups of Fruits</label>
     <input type="number" id="fruitRatio" value="15">
   </div>
   <div>
-    <label for="dairyRatio">Dairy Ratio:</label>
+    <label for="dairyRatio" class="label">Cups of Dairy:</label>
     <input type="number" id="dairyRatio" value="20">
   </div>
   <div>
-    <label for="grainRatio">Grain Ratio:</label>
+    <label for="grainRatio" class="label">Cups of Grain:</label>
     <input type="number" id="grainRatio" value="15">
   </div>
-  <button onclick="createPieChart()">Create Chart</button>
+  <button class="btn" onclick="createPieChart()">User's Chart</button>
+  <button class="btn" onclick="createUSDAChart()">USDA's Chart</button>
+
+  <h2>User Food Ratios Pie Chart</h2>
+  <svg id="userChart" width="300" height="300"></svg>
   
-  <svg id="chart" width="300" height="300"></svg>
-  
+  <h2>USDA Suggested Food Ratios Pie Chart</h2>
+  <svg id="usdaChart" width="300" height="300"></svg>
+
   <div id="legend"></div>
-  
+
   <script>
     function createPieChart() {
       const protein = parseFloat(document.getElementById('proteinRatio').value);
@@ -51,23 +54,45 @@ search_exclude: false
       const dairyAngle = (dairy / total) * 360;
       const grainAngle = (grain / total) * 360;
 
-      const chart = document.getElementById('chart');
-      const legend = document.getElementById('legend');
+      const userChart = document.getElementById('userChart');
       
-      chart.innerHTML = '';
-      legend.innerHTML = '';
+      userChart.innerHTML = '';
 
-      drawSegment(chart, 150, 150, 100, 0, proteinAngle, '#FFC3BD');
-      drawSegment(chart, 150, 150, 100, proteinAngle, proteinAngle + vegetableAngle, '#C1E1C1');
-      drawSegment(chart, 150, 150, 100, proteinAngle + vegetableAngle, proteinAngle + vegetableAngle + fruitAngle, '#ADD8E6');
-      drawSegment(chart, 150, 150, 100, proteinAngle + vegetableAngle + fruitAngle, proteinAngle + vegetableAngle + fruitAngle + dairyAngle, '#FFD700');
-      drawSegment(chart, 150, 150, 100, proteinAngle + vegetableAngle + fruitAngle + dairyAngle, 360, '#E6A8D7');
+      drawSegment(userChart, 150, 150, 100, 0, proteinAngle, '#FFC3BD');
+      drawSegment(userChart, 150, 150, 100, proteinAngle, proteinAngle + vegetableAngle, '#C1E1C1');
+      drawSegment(userChart, 150, 150, 100, proteinAngle + vegetableAngle, proteinAngle + vegetableAngle + fruitAngle, '#ADD8E6');
+      drawSegment(userChart, 150, 150, 100, proteinAngle + vegetableAngle + fruitAngle, proteinAngle + vegetableAngle + fruitAngle + dairyAngle, '#FFD700');
+      drawSegment(userChart, 150, 150, 100, proteinAngle + vegetableAngle + fruitAngle + dairyAngle, 360, '#E6A8D7');
 
-      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFC3BD;"></span> Protein</div>';
-      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#C1E1C1;"></span> Vegetable</div>';
-      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#ADD8E6;"></span> Fruit</div>';
-      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFD700;"></span> Dairy</div>';
-      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#E6A8D7;"></span> Grain</div>';
+      updateLegend();
+    }
+
+    function createUSDAChart() {
+      const usdaProtein = 20; // USDA suggested ratio for protein
+      const usdaVegetable = 30; // USDA suggested ratio for vegetables
+      const usdaFruit = 20; // USDA suggested ratio for fruits
+      const usdaDairy = 20; // USDA suggested ratio for dairy
+      const usdaGrain = 30; // USDA suggested ratio for grains
+
+      const usdaTotal = usdaProtein + usdaVegetable + usdaFruit + usdaDairy + usdaGrain;
+
+      const usdaProteinAngle = (usdaProtein / usdaTotal) * 360;
+      const usdaVegetableAngle = (usdaVegetable / usdaTotal) * 360;
+      const usdaFruitAngle = (usdaFruit / usdaTotal) * 360;
+      const usdaDairyAngle = (usdaDairy / usdaTotal) * 360;
+      const usdaGrainAngle = (usdaGrain / usdaTotal) * 360;
+
+      const usdaChart = document.getElementById('usdaChart');
+
+      usdaChart.innerHTML = '';
+
+      drawSegment(usdaChart, 150, 150, 100, 0, usdaProteinAngle, '#FFC3BD');
+      drawSegment(usdaChart, 150, 150, 100, usdaProteinAngle, usdaProteinAngle + usdaVegetableAngle, '#C1E1C1');
+      drawSegment(usdaChart, 150, 150, 100, usdaProteinAngle + usdaVegetableAngle, usdaProteinAngle + usdaVegetableAngle + usdaFruitAngle, '#ADD8E6');
+      drawSegment(usdaChart, 150, 150, 100, usdaProteinAngle + usdaVegetableAngle + usdaFruitAngle, usdaProteinAngle + usdaVegetableAngle + usdaFruitAngle + usdaDairyAngle, '#FFD700');
+      drawSegment(usdaChart, 150, 150, 100, usdaProteinAngle + usdaVegetableAngle + usdaFruitAngle + usdaDairyAngle, 360, '#E6A8D7');
+
+      updateLegend();
     }
 
     function drawSegment(svg, x, y, radius, startAngle, endAngle, color) {
@@ -93,6 +118,17 @@ search_exclude: false
       segment.setAttribute('fill', color);
 
       svg.appendChild(segment);
+    }
+
+    function updateLegend() {
+      const legend = document.getElementById('legend');
+      legend.innerHTML = '';
+
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFC3BD;"></span> Protein</div>';
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#C1E1C1;"></span> Vegetable</div>';
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#ADD8E6;"></span> Fruit</div>';
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFD700;"></span> Dairy</div>';
+      legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#E6A8D7;"></span> Grain</div>';
     }
   </script>
 </body>
