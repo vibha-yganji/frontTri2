@@ -5,7 +5,6 @@ permalink: "/food/"
 search_exclude: false
 ---
 <html lang="en">
-</head>
 <body>
   <div>
     <label for="proteinRatio" class="label">Cups of Protein:</label>
