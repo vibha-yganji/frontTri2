@@ -79,12 +79,12 @@ permalink: /exercise/
                 });
             });
 
-        const duration = parseInt(document.getElementById('duration').value);
+
         const binaryDuration = decimalToBinary(duration);
         displayBinaryBadge(binaryDuration);
 
         function decimalToBinary(number) {
-      return (number >>> 0).toString(2);
+        return (number >>> 0).toString(2);
     }
 
     function displayBinaryBadge(binaryString) {
