@@ -80,46 +80,65 @@ permalink: /exercise/
             });
      });
 
-     function decimalToBinary(number) {
-        return (number >>> 0).toString(2); // Using bitwise zero-fill right shift operator
-    //Notes: This part of the code performs a zero-fill right shift operation on the input number to make number positive/32 bit integer
 
+document.getElementById('exerciseForm').addEventListener('submit', function (event) {
+event.preventDefault();
+    // Function to convert a number to binary representation
+function decimalToBinary(number) {
+    return (number >>> 0).toString(2); // Using bitwise zero-fill right shift operator
+}
 
+document.getElementById('exerciseForm').addEventListener('submit', function (event) {
+    event.preventDefault();
 
+    // Get the exercise duration from the form
+    const duration = parseInt(document.getElementById('duration').value);
 
+    // Convert duration to binary representation
+    const binaryDuration = decimalToBinary(duration);
+
+    // Display the appropriate binary badge based on duration
+    displayBinaryBadge(binaryDuration);
+});
+
+// Function to display the binary badge based on duration
+function displayBinaryBadge(binaryString) {
+    const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+
+    // Clear existing badge content
+    binaryBadgeElement.innerHTML = '';
+
+    // Check the duration thresholds to assign badges
+    if (parseInt(binaryString, 2) >= 60) {
+        createBadge(6); // For durations over an hour (60 minutes or more)
+    } else if (parseInt(binaryString, 2) >= 50) {
+        createBadge(5); // For durations over 50 minutes
+    } else {
+        createBadge(parseInt(binaryString, 2)); // For other durations
+    }
+}
+
+// Function to create badge elements based on the count of binary digits
+function createBadge(count) {
+    const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+
+    // Create spans representing binary digits for the badge
+    for (let i = 0; i < count; i++) {
+        const span = document.createElement('span');
+        span.textContent = '1';
+        span.classList.add('binary-digit', 'binary-one');
+        binaryBadgeElement.appendChild(span);
     }
 
-    document.getElementById('exerciseForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+    // Add zero digits if needed to complete the badge
+    for (let i = count; i < 6; i++) {
+        const span = document.createElement('span');
+        span.textContent = '0';
+        span.classList.add('binary-digit');
+        binaryBadgeElement.appendChild(span);
+    }
+}
 
-        // Get the exercise duration from the form
-        const duration = parseInt(document.getElementById('duration').value);
-
-        // Convert duration to binary representation
-        const binaryDuration = decimalToBinary(duration);
-
-        // Display the binary badge representing the duration
-        displayBinaryBadge(binaryDuration);
-    });
-
-    // Function to display the binary badge based on duration
-    function displayBinaryBadge(binaryString) {
-        const binaryBadgeElement = document.getElementById('binaryDurationBadge');
-
-        // Clear existing badge content
-        binaryBadgeElement.innerHTML = '';
-
-        // Create spans for each binary digit and style accordingly
-        for (let i = 0; i < binaryString.length; i++) {
-            const span = document.createElement('span');
-            span.textContent = binaryString[i];
-            if (binaryString[i] === '0') {
-                span.classList.add('binary-zero');
-            } else {
-                span.classList.add('binary-one');
-            }
-            binaryBadgeElement.appendChild(span);
-        }
     }
 </script>
 
