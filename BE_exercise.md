@@ -78,68 +78,50 @@ permalink: /exercise/
                     // Handle error if the request fails
                 });
             });
-     });
 
+        const duration = parseInt(document.getElementById('duration').value);
+        const binaryDuration = decimalToBinary(duration);
+        displayBinaryBadge(binaryDuration);
 
-document.getElementById('exerciseForm').addEventListener('submit', function (event) {
-event.preventDefault();
-    // Function to convert a number to binary representation
-function decimalToBinary(number) {
-    return (number >>> 0).toString(2); // Using bitwise zero-fill right shift operator
-}
-
-document.getElementById('exerciseForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    // Get the exercise duration from the form
-    const duration = parseInt(document.getElementById('duration').value);
-
-    // Convert duration to binary representation
-    const binaryDuration = decimalToBinary(duration);
-
-    // Display the appropriate binary badge based on duration
-    displayBinaryBadge(binaryDuration);
-});
-
-// Function to display the binary badge based on duration
-function displayBinaryBadge(binaryString) {
-    const binaryBadgeElement = document.getElementById('binaryDurationBadge');
-
-    // Clear existing badge content
-    binaryBadgeElement.innerHTML = '';
-
-    // Check the duration thresholds to assign badges
-    if (parseInt(binaryString, 2) >= 60) {
-        createBadge(6); // For durations over an hour (60 minutes or more)
-    } else if (parseInt(binaryString, 2) >= 50) {
-        createBadge(5); // For durations over 50 minutes
-    } else {
-        createBadge(parseInt(binaryString, 2)); // For other durations
+        function decimalToBinary(number) {
+      return (number >>> 0).toString(2);
     }
-}
 
-// Function to create badge elements based on the count of binary digits
-function createBadge(count) {
-    const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+    function displayBinaryBadge(binaryString) {
+      const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+      binaryBadgeElement.innerHTML = '';
 
-    // Create spans representing binary digits for the badge
-    for (let i = 0; i < count; i++) {
+      if (parseInt(binaryString, 2) >= 60) {
+        createBadge(6);
+      } else if (parseInt(binaryString, 2) >= 50) {
+        createBadge(5);
+      } else {
+        createBadge(parseInt(binaryString, 2));
+      }
+    }
+
+    function createBadge(count) {
+      const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+
+      for (let i = 0; i < count; i++) {
         const span = document.createElement('span');
         span.textContent = '1';
         span.classList.add('binary-digit', 'binary-one');
         binaryBadgeElement.appendChild(span);
-    }
+      }
 
-    // Add zero digits if needed to complete the badge
-    for (let i = count; i < 6; i++) {
+      for (let i = count; i < 6; i++) {
         const span = document.createElement('span');
         span.textContent = '0';
         span.classList.add('binary-digit');
         binaryBadgeElement.appendChild(span);
+      }
     }
-}
+     
+    });
 
-    }
+    
+
 </script>
 
 <iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
