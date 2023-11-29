@@ -7,6 +7,7 @@ permalink: /exercise/
 
 <html lang="en">
   <div class="purple-form">
+   <div id="binaryDurationBadge" class="binary-badge"></div>
     <form id="exerciseForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -78,6 +79,48 @@ permalink: /exercise/
                 });
             });
      });
+
+     function decimalToBinary(number) {
+        return (number >>> 0).toString(2); // Using bitwise zero-fill right shift operator
+    //Notes: This part of the code performs a zero-fill right shift operation on the input number to make number positive/32 bit integer
+
+
+
+
+    }
+
+    document.getElementById('exerciseForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Get the exercise duration from the form
+        const duration = parseInt(document.getElementById('duration').value);
+
+        // Convert duration to binary representation
+        const binaryDuration = decimalToBinary(duration);
+
+        // Display the binary badge representing the duration
+        displayBinaryBadge(binaryDuration);
+    });
+
+    // Function to display the binary badge based on duration
+    function displayBinaryBadge(binaryString) {
+        const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+
+        // Clear existing badge content
+        binaryBadgeElement.innerHTML = '';
+
+        // Create spans for each binary digit and style accordingly
+        for (let i = 0; i < binaryString.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = binaryString[i];
+            if (binaryString[i] === '0') {
+                span.classList.add('binary-zero');
+            } else {
+                span.classList.add('binary-one');
+            }
+            binaryBadgeElement.appendChild(span);
+        }
+    }
 </script>
 
 <iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
