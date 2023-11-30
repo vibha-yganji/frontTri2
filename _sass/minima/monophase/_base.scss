@@ -173,24 +173,18 @@ abbr {
 
 
 
+
 purple-form {
   background-color: #8a2be2; /*
    Purple background color 
    */
-  padding: 20px; /* 
-  Padding for the content
-   */
-  width: 300px; /* 
-  Adjust width as needed 
-  */
-  margin: 0 auto; /*
-   Center the form horizontally 
-   */
-  border-radius: 10px; /* 
-  Rounded corners */
+  padding: 20px;
+  width: 300px; 
+  margin: 0 auto; 
+  border-radius: 10px; 
 }
 
-.purple-form input,
+.purple-form input, //all input
 .purple-form textarea {
   width: 100%; /* Make all input and textarea full width */
   padding: 8px; /* Padding for input fields */
