@@ -154,7 +154,7 @@ abbr {
   border: 1px solid #000;
   border-radius: 6px;
   background-color: #f0f0f0;
-}
+} //adapts to fitt lenegth, is the grey badge
 
 .binary-digit {
   width: 20px;
@@ -165,9 +165,10 @@ abbr {
   border: 1px solid #000;
   border-radius: 50%;
   background-color: #fff;
-}
+  // 
+} //
 .binary-one {
-  background-color: #FF6347; /* Change color for '1' digit */
+  background-color: #FF6347; /* Change color for '1' digit  or one bit of the binary to make it more like binary*/
 }
 
 
@@ -189,10 +190,9 @@ purple-form {
   Rounded corners */
 }
 
-.purple-form input[type="text"],
-.purple-form input[type="email"],
+.purple-form input,
 .purple-form textarea {
-  width: 100%; /* Make text input and textarea full width */
+  width: 100%; /* Make all input and textarea full width */
   padding: 8px; /* Padding for input fields */
   margin-bottom: 10px; /* Spacing between fields */
   box-sizing: border-box; /* Include padding in width calculation */
