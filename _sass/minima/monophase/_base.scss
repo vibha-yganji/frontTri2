@@ -170,6 +170,50 @@ abbr {
   background-color: #FF6347; /* Change color for '1' digit */
 }
 
+<<<<<<< HEAD
+
+purple-form {
+  background-color: #8a2be2; /*
+   Purple background color 
+   */
+  padding: 20px; /* 
+  Padding for the content
+   */
+  width: 300px; /* 
+  Adjust width as needed 
+  */
+  margin: 0 auto; /*
+   Center the form horizontally 
+   */
+  border-radius: 10px; /* 
+  Rounded corners */
+}
+
+.purple-form input[type="text"],
+.purple-form input[type="email"],
+.purple-form textarea {
+  width: 100%; /* Make text input and textarea full width */
+  padding: 8px; /* Padding for input fields */
+  margin-bottom: 10px; /* Spacing between fields */
+  box-sizing: border-box; /* Include padding in width calculation */
+  border-radius: 5px; /* Rounded corners for input fields */
+  border: 1px solid #ccc; /* Border color */
+}
+
+.purple-form input[type="submit"] {
+  background-color: #fff; /* White background color for submit button */
+  color: #8a2be2; /* Purple text color for submit button */
+  padding: 10px 15px; /* Padding for button */
+  border: 1px solid #8a2be2; /* Purple border color */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.purple-form input[type="submit"]:hover {
+  background-color: #8a2be2; /* Purple background color on hover */
+  color: #fff; /* White text color on hover */
+}
+
 .container {
   display:flex;
   flex-direction: column;

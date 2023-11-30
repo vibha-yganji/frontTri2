@@ -23,7 +23,7 @@ permalink: /Register/
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
-            const name = document.getElementById('name').value;
+            const name = document.getElementById('name').value;// DEFINE VALUES
             const uid =  document.getElementById('uid').value;
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
