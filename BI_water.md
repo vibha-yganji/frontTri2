@@ -50,7 +50,8 @@ permalink: /water/
     <div class="box">
       <h2>Enter Cups</h2>
       <div class="input-section">
-        <img src="https://yourrepository.com/water_glass.png" alt="Water Glass">
+        <img src="https://github.com/jplip/frontTri2/blob/1964ff464b7cdc4eae8a0588c46b4af4e59bfa41/images/WaterCupIcon.png" alt="Water Glass">
+        
         <input type="number" id="waterIntake" placeholder="Enter amount">
       </div>
       <button onclick="trackWater()">Track</button>
@@ -60,7 +61,7 @@ permalink: /water/
       <div class="counter-box">
         <div class="counter">
           <p>You've consumed <span id="cupsToday">0</span>/8 cups today</p>
-          <img src="https://yourrepository.com/smiley_face.png" alt="Smiley">
+          <img src="https://github.com/jplip/frontTri2/blob/1964ff464b7cdc4eae8a0588c46b4af4e59bfa41/images/SmileyFace.png" alt="Smiley">
         </div>
       </div>
     </div>
