@@ -69,8 +69,14 @@ permalink: /water/
         </div>
       </div>
     </div>
-
   </div>
+
+  <h2>Binary Water Amount</h2>
+  <div class="binary-bar" id="binaryWater"></div>
+
+  <!-- ASCII Progress Bar -->
+  <h2>ASCII Water Amount</h2>
+  <div class="ascii-bar" id="asciiWater"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
   <script>
