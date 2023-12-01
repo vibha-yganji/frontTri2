@@ -50,7 +50,9 @@ permalink: /water/
       <div class="progress-bar" id="waterProgress">
         <div class="water-bar">
           <div class="water-level" id="waterLevel"></div>
-        </div>
+      </div>
+      <div class="binary-bar" id="binaryWater"></div>
+      <div class="ascii-bar" id="asciiWater"></div>
       </div>
     </div>
     <div class="box">
@@ -70,12 +72,7 @@ permalink: /water/
     </div>
   </div>
 
-  <h2>Binary Water Amount</h2>
-  <div class="binary-bar" id="binaryWater"></div>
 
-  <!-- ASCII Progress Bar -->
-  <h2>ASCII Water Amount</h2>
-  <div class="ascii-bar" id="asciiWater"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
   <script>
