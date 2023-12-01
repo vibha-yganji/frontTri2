@@ -88,13 +88,23 @@ permalink: /water/
         triggerConfetti();
         totalCups = 8; // Limit the total cups to 8
       }
+      // Update Binary and ASCII Progress Bars
+      updateBinaryProgressBar();
+      updateAsciiProgressBar();
     }
-    function triggerConfetti() {
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 }
-      });
+    // Function to convert a number to binary
+    function toBinary(number) {
+      return Number(number).toString(2);
+    }
+    function updateBinaryProgressBar() {
+      const waterBinaryElement = document.getElementById('binaryWater');
+      const waterBinary = toBinary(totalCups);
+      waterBinaryElement.textContent = waterBinary;
+    }
+    function updateAsciiProgressBar() {
+      const waterAsciiElement = document.getElementById('asciiWater');
+      const waterAscii = '='.repeat(totalCups) + '>'.repeat(8 - totalCups);
+      waterAsciiElement.textContent = waterAscii;
     }
     function trackWater() {
       const cupsInput = document.getElementById('waterIntake').value;
