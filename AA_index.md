@@ -53,17 +53,18 @@ search_exclude: false
 
     // Event listeners for checkboxes
     completedExerciseCheckbox.addEventListener('change', () => {
-      if (completedExerciseCheckbox.checked) {
-    // If 'Completed Exercise' is checked, uncheck 'Rest Day'
-        restDayCheckbox.checked = false;
-    });
+    if (completedExerciseCheckbox.checked) {
+      // If 'Completed Exercise' is checked, uncheck 'Rest Day'
+      restDayCheckbox.checked = false;
+    }
+  });
 
-    restDayCheckbox.addEventListener('change', () => {
-      if (restDayCheckbox.checked) {
-    // If 'Rest Day' is checked, uncheck 'Completed Exercise'
-        completedExerciseCheckbox.checked = false;
-    });
-
+  restDayCheckbox.addEventListener('change', () => {
+    if (restDayCheckbox.checked) {
+      // If 'Rest Day' is checked, uncheck 'Completed Exercise'
+      completedExerciseCheckbox.checked = false;
+    }
+  });
     favoriteExerciseCheckbox.addEventListener('change', () => {
     });
 
