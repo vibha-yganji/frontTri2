@@ -37,6 +37,9 @@ search_exclude: false
 
   <div id="legend"></div>
 
+<h2>Food Intake in Binary</h2>
+<div id="foodBinaryDisplay"></div>
+
   <script>
     function createPieChart() {
       const protein = parseFloat(document.getElementById('proteinRatio').value);
@@ -129,6 +132,38 @@ search_exclude: false
       legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFD700;"></span> Dairy</div>';
       legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#E6A8D7;"></span> Grain</div>';
     }
+     
+  function updateBinaryDisplay() {
+    const protein = parseFloat(document.getElementById('proteinRatio').value);
+    const vegetable = parseFloat(document.getElementById('vegetableRatio').value);
+    const fruit = parseFloat(document.getElementById('fruitRatio').value);
+    const dairy = parseFloat(document.getElementById('dairyRatio').value);
+    const grain = parseFloat(document.getElementById('grainRatio').value);
+
+    const totalIntake = protein + vegetable + fruit + dairy + grain;
+
+    const foodBinaryDisplay = document.getElementById('foodBinaryDisplay');
+
+    const binaryProtein = Number(protein).toString(2);
+    const binaryVegetable = Number(vegetable).toString(2);
+    const binaryFruit = Number(fruit).toString(2);
+    const binaryDairy = Number(dairy).toString(2);
+    const binaryGrain = Number(grain).toString(2);
+    
+    foodBinaryDisplay.innerHTML = `
+      <p>Protein in Binary: ${binaryProtein}</p>
+      <p>Vegetable in Binary: ${binaryVegetable}</p>
+      <p>Fruit in Binary: ${binaryFruit}</p>
+      <p>Dairy in Binary: ${binaryDairy}</p>
+      <p>Grain in Binary: ${binaryGrain}</p>
+      <p>Total Food Intake in Binary: ${totalIntake.toString(2)}</p>
+    `;
+  }
+
+  // Call updateBinaryDisplay function whenever necessary
+  createPieChart(); 
+
+
   </script>
 </body>
 </html>
