@@ -4,7 +4,6 @@ title: Water
 permalink: /water/
 ---
 <html lang="en">
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Water Tracker with Progress Bar</title>
