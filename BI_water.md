@@ -33,8 +33,7 @@ permalink: /water/
       left: 0;
     }
   </style>
-</head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <body>
   <h1>Water Tracker with Progress Bar</h1>
 
@@ -60,8 +59,6 @@ permalink: /water/
       <div class="counter-box">
         <div class="counter">
           <p>You've consumed <span id="cupsToday">0</span>/8 cups today</p>
-          <i class="fas fa-glass-whiskey"></i>
-          <img src="https://jplip.github.io/frontTri2/SmileyFace/">
         </div>
       </div>
     </div>
