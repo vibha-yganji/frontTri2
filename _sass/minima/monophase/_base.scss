@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-$light-blue: deepskyblue;  //make a css variable
+$light-blue: deepskyblue; 
 
 body {
   color: var(--body-color);
@@ -154,7 +154,7 @@ abbr {
   border: 1px solid #000;
   border-radius: 6px;
   background-color: #f0f0f0;
-} //adapts to fitt lenegth, is the grey badge
+}
 
 .binary-digit {
   width: 20px;
@@ -165,48 +165,9 @@ abbr {
   border: 1px solid #000;
   border-radius: 50%;
   background-color: #fff;
-  // 
-} //
+}
 .binary-one {
-  background-color: #FF6347; /* Change color for '1' digit  or one bit of the binary to make it more like binary*/
-}
-
-//will use form
-
-
-.purple-form {
-  background-color: lavender; /*
-   Purple background color 
-   */
-  padding: 20px;
-  width: 600px; 
-  margin: 0 auto; 
-  border-radius: 10px; 
-}
-
-.purple-form input, //all input
-.purple-form textarea {
-  width: 100%; /* Make all input and textarea full width */
-  background-color: lavenderblush;
-  padding: 8px; /* Padding for input fields */
-  margin-bottom: 10px; /* Spacing between fields */
-  box-sizing: border-box; /* Include padding in width calculation */
-  border-radius: 5px; /* Rounded corners for input fields */
-  border: 1px solid #ccc; /* Border color */
-}
-
-.purple-form input[type="submit"] {
-  background-color: #fff; /* White background color for submit button */
-  color: #8a2be2; /* Purple text color for submit button */
-  padding: 10px 15px; /* Padding for button */
-  border: 1px solid #8a2be2; /* Purple border color */
-  border-radius: 5px; /* Rounded corners for button */
-  cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-.purple-form input[type="submit"]:hover {
-  background-color: #8a2be2; /* Purple background color on hover */
-  color: #fff; /* White text color on hover */
+  background-color: #FF6347; /* Change color for '1' digit */
 }
 
 .container {
@@ -214,12 +175,25 @@ abbr {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  background-color: #fff;
 }
 .box {
   width: 300px;
   padding: 20px;
   border: 1px solid #d6b7b7;
   border-radius: 8px;
-  background-color: #fff;
+}
+
+b {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+.app {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto 9px;
+  border-radius: 10px;
+  padding: 30px;
 }
