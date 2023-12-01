@@ -32,9 +32,16 @@ permalink: /water/
       top: 0;
       left: 0;
     }
+     .binary-bar, .ascii-bar {
+      width: 100%;
+      height: 20px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      font-family: 'Courier New', monospace;
+      line-height: 20px;
+      overflow: hidden;
+    }
   </style>
-
-<body>
   <h1>Water Tracker with Progress Bar</h1>
 
   <div class="container">
@@ -98,5 +105,6 @@ permalink: /water/
       }
     }
   </script>
-</body>
 </html>
+
+
