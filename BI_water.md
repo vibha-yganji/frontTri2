@@ -56,7 +56,6 @@ permalink: /water/
     <div class="box">
       <h2>Enter Cups</h2>
       <div class="input-section">
-        <img src=>
         <input type="number" id="waterIntake" placeholder="Enter amount">
       </div>
       <button onclick="trackWater()">Track</button>
@@ -118,14 +117,14 @@ permalink: /water/
         waterLevelElement.style.width = waterPercentage + '%';
       } else {
         alert('Please enter a valid amount of water in cups.');
-      }
-       function triggerConfetti() {
+      }}
+     function triggerConfetti() {
       confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 }
       });
-    }
+    }  
 
   </script>
 </html>
