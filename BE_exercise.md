@@ -4,8 +4,6 @@ title: Exercise
 permalink: /exercise/
 ---
 ![Alt text](images/exerciseheader.png)
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -114,14 +112,11 @@ permalink: /exercise/
         function performOR(flag1, flag2) {
             return (flag1 || flag2) ? 1 : 0;
         }
-
         function performAND(flag1, flag2) {
             return (flag1 && flag2) ? 1 : 0;
         }
-
         function createBadge(flag) {
             const binaryBadgeElement = document.getElementById('binaryDurationBadge');
-
             if (flag) {
                 for (let i = 0; i < 6; i++) {
                     const span = document.createElement('span');
@@ -139,7 +134,6 @@ permalink: /exercise/
             }
         }
     </script>
-
     <iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
 
 </body>
