@@ -5,10 +5,17 @@ permalink: /exercise/
 ---
 ![Alt text](images/exerciseheader.png)
 
+<!DOCTYPE html>
 <html lang="en">
-  <div class="purple-form">
-   <div id="binaryDurationBadge" class="binary-badge"></div>
-    <form id="exerciseForm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise</title>
+</head>
+<body>
+    <div class="purple-form">
+        <div id="binaryDurationBadge" class="binary-badge"></div>
+        <form id="exerciseForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
             <label for="exerciseType">Exercise Type:</label>
@@ -19,36 +26,33 @@ permalink: /exercise/
             <input type="date" id="exerciseDate" name="exerciseDate" required>
             <input type="submit" value="Submit">
         </form>
-</div>
-
-
-<script>
-    const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); //gets user id from local storage
-    console.log(userIDFromLocalStorage) // tells me if I have the right one 
-     document.getElementById('exerciseForm').addEventListener('submit', function(event) { // eventlistner(necessary for fform submission)
+    </div>
+    <script>
+        const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
+        console.log(userIDFromLocalStorage);
+        document.getElementById('exerciseForm').addEventListener('submit', function (event) {
             event.preventDefault();
-            const name = document.getElementById('name').value; //get name
-            const exerciseType = document.getElementById('exerciseType').value; //g
+            const name = document.getElementById('name').value;
+            const exerciseType = document.getElementById('exerciseType').value;
             const duration = document.getElementById('duration').value;
             const exerciseDate = document.getElementById('exerciseDate').value;
-            fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`) //comment
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json(); //return user.read() json object (user!)
-            })
-            .then(data => {
-                // Combine old and new exercise data
-                const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
-                const exercise = {
+            fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
+                    const exercise = {
                         "name": name,
-                        "exerciseType" : exerciseType,
+                        "exerciseType": exerciseType,
                         "duration": duration,
                         "exerciseDate": exerciseDate
                     }
-                const updatedExerciseData = [...originalExerciseData, exercise];
-                const data2 = {
+                    const updatedExerciseData = [...originalExerciseData, exercise];
+                    const data2 = {
                         "id": userIDFromLocalStorage,
                         "name": name,
                         "uid": "life",
@@ -57,76 +61,90 @@ permalink: /exercise/
                         "exercise": updatedExerciseData,
                         "tracking": {}
                     };
-                var jsonData = JSON.stringify(data2);
-            // Here you can perform an API request to send this data to your backend
-            // Modify this section to send the collected data to your backend API
-            // Example API call using fetch (modify as per your backend endpoint)
-                fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: jsonData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Server response:', data);
-                    // Handle response or perform additional actions after sending data
+                    var jsonData = JSON.stringify(data2);
+                    fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: jsonData
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Server response:', data);
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                    const binaryDuration = decimalToBinary(duration);
+                    displayBinaryBadge(binaryDuration);
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    // Handle error if the request fails
                 });
-            });
-
-
-        const binaryDuration = decimalToBinary(duration);
-        displayBinaryBadge(binaryDuration);
-
+        });
         function decimalToBinary(number) {
-        return (number >>> 0).toString(2);
-    }
+            return (number >>> 0).toString(2);
+        }
+        function displayBinaryBadge(binaryString) {
+            const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+            binaryBadgeElement.innerHTML = '';
+            const overThirtyMinutes = isOverThirtyMinutes(binaryString);
+            const overTenMinutes = isOverTenMinutes(binaryString);
+            const didPractice = checkPracticeToday(); // Assuming you have a function to check if they practiced today
+            const badgeEarned = performOR(overThirtyMinutes, performAND(overTenMinutes, didPractice));
+            createBadge(badgeEarned);
+        }
+        function isOverThirtyMinutes(binaryString) {
+            return parseInt(binaryString, 2) >= 30; // Assuming 30 minutes equals binary 11110
+        }
+        function isOverTenMinutes(binaryString) {
+            return parseInt(binaryString, 2) >= 10; // Assuming 10 minutes equals binary 1010
+        }
+        function checkPracticeToday(exerciseDate) {
+          const today = new Date(); // Get current date
+          const exercise = new Date(exerciseDate); // Convert exercise date string to Date object
+           // Compare the year, month, and day of both dates
+          return (
+            today.getFullYear() === exercise.getFullYear() &&
+            today.getMonth() === exercise.getMonth() &&
+            today.getDate() === exercise.getDate()
+            );
+        }
+        function performOR(flag1, flag2) {
+            return (flag1 || flag2) ? 1 : 0;
+        }
 
-    function displayBinaryBadge(binaryString) {
-      const binaryBadgeElement = document.getElementById('binaryDurationBadge');
-      binaryBadgeElement.innerHTML = '';
+        function performAND(flag1, flag2) {
+            return (flag1 && flag2) ? 1 : 0;
+        }
 
-      if (parseInt(binaryString, 2) >= 60) {
-        createBadge(6);
-      } else if (parseInt(binaryString, 2) >= 50) {
-        createBadge(5);
-      } else {
-        createBadge(parseInt(binaryString, 2));
-      }
-    }
+        function createBadge(flag) {
+            const binaryBadgeElement = document.getElementById('binaryDurationBadge');
 
-    function createBadge(count) {
-      const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+            if (flag) {
+                for (let i = 0; i < 6; i++) {
+                    const span = document.createElement('span');
+                    span.textContent = '1';
+                    span.classList.add('binary-digit', 'binary-one');
+                    binaryBadgeElement.appendChild(span);
+                }
+            } else {
+                for (let i = 0; i < 6; i++) {
+                    const span = document.createElement('span');
+                    span.textContent = '0';
+                    span.classList.add('binary-digit');
+                    binaryBadgeElement.appendChild(span);
+                }
+            }
+        }
+    </script>
 
-      for (let i = 0; i < count; i++) {
-        const span = document.createElement('span');
-        span.textContent = '1';
-        span.classList.add('binary-digit', 'binary-one');
-        binaryBadgeElement.appendChild(span);
-      }
+    <iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
 
-      for (let i = count; i < 6; i++) {
-        const span = document.createElement('span');
-        span.textContent = '0';
-        span.classList.add('binary-digit');
-        binaryBadgeElement.appendChild(span);
-      }
-    }
-     
-    });
+</body>
 
-    
-
-</script>
-
-<iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
-
-<html>
+</html>
 
 
 

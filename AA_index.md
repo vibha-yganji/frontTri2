@@ -50,7 +50,6 @@ search_exclude: false
     const favoriteExerciseCheckbox = document.getElementById('favoriteExercise');
     const warmupCompletedCheckbox = document.getElementById('warmupCompleted');
     const cooldownCompletedCheckbox = document.getElementById('cooldownCompleted');
-
     // Event listeners for checkboxes
     completedExerciseCheckbox.addEventListener('change', () => {
     if (completedExerciseCheckbox.checked) {
@@ -58,13 +57,13 @@ search_exclude: false
       restDayCheckbox.checked = false;
     }
   });
+    restDayCheckbox.addEventListener('change', () => {
+      if (restDayCheckbox.checked) {
+        // If 'Rest Day' is checked, uncheck 'Completed Exercise'
+        completedExerciseCheckbox.checked = false;
+      }
+    });
 
-  restDayCheckbox.addEventListener('change', () => {
-    if (restDayCheckbox.checked) {
-      // If 'Rest Day' is checked, uncheck 'Completed Exercise'
-      completedExerciseCheckbox.checked = false;
-    }
-  });
     favoriteExerciseCheckbox.addEventListener('change', () => {
     });
 
