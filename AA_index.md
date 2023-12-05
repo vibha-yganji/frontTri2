@@ -26,6 +26,8 @@ search_exclude: false
     const checkboxA = document.getElementById('checkboxA');
     const checkboxB = document.getElementById('checkboxB');
 
+
+
     // Event listeners for checkboxes
     checkboxA.addEventListener('change', () => {
       performXORLogic();
@@ -38,11 +40,9 @@ search_exclude: false
     function performXORLogic() {
       const isCheckedA = checkboxA.checked;
       const isCheckedB = checkboxB.checked;
-
-      if ((isCheckedA && !isCheckedB) || (!isCheckedA && isCheckedB))
-        console.log('XOR condition is satisfied: Only one checkbox is checked.');
+      const xorResult = (isCheckedA || isCheckedB) && !(isCheckedA && isCheckedB);
+      resultDiv.textContent = `XOR Gate Result: ${xorResult}`;
       }
-    }
  </script>
   <a href="https://jplip.github.io/frontTri2/login/"><button class="btn">Login</button></a>
     <a href="https://jplip.github.io/frontTri2/Register/"><button class="btn">Register</button></a>
