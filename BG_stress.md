@@ -13,7 +13,7 @@ permalink: /stress/
 <div class="app">
   <h1>Stress Test</h1>
   <div class="quiz">
-        <h2 id="question">Question goes here</h2>
+        <h2 id="question">Question Gos here</h2>
         <div id="answer-buttons">
           <button class="btn">Answer 1</button>
           <button class="btn">Answer 2</button>
