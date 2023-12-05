@@ -4,6 +4,7 @@ title: Binary Challenge
 permalink: /about/
 ---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -36,6 +37,7 @@ permalink: /about/
 
   <script>
     const decimalNumbers = [10, 25, 36, 47, 58];
+    const numberOfChallenges = decimalNumbers.length;
 
     const userProgress = {
       challengesCompleted: 0,
@@ -70,6 +72,12 @@ permalink: /about/
 
             userProgress.challengesCompleted++;
             awardBinaryBadge();
+
+            // Check if all challenges are completed
+            if (userProgress.challengesCompleted === numberOfChallenges) {
+              alert('Congratulations! All challenges completed!');
+              // You can add any other action when all challenges are completed here
+            }
           } else {
             alert('Incorrect. Try again!');
           }
