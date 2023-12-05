@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Binary Challenge
-permalink: /about/
+permalink: /challenge/
 ---
 <html lang="en">
 <head>
@@ -34,7 +34,7 @@ permalink: /about/
   </div>
 
   <script>
-    const decimalNumbers = [10, 25, 36, 47, 58];
+    const decimalNumbers = [10, 25, 36, 47, 58, 100]; // Added an extra challenge number
     const numberOfChallenges = decimalNumbers.length;
 
     const userProgress = {
@@ -49,8 +49,16 @@ permalink: /about/
         const challengeDiv = document.createElement('div');
         challengeDiv.classList.add('challenge-item');
 
+        let challengeText;
+        if (index === numberOfChallenges - 1) {
+          // If it's the last challenge, make it a special challenge question
+          challengeText = 'What is the binary representation of 100?';
+        } else {
+          challengeText = `Decimal Number: ${number}`;
+        }
+
         const decimalLabel = document.createElement('label');
-        decimalLabel.textContent = `Decimal Number: ${number}`;
+        decimalLabel.textContent = challengeText;
         challengeDiv.appendChild(decimalLabel);
 
         const inputField = document.createElement('input');
@@ -107,18 +115,10 @@ permalink: /about/
     function checkBadgeCriteria() {
       const challengesThreshold = 3; // Threshold for challenges completed for badge earning
       const challengesCompleted = userProgress.challengesCompleted;
-      const overThirtyMinutes = isOverThirtyMinutes(challengesCompleted);
-      const overTenMinutes = isOverTenMinutes(challengesCompleted);
+      const specialChallengeCompleted = challengesCompleted === numberOfChallenges - 1;
+      const threeOutOfFiveCompleted = challengesCompleted >= 3;
 
-      return (overThirtyMinutes || (overTenMinutes && challengesCompleted >= challengesThreshold));
-    }
-
-    function isOverThirtyMinutes(challengesCompleted) {
-      return challengesCompleted >= 5; // Assuming 5 challenges completed equals over 30 minutes
-    }
-
-    function isOverTenMinutes(challengesCompleted) {
-      return challengesCompleted >= 2; // Assuming 2 challenges completed equals over 10 minutes
+      return specialChallengeCompleted || threeOutOfFiveCompleted;
     }
 
     function convertToBinary(decimalNumber) {
