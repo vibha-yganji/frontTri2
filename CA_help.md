@@ -125,6 +125,34 @@ permalink: /challenge/
       return (decimalNumber >>> 0).toString(2);
     }
 
+    function andGate(input1, input2) {
+      return input1 === '1' && input2 === '1' ? '1' : '0';
+    }
+
+    function orGate(input1, input2) {
+      return input1 === '1' || input2 === '1' ? '1' : '0';
+    }
+
+    // checkButton to incorporate logic gates
+    checkButton.addEventListener('click', () => {
+      const userAnswer = inputField.value.trim();
+      const correctAnswer = convertToBinary(number);
+
+      if (userAnswer === correctAnswer) {
+        alert('Correct! Great job.');
+
+        userProgress.challengesCompleted++;
+        awardBinaryBadge();
+
+        // Check if all challenges are completed
+        if (userProgress.challengesCompleted === numberOfChallenges) {
+          alert('Congratulations! All challenges completed!');
+          // You can add any other action when all challenges are completed here
+        }
+      } else {
+        alert('Incorrect. Try again!');
+      }
+
     window.onload = function () {
       generateConversionChallenge();
     };
