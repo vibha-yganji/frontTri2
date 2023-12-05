@@ -19,6 +19,7 @@ search_exclude: false
   <br>
   <label for="checkboxB">Checkbox B</label>
   <input type="checkbox" id="checkboxB">
+  <div class="result" id="xorResult">XOR Gate Result: </div>
 
   <script>
 
@@ -38,11 +39,8 @@ search_exclude: false
       const isCheckedA = checkboxA.checked;
       const isCheckedB = checkboxB.checked;
 
-      if ((isCheckedA && !isCheckedB) || (!isCheckedA && isCheckedB)) {
-        // XOR condition between checkboxA and checkboxB
-        // Perform an action or set a flag when only one checkbox is checked
+      if ((isCheckedA && !isCheckedB) || (!isCheckedA && isCheckedB))
         console.log('XOR condition is satisfied: Only one checkbox is checked.');
-        // Add your action or logic here
       }
     }
  </script>
