@@ -3,6 +3,7 @@ layout: base
 title: Binary Challenge
 permalink: /challenge/
 ---
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Binary Logic Gates Challenge</title>
@@ -21,6 +22,14 @@ permalink: /challenge/
 <body>
   <h1>Binary Logic Gates Challenge</h1>
 
+``<div id="instructions">
+    <h2>Instructions</h2>
+    <p>Welcome to the Binary Logic Gates Challenge!</p>
+    <p>Input binary values (0 or 1) into the fields and select the correct logic gate operation.</p>
+    <p>Click "Check Answer" to verify your answer. Earn badges for each correct answer!</p>
+  </div>
+
+
   <div id="challengeSection">
     <!-- Challenge items will be dynamically generated here -->
     <!-- Each challenge will include logic gate operation and input fields -->
@@ -29,7 +38,7 @@ permalink: /challenge/
   <h2>Binary Badges</h2>
   <div id="binaryBadge">
     <!-- The binary badges earned by the user will be displayed here -->
-    <!-- Example: 110 (representing two badges earned) -->
+    <!-- Example: AND: 110, OR: 101, XOR: 010, NOT: 100, NAND: 011 -->
   </div>
 
   <script>
@@ -42,22 +51,47 @@ permalink: /challenge/
       return input1 === '1' || input2 === '1' ? '1' : '0';
     }
 
+    function xorGate(input1, input2) {
+      return input1 !== input2 ? '1' : '0';
+    }
+
+    function notGate(input) {
+      return input === '0' ? '1' : '0';
+    }
+
+    function nandGate(input1, input2) {
+      return !(input1 === '1' && input2 === '1') ? '1' : '0';
+    }
+
     // User object to track progress and earned binary badges
     let user = {
-      binaryBadges: 0,
+      binaryBadges: {
+        AND: 0,
+        OR: 0,
+        XOR: 0,
+        NOT: 0,
+        NAND: 0
+        // Add more gates as needed
+      },
       challengeCount: 0
     };
 
     // Function to update earned binary badges
     function updateBadges() {
       const badgeSection = document.getElementById('binaryBadge');
-      badgeSection.textContent = `Binary Badges Earned: ${user.binaryBadges}`;
+      let badgesHTML = '';
+
+      for (let gate in user.binaryBadges) {
+        badgesHTML += `${gate}: ${user.binaryBadges[gate]} `;
+      }
+
+      badgeSection.textContent = `Binary Badges Earned: ${badgesHTML}`;
     }
 
     // Function to generate logic gate challenge
     function generateLogicGateChallenge() {
       const challengeSection = document.getElementById('challengeSection');
-      const logicGates = ['AND', 'OR']; // Types of logic gates
+      const logicGates = ['AND', 'OR', 'XOR', 'NOT', 'NAND']; // Types of logic gates
 
       logicGates.forEach((gate) => {
         const challengeDiv = document.createElement('div');
@@ -67,45 +101,66 @@ permalink: /challenge/
         gateLabel.textContent = `${gate} Gate Operation`;
         challengeDiv.appendChild(gateLabel);
 
-        const inputField1 = document.createElement('input');
-        inputField1.setAttribute('type', 'text');
-        inputField1.setAttribute('placeholder', 'Enter Binary 0 or 1');
-        inputField1.classList.add('binary-input');
-        challengeDiv.appendChild(inputField1);
+        // Creating input fields based on the gate type
+        if (gate === 'NOT') {
+          const inputField = document.createElement('input');
+          inputField.setAttribute('type', 'text');
+          inputField.setAttribute('placeholder', 'Enter Binary 0 or 1');
+          inputField.classList.add('binary-input');
+          challengeDiv.appendChild(inputField);
+        } else {
+          const inputField1 = document.createElement('input');
+          inputField1.setAttribute('type', 'text');
+          inputField1.setAttribute('placeholder', 'Enter Binary 0 or 1');
+          inputField1.classList.add('binary-input');
+          challengeDiv.appendChild(inputField1);
 
-        const inputField2 = document.createElement('input');
-        inputField2.setAttribute('type', 'text');
-        inputField2.setAttribute('placeholder', 'Enter Binary 0 or 1');
-        inputField2.classList.add('binary-input');
-        challengeDiv.appendChild(inputField2);
+          if (gate !== 'XOR') { // XOR gate has only one input
+            const inputField2 = document.createElement('input');
+            inputField2.setAttribute('type', 'text');
+            inputField2.setAttribute('placeholder', 'Enter Binary 0 or 1');
+            inputField2.classList.add('binary-input');
+            challengeDiv.appendChild(inputField2);
+          }
+        }
 
         const checkButton = document.createElement('button');
         checkButton.textContent = 'Check Answer';
         checkButton.addEventListener('click', () => {
-          const userAnswer1 = inputField1.value.trim();
-          const userAnswer2 = inputField2.value.trim();
-
           let gateResult;
-          if (gate === 'AND') {
-            gateResult = andGate(userAnswer1, userAnswer2);
-          } else if (gate === 'OR') {
-            gateResult = orGate(userAnswer1, userAnswer2);
+
+          if (gate === 'NOT') {
+            const userAnswer = inputField.value.trim();
+            gateResult = notGate(userAnswer);
+          } else {
+            const userAnswer1 = inputField1.value.trim();
+            const userAnswer2 = inputField2 ? inputField2.value.trim() : null;
+
+            if (gate === 'AND') {
+              gateResult = andGate(userAnswer1, userAnswer2);
+            } else if (gate === 'OR') {
+              gateResult = orGate(userAnswer1, userAnswer2);
+            } else if (gate === 'XOR') {
+              gateResult = xorGate(userAnswer1, userAnswer2);
+            } else if (gate === 'NAND') {
+              gateResult = nandGate(userAnswer1, userAnswer2);
+            }
           }
 
-          const correctAnswer = gateResult; // Set correct answer based on gate operation
+          const correctAnswer = gate === 'NOT' ? gateResult : gateResult; // Set correct answer based on gate operation
 
-          if (userAnswer1 === '' || userAnswer2 === '') {
-            alert('Please enter both binary values.');
-          } else if (userAnswer1 !== '0' && userAnswer1 !== '1' && userAnswer2 !== '0' && userAnswer2 !== '1') {
-            alert('Please enter valid binary values (0 or 1).');
-          } else if (userAnswer1 === correctAnswer && userAnswer2 === correctAnswer) {
+          if (gate === 'NOT' && (userAnswer === '0' || userAnswer === '1')) {
             alert('Correct! Great job.');
             user.challengeCount++;
 
-            if (user.challengeCount % 3 === 0) {
-              user.binaryBadges++; // Award a binary badge every 3 correct answers
-              updateBadges();
-            }
+            user.binaryBadges[gate]++; // Increment badge count for the specific gate
+            updateBadges();
+          } else if (gate !== 'NOT' && (userAnswer1 === correctAnswer && (gate === 'XOR' || userAnswer2 === correctAnswer))) {
+            alert('Correct! Great job.');
+            user.challengeCount++;
+
+            user.binaryBadges[gate]++; // Increment badge count for the specific gate
+            updateBadges();
           } else {
             alert('Incorrect. Try again!');
           }
