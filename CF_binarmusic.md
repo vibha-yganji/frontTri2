@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Binary Music
-permalink: /quiz/
+permalink: /music/
 ---
 
 
