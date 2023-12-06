@@ -4,15 +4,7 @@ title: Binary Challenge
 permalink: /challenge/
 ---
 <html lang="en">
-<head>
   <meta charset="UTF-8">
-  <title>Binary Logic Gates Challenge</title>
-  <style>
-  </style>
-</head>
-<body>
-  <h1>Binary Logic Gates Challenge</h1>
-
   <div id="instructions">
     <h2>Instructions</h2>
     <p>Welcome to the Binary Logic Gates Challenge!</p>
@@ -188,5 +180,4 @@ permalink: /challenge/
       generateLogicGateChallenge();
     };
   </script>
-</body>
 </html>
