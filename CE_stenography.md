@@ -5,7 +5,6 @@ permalink: /quiz/
 ---
 <html>
 <head>
-  <title>Binary Quiz</title>
   <style>
     .progress-bar {
       width: 100%;
