@@ -1,12 +1,8 @@
----
-layout: page
-title: Binary Challenge
-permalink: /challenge/
----
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Binary Conversion Challenge</title>
+  <title>Binary Logic Gates Challenge</title>
   <style>
     /* Your CSS styles can be placed here */
     /* Example styles for badges */
@@ -20,11 +16,11 @@ permalink: /challenge/
   </style>
 </head>
 <body>
-  <h1>Decimal to Binary Conversion Challenge</h1>
+  <h1>Binary Logic Gates Challenge</h1>
 
-  <div id="conversionChallenge">
-    <!-- The challenge items will be dynamically generated here -->
-    <!-- Each challenge will include a decimal number and input field -->
+  <div id="challengeSection">
+    <!-- Challenge items will be dynamically generated here -->
+    <!-- Each challenge will include logic gate operation and input fields -->
   </div>
 
   <h2>Binary Badges</h2>
@@ -34,56 +30,62 @@ permalink: /challenge/
   </div>
 
   <script>
-    const decimalNumbers = [10, 25, 36, 47, 58, 100]; // Added an extra challenge number
-    const numberOfChallenges = decimalNumbers.length;
+    // Define logic gate functions
+    function andGate(input1, input2) {
+      return input1 === '1' && input2 === '1' ? '1' : '0';
+    }
 
-    const userProgress = {
-      challengesCompleted: 0,
-      badgesEarned: 0
-    };
+    function orGate(input1, input2) {
+      return input1 === '1' || input2 === '1' ? '1' : '0';
+    }
 
-    function generateConversionChallenge() {
-      const challengeSection = document.getElementById('conversionChallenge');
+    // Function to generate logic gate challenge
+    function generateLogicGateChallenge() {
+      const challengeSection = document.getElementById('challengeSection');
+      const logicGates = ['AND', 'OR']; // Types of logic gates
 
-      decimalNumbers.forEach((number, index) => {
+      logicGates.forEach((gate) => {
         const challengeDiv = document.createElement('div');
         challengeDiv.classList.add('challenge-item');
 
-        let challengeText;
-        if (index === numberOfChallenges - 1) {
-          // If it's the last challenge, make it a special challenge question
-          challengeText = 'What is the binary representation of 100?';
-        } else {
-          challengeText = `Decimal Number: ${number}`;
-        }
+        const gateLabel = document.createElement('label');
+        gateLabel.textContent = `${gate} Gate Operation`;
+        challengeDiv.appendChild(gateLabel);
 
-        const decimalLabel = document.createElement('label');
-        decimalLabel.textContent = challengeText;
-        challengeDiv.appendChild(decimalLabel);
+        const inputField1 = document.createElement('input');
+        inputField1.setAttribute('type', 'text');
+        inputField1.setAttribute('placeholder', 'Enter Binary 0 or 1');
+        inputField1.classList.add('binary-input');
+        challengeDiv.appendChild(inputField1);
 
-        const inputField = document.createElement('input');
-        inputField.setAttribute('type', 'text');
-        inputField.setAttribute('placeholder', 'Enter Binary');
-        inputField.classList.add('binary-input');
-        challengeDiv.appendChild(inputField);
+        const inputField2 = document.createElement('input');
+        inputField2.setAttribute('type', 'text');
+        inputField2.setAttribute('placeholder', 'Enter Binary 0 or 1');
+        inputField2.classList.add('binary-input');
+        challengeDiv.appendChild(inputField2);
 
         const checkButton = document.createElement('button');
         checkButton.textContent = 'Check Answer';
         checkButton.addEventListener('click', () => {
-          const userAnswer = inputField.value.trim();
-          const correctAnswer = convertToBinary(number);
+          const userAnswer1 = inputField1.value.trim();
+          const userAnswer2 = inputField2.value.trim();
 
-          if (userAnswer === correctAnswer) {
+          let gateResult;
+          if (gate === 'AND') {
+            gateResult = andGate(userAnswer1, userAnswer2);
+          } else if (gate === 'OR') {
+            gateResult = orGate(userAnswer1, userAnswer2);
+          }
+
+          const correctAnswer = gateResult; // Set correct answer based on gate operation
+
+          if (userAnswer1 === '' || userAnswer2 === '') {
+            alert('Please enter both binary values.');
+          } else if (userAnswer1 !== '0' && userAnswer1 !== '1' && userAnswer2 !== '0' && userAnswer2 !== '1') {
+            alert('Please enter valid binary values (0 or 1).');
+          } else if (userAnswer1 === correctAnswer && userAnswer2 === correctAnswer) {
             alert('Correct! Great job.');
-
-            userProgress.challengesCompleted++;
-            awardBinaryBadge();
-
-            // Check if all challenges are completed
-            if (userProgress.challengesCompleted === numberOfChallenges) {
-              alert('Congratulations! All challenges completed!');
-              // You can add any other action when all challenges are completed here
-            }
+            // Award badges or progress tracking logic can be added here
           } else {
             alert('Incorrect. Try again!');
           }
@@ -94,67 +96,9 @@ permalink: /challenge/
       });
     }
 
-    function awardBinaryBadge() {
-      const binaryBadgeElement = document.getElementById('binaryBadge');
-      binaryBadgeElement.innerHTML = '';
-
-      const badgeEarned = checkBadgeCriteria();
-
-      if (badgeEarned) {
-        userProgress.badgesEarned++;
-      }
-
-      for (let i = 0; i < userProgress.badgesEarned; i++) {
-        const span = document.createElement('span');
-        span.textContent = '1';
-        span.classList.add('binary-digit', 'binary-one');
-        binaryBadgeElement.appendChild(span);
-      }
-    }
-
-    function checkBadgeCriteria() {
-      const challengesThreshold = 3; // Threshold for challenges completed for badge earning
-      const challengesCompleted = userProgress.challengesCompleted;
-      const specialChallengeCompleted = challengesCompleted === numberOfChallenges - 1;
-      const threeOutOfFiveCompleted = challengesCompleted >= 3;
-
-      return specialChallengeCompleted || threeOutOfFiveCompleted;
-    }
-
-    function convertToBinary(decimalNumber) {
-      return (decimalNumber >>> 0).toString(2);
-    }
-
-    function andGate(input1, input2) {
-      return input1 === '1' && input2 === '1' ? '1' : '0';
-    }
-
-    function orGate(input1, input2) {
-      return input1 === '1' || input2 === '1' ? '1' : '0';
-    }
-
-    // checkButton to incorporate logic gates
-    checkButton.addEventListener('click', () => {
-      const userAnswer = inputField.value.trim();
-      const correctAnswer = convertToBinary(number);
-
-      if (userAnswer === correctAnswer) {
-        alert('Correct! Great job.');
-
-        userProgress.challengesCompleted++;
-        awardBinaryBadge();
-
-        // Check if all challenges are completed
-        if (userProgress.challengesCompleted === numberOfChallenges) {
-          alert('Congratulations! All challenges completed!');
-          // You can add any other action when all challenges are completed here
-        }
-      } else {
-        alert('Incorrect. Try again!');
-      }
-
+    // Call the function to generate logic gate challenges on window load
     window.onload = function () {
-      generateConversionChallenge();
+      generateLogicGateChallenge();
     };
   </script>
 </body>
