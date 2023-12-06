@@ -3,8 +3,6 @@ layout: page
 title: Binary Quiz
 permalink: /quiz/
 ---
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
