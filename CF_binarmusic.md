@@ -3,12 +3,9 @@ layout: page
 title: Binary Music
 permalink: /music/
 ---
-
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Binary Music Composition</title>
 </head>
 <body>
   <h1>Binary Music Composition</h1>
