@@ -102,6 +102,50 @@ permalink: /quiz/
       });
     }
 
+    // Define badges
+const badges = {
+  bronze: { threshold: 3, earned: false },
+  silver: { threshold: 6, earned: false },
+  gold: { threshold: 9, earned: false }
+};
+
+// User object to track progress and earned badges
+let user = {
+  earnedBadges: 0,
+  challengeCount: 0
+};
+
+// Function to update earned badges
+function updateBadges() {
+  const badgeSection = document.getElementById('binaryBadge');
+  badgeSection.textContent = `Badges Earned: ${user.earnedBadges}`;
+}
+
+// Function to check for earned badges
+function checkForBadges() {
+  for (const badge in badges) {
+    if (!badges[badge].earned && user.earnedBadges >= badges[badge].threshold) {
+      badges[badge].earned = true;
+      alert(`Congratulations! You earned the ${badge.toUpperCase()} badge.`);
+      // Additional logic if needed when a badge is earned
+    }
+  }
+}
+
+// Within the correct answer condition block
+if (userAnswer1 === correctAnswer && userAnswer2 === correctAnswer) {
+  alert('Correct! Great job.');
+  user.challengeCount++;
+  if (user.challengeCount % 3 === 0) {
+    user.earnedBadges++; // Award a badge every 3 correct answers
+    updateBadges();
+    checkForBadges();
+  }
+} else {
+  alert('Incorrect. Try again!');
+}
+
+
     // Call the function to generate logic gate challenges on window load
     window.onload = function () {
       generateLogicGateChallenge();
