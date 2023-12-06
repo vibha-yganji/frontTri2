@@ -3,7 +3,7 @@ description: "August 2023 to June 2024"
 owner_name: iKAN2025
 github_username: iKAN2025
 github_repo: "Nighthawk-Pages"
-baseurl: "/binaryfrontend"
+baseurl: "/frontTri2"
 remote_theme: jekyll/minima
 minima:
   social_links:
