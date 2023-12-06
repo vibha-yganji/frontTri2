@@ -8,33 +8,6 @@ permalink: /challenge/
   <meta charset="UTF-8">
   <title>Binary Logic Gates Challenge</title>
   <style>
-    .binary-badge {
-      display: inline-block;
-      padding: 8px;
-      margin: 4px;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    .badge-and {
-      background-color: #3498db;
-      color: #fff;
-    }
-    .badge-or {
-      background-color: #e74c3c;
-      color: #fff;
-    }
-    .badge-xor {
-      background-color: #2ecc71;
-      color: #fff;
-    }
-    .badge-not {
-      background-color: #9b59b6;
-      color: #fff;
-    }
-    .badge-nand {
-      background-color: #f39c12;
-      color: #fff;
-    }
   </style>
 </head>
 <body>
