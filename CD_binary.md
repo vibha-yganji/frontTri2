@@ -174,6 +174,19 @@ permalink: /challenge/
       });
     }
 
+     function updateBadges() {
+      const badgeSection = document.getElementById('binaryBadge');
+      let badgesHTML = '';
+
+      for (let gate in user.binaryBadges) {
+        const binaryBadge = user.binaryBadges[gate].toString(2); // Convert badge count to binary
+        badgesHTML += `${gate}: ${binaryBadge.padStart(3, '0')} `;
+      }
+
+      badgeSection.innerHTML = `Binary Badges Earned: ${badgesHTML}`;
+    }
+
+
     // Call the function to generate logic gate challenges on window load
     window.onload = function () {
       generateLogicGateChallenge();
