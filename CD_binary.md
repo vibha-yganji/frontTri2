@@ -22,13 +22,12 @@ permalink: /challenge/
 <body>
   <h1>Binary Logic Gates Challenge</h1>
 
-``<div id="instructions">
+  <div id="instructions">
     <h2>Instructions</h2>
     <p>Welcome to the Binary Logic Gates Challenge!</p>
     <p>Input binary values (0 or 1) into the fields and select the correct logic gate operation.</p>
     <p>Click "Check Answer" to verify your answer. Earn badges for each correct answer!</p>
   </div>
-
 
   <div id="challengeSection">
     <!-- Challenge items will be dynamically generated here -->
@@ -108,6 +107,23 @@ permalink: /challenge/
           inputField.setAttribute('placeholder', 'Enter Binary 0 or 1');
           inputField.classList.add('binary-input');
           challengeDiv.appendChild(inputField);
+
+          const checkButton = document.createElement('button');
+          checkButton.textContent = 'Check Answer';
+          checkButton.addEventListener('click', () => {
+            const userAnswer = inputField.value.trim();
+            const gateResult = notGate(userAnswer);
+
+            if (userAnswer === '0' || userAnswer === '1') {
+              alert('Correct! Great job.');
+              user.challengeCount++;
+              user.binaryBadges[gate]++;
+              updateBadges();
+            } else {
+              alert('Incorrect. Try again!');
+            }
+          });
+          challengeDiv.appendChild(checkButton);
         } else {
           const inputField1 = document.createElement('input');
           inputField1.setAttribute('type', 'text');
@@ -115,26 +131,18 @@ permalink: /challenge/
           inputField1.classList.add('binary-input');
           challengeDiv.appendChild(inputField1);
 
-          if (gate !== 'XOR') { // XOR gate has only one input
-            const inputField2 = document.createElement('input');
-            inputField2.setAttribute('type', 'text');
-            inputField2.setAttribute('placeholder', 'Enter Binary 0 or 1');
-            inputField2.classList.add('binary-input');
-            challengeDiv.appendChild(inputField2);
-          }
-        }
+          const inputField2 = document.createElement('input');
+          inputField2.setAttribute('type', 'text');
+          inputField2.setAttribute('placeholder', 'Enter Binary 0 or 1');
+          inputField2.classList.add('binary-input');
+          challengeDiv.appendChild(inputField2);
 
-        const checkButton = document.createElement('button');
-        checkButton.textContent = 'Check Answer';
-        checkButton.addEventListener('click', () => {
-          let gateResult;
-
-          if (gate === 'NOT') {
-            const userAnswer = inputField.value.trim();
-            gateResult = notGate(userAnswer);
-          } else {
+          const checkButton = document.createElement('button');
+          checkButton.textContent = 'Check Answer';
+          checkButton.addEventListener('click', () => {
             const userAnswer1 = inputField1.value.trim();
-            const userAnswer2 = inputField2 ? inputField2.value.trim() : null;
+            const userAnswer2 = inputField2.value.trim();
+            let gateResult;
 
             if (gate === 'AND') {
               gateResult = andGate(userAnswer1, userAnswer2);
@@ -145,27 +153,22 @@ permalink: /challenge/
             } else if (gate === 'NAND') {
               gateResult = nandGate(userAnswer1, userAnswer2);
             }
-          }
 
-          const correctAnswer = gate === 'NOT' ? gateResult : gateResult; // Set correct answer based on gate operation
-
-          if (gate === 'NOT' && (userAnswer === '0' || userAnswer === '1')) {
-            alert('Correct! Great job.');
-            user.challengeCount++;
-
-            user.binaryBadges[gate]++; // Increment badge count for the specific gate
-            updateBadges();
-          } else if (gate !== 'NOT' && (userAnswer1 === correctAnswer && (gate === 'XOR' || userAnswer2 === correctAnswer))) {
-            alert('Correct! Great job.');
-            user.challengeCount++;
-
-            user.binaryBadges[gate]++; // Increment badge count for the specific gate
-            updateBadges();
-          } else {
-            alert('Incorrect. Try again!');
-          }
-        });
-        challengeDiv.appendChild(checkButton);
+            if ((userAnswer1 === '0' || userAnswer1 === '1') && (userAnswer2 === '0' || userAnswer2 === '1')) {
+              if (gateResult === '1') {
+                alert('Correct! Great job.');
+                user.challengeCount++;
+                user.binaryBadges[gate]++;
+                updateBadges();
+              } else {
+                alert('Incorrect. Try again!');
+              }
+            } else {
+              alert('Please enter valid binary values (0 or 1).');
+            }
+          });
+          challengeDiv.appendChild(checkButton);
+        }
 
         challengeSection.appendChild(challengeDiv);
       });
