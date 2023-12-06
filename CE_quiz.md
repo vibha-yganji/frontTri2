@@ -16,7 +16,6 @@ permalink: /quiz/
   </style>
 </head>
 <body>
-  <h1>Binary Quiz</h1>
   <p>Test your knowledge of binary numbers!</p>
   <div id="quiz">
     <h2>Question 1: What is the binary representation of 10 in decimal?</h2>
