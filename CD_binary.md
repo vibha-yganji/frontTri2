@@ -193,16 +193,21 @@ permalink: /challenge/
     }
 
      function updateBadges() {
-      const badgeSection = document.getElementById('binaryBadge');
-      let badgesHTML = '';
+    const badgeSection = document.getElementById('binaryBadge');
+    badgeSection.innerHTML = ''; // Clear previous badges
 
-      for (let gate in user.binaryBadges) {
-        const binaryBadge = user.binaryBadges[gate].toString(2); // Convert badge count to binary
-        badgesHTML += `${gate}: ${binaryBadge.padStart(3, '0')} `;
-      }
+    for (let gate in user.binaryBadges) {
+      const binaryBadge = user.binaryBadges[gate].toString(2).padStart(3, '0'); // Convert badge count to binary
 
-      badgeSection.innerHTML = `Binary Badges Earned: ${badgesHTML}`;
+      const badgeSpan = document.createElement('span');
+      badgeSpan.classList.add('binary-badge', `badge-${gate.toLowerCase()}`);
+      badgeSpan.textContent = `${gate}: ${binaryBadge} `;
+      badgeSection.appendChild(badgeSpan);
     }
+  }
+
+
+    
 
 
     // Call the function to generate logic gate challenges on window load
