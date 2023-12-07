@@ -1,51 +1,15 @@
----
-layout: base
-title: Binary Games
-permalink: /binary_games/
----
-Binary Wordle
----
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Binary Guessing Game</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-      background-color: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    p {
-      margin-bottom: 15px;
-    }
     select,
     input[type="number"],
-    button {
+    .btn {
       padding: 8px 12px;
       font-size: 16px;
       margin-bottom: 10px;
-    }
-    button {
-      cursor: pointer;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-    }
-    button:hover {
-      background-color: #45a049;
     }
     #binaryRepresentation {
       font-size: 24px;
@@ -57,6 +21,24 @@ Binary Wordle
     #previousGuesses {
       margin-top: 15px;
       font-style: italic;
+    }
+    .cell {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ccc;
+      display: inline-block;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .cell:hover {
+      background-color: #f0f0f0;
+    }
+    .cell.clicked {
+      background-color: #007bff;
+      color: white;
     }
   </style>
 </head>
@@ -78,7 +60,7 @@ Binary Wordle
       
       <!-- Input field for the player's guess -->
       <input type="number" id="playerGuess" placeholder="Enter your guess">
-      <button onclick="checkGuess()">Submit</button>
+      <button class="btn" onclick="checkGuess()">Submit</button>
 
       <p id="result"></p>
       <p id="previousGuesses">Previous Guesses:</p>
@@ -147,26 +129,6 @@ Binary Wordle
   </script>
 </body>
 </html>
----
-Binary Puzzle
----
-<head>
-  <meta charset="UTF-8">
-  <title>Binary Puzzle</title>
-  <style>
-    /* Style the cells to create a grid-like appearance */
-    .cell {
-      width: 30px;
-      height: 30px;
-      border: 1px solid black;
-      display: inline-block;
-      text-align: center;
-      line-height: 30px;
-      font-family: Arial, sans-serif;
-    }
-  </style>
-</head>
-<body>
   <h1>Binary Puzzle</h1>
   <p>Click on the cells to toggle their values and reach a configuration of all 1s.</p>
 
@@ -231,11 +193,9 @@ Binary Puzzle
           // Apply XOR and AND operations alternately
           var newValue = i % 2 === 0 ? currentValue ^ 1 : currentValue & 1;
           currentCell.innerHTML = newValue;
+          currentCell.classList.toggle('clicked'); // Toggle class for visual feedback
         }
       }
     }
   </script>
 </body>
-</html>
-
-
