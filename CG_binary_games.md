@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+---
+layout: page
+title: Binary Games
+permalink: /binary_games/
+---
 <html lang="en">
 <head>
   <meta charset="UTF-8">
