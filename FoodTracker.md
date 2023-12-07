@@ -1,9 +1,9 @@
----
+<!-- ---
 layout: base
 title: Food Tracker
 permalink: "/food/"
 search_exclude: false
----
+--- -->
 <html lang="en">
 <head>
   <title>Food Tracker</title>

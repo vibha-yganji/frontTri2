@@ -1,8 +1,8 @@
----
+<!-- ---
 layout: base
 title: Register
 permalink: /Register/
----
+--- -->
 
 <html lang="en">
     <title>User Registration</title>
