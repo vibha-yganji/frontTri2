@@ -286,3 +286,28 @@ form {
 input[type=“radio”] {
   margin-right: 5px;
 }
+
+.containerlogicgates {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#inputs {
+  margin-bottom: 20px;
+}
+
+#gates {
+  margin-bottom: 20px;
+}
+
+#lightbulb {
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+#output button {
+  margin-top: 10px;
+}

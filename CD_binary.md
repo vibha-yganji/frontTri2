@@ -3,8 +3,33 @@ layout: base
 title: Binary Challenge
 permalink: /challenge/
 ---
-<html lang="en">
-  <meta charset="UTF-8">
+<html>
+<head>
+  <title>Logic Gates Game</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="containerlogicgates">
+    <h1>Logic Gates Game</h1>
+    <div id="inputs">
+      <label>Input A:</label>
+      <input type="checkbox" id="inputA">
+      <label>Input B:</label>
+      <input type="checkbox" id="inputB">
+    </div>
+    <div id="gates">
+      <h2>Gates:</h2>
+      <button onclick="applyGate('and')">AND (&#8743;) Gate</button>
+      <button onclick="applyGate('or')">OR (&#8744;) Gate</button>
+      <button onclick="applyGate('not')">NOT (&#172;) Gate</button>
+      <button onclick="applyGate('xor')">XOR (&#8853;) Gate</button>
+    </div>
+    <div id="output">
+      <h2>Lightbulb</h2>
+      <div id="lightbulb"></div>
+      <button onclick="testOutput()">Test Output</button>
+    </div>
+  </div>
   <div id="instructions">
     <h2>Instructions</h2>
     <p>Welcome to the Binary Logic Gates Challenge!</p>
@@ -171,6 +196,50 @@ permalink: /challenge/
     }
   }
 
+  // Variables to store inputs A and B, and lightbulb status
+let inputA = false;
+let inputB = false;
+let lightbulb = false;
+
+// Function to apply selected gate logic
+function applyGate(gate) {
+  if (gate === 'and') {
+    lightbulb = inputA && inputB; // Applyng AND gate logic
+  } else if (gate === 'or') {
+    lightbulb = inputA || inputB; // Applyng OR gate logic
+  } else if (gate === 'not') {
+    lightbulb = !inputA; // Applyng NOT gate logic to input A
+  } else if (gate === 'xor') {
+    lightbulb = inputA !== inputB; // Applyng XOR gate logic
+  }
+  updateLightbulb(); // Updat the lightbulb representation
+}
+
+// Function to update the lightbulb representation based on it's status
+function updateLightbulb() {
+  const lightbulbElement = document.getElementById('lightbulb');
+  if (lightbulb) {
+    lightbulbElement.style.backgroundColor = 'yellow'; // Light is ONN
+  } else {
+    lightbulbElement.style.backgroundColor = 'grey'; // Light is OFFF
+  }
+}
+
+// Function to test and display the current lightbulb outputt
+function testOutput() {
+  alert(`Output to the lightbulb: ${lightbulb}`);
+}
+
+// Event listeners for input checkboxes
+document.getElementById('inputA').addEventListener('change', function() {
+  inputA = this.checked; // Update input A statuss
+  applyGate(); // Apply selected gate logic
+});
+
+document.getElementById('inputB').addEventListener('change', function() {
+  inputB = this.checked; // Update input B statuss
+  applyGate(); // Apply selected gate logic
+});
 
     
 

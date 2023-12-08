@@ -66,6 +66,8 @@ permalink: /music/
       };
       return notesMap[note];
     }
+
+    
   </script>
 </body>
 </html>
