@@ -3,6 +3,7 @@ layout: base
 title: Binary Challenge
 permalink: /challenge/
 ---
+<!DOCTYPE html>
 <html>
 <head>
   <title>Logic Gates Game</title>
