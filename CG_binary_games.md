@@ -202,4 +202,3 @@ permalink: /binary_games/
       }
     }
   </script>
-</body>

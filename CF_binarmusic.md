@@ -55,7 +55,7 @@ permalink: /music/
     }
 
     function noteToFrequency(note) {
-      const notesMap = {
+      const notesMap = { //assigns note to a certain frquency 
         'C4': 261.63,
         'D4': 293.66,
         'E4': 329.63,
@@ -69,4 +69,3 @@ permalink: /music/
   </script>
 </body>
 </html>
-#hey
