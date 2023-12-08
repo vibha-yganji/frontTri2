@@ -27,6 +27,7 @@ permalink: /challenge/
     <div id="output">
       <h2>Lightbulb</h2>
       <div id="lightbulb"></div>
+      <img src="images/off.png" id="lightbulb-image">
       <button onclick="testOutput()">Test Output</button>
     </div>
   </div>
@@ -217,12 +218,13 @@ function applyGate(gate) {
 
 // Function to update the lightbulb representation based on it's status
 function updateLightbulb() {
-  const lightbulbElement = document.getElementById('lightbulb');
+ const lightbulbImage = document.getElementById('lightbulb-image');
   if (lightbulb) {
-    lightbulbElement.style.backgroundColor = 'yellow'; // Light is ONN
+    lightbulbImage.src = 'images/on.png'; // Change to the image representing a lit bulb
   } else {
-    lightbulbElement.style.backgroundColor = 'grey'; // Light is OFFF
+    lightbulbImage.src = 'images/off.png'; // Change to the image representing an unlit bulb
   }
+  
 }
 
 // Function to test and display the current lightbulb outputt
