@@ -248,4 +248,5 @@ document.getElementById('inputB').addEventListener('change', function() {
       generateLogicGateChallenge();
     };
   </script>
-</html>
+
+
