@@ -67,15 +67,24 @@ let lightbulb = false;
 // Function to apply selected gate logic
 function applyGate(gate) {
   if (gate === 'and') {
-    lightbulb = inputA && inputB; // Applyng AND gate logic
+    lightbulb = inputA && inputB; // Applying AND gate logic
   } else if (gate === 'or') {
-    lightbulb = inputA || inputB; // Applyng OR gate logic
+    lightbulb = inputA || inputB; // Applying OR gate logic
   } else if (gate === 'not') {
-    lightbulb = !inputA; // Applyng NOT gate logic to input A
+    lightbulb = !inputA; // Applying NOT gate logic to input A
   } else if (gate === 'xor') {
-    lightbulb = inputA !== inputB; // Applyng XOR gate logic
+    lightbulb = inputA !== inputB; // Applying XOR gate logic
+  } else if (gate === 'nand') {
+    lightbulb = !(inputA && inputB); // Applying NAND gate logic
+  } else if (gate === 'nor') {
+    lightbulb = !(inputA || inputB); // Applying NOR gate logic
+  } else if (gate === 'xnor') {
+    lightbulb = inputA === inputB; // Applying XNOR gate logic
+  } else {
+    // Additional logic for other gates if needed
   }
-  updateLightbulb(); // Updat the lightbulb representation
+  
+  updateLightbulb(); // Update the lightbulb representation
 }
 
 // Function to update the lightbulb representation based on it's status
@@ -106,7 +115,7 @@ document.getElementById('inputB').addEventListener('change', function() {
 });
 
     
-    // Define logic gate functions
+    // Define logic gate functions for lightbu;n
     function andGate(input1, input2) {
       return input1 === '1' && input2 === '1' ? '1' : '0';
     }
@@ -125,6 +134,20 @@ document.getElementById('inputB').addEventListener('change', function() {
 
     function nandGate(input1, input2) {
       return !(input1 === '1' && input2 === '1') ? '1' : '0';
+    }
+
+    function nandGate(input1, input2) {
+      return !(input1 === '1' && input2 === '1') ? '1' : '0';
+    }
+
+    // Function for NOR gate operation
+    function norGate(input1, input2) {
+      return !(input1 === '1' || input2 === '1') ? '1' : '0';
+    }
+
+    // Function for XNOR gate operation
+    function xnorGate(input1, input2) {
+      return input1 === input2 ? '1' : '0';
     }
 
     // User object to track progress and earned binary badges
