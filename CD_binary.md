@@ -23,6 +23,9 @@ permalink: /challenge/
       <button onclick="applyGate('or')">OR (&#8744;) Gate</button>
       <button onclick="applyGate('not')">NOT (&#172;) Gate</button>
       <button onclick="applyGate('xor')">XOR (&#8853;) Gate</button>
+      <button onclick="applyGate('nand')">NAND (&#172;&#8743;) Gate</button>
+      <button onclick="applyGate('nor')">NOR (&#172;&#8744;) Gate</button>
+      <button onclick="applyGate('xnor')">XNOR (&#8891;) Gate</button>
     </div>
     <div id="output">
       <h2>Lightbulb</h2>
