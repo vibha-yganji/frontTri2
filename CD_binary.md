@@ -50,6 +50,7 @@ permalink: /challenge/
     </ul>
     <p>Click "Test Output" to see the lightbulb illuminate according to the selected logic.</p>
     <p>Click "Check Answer" to verify your result. Earn badges for each correct answer!</p>
+    <p> If you want, try you skills with the <strong> Binary Badge Challenge </strong> below </p>
   </div>
 
 
