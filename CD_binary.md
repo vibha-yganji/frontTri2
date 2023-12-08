@@ -49,6 +49,53 @@ permalink: /challenge/
   </div>
 
   <script>
+      // Variables to store inputs A and B, and lightbulb status
+let inputA = false;
+let inputB = false;
+let lightbulb = false;
+
+// Function to apply selected gate logic
+function applyGate(gate) {
+  if (gate === 'and') {
+    lightbulb = inputA && inputB; // Applyng AND gate logic
+  } else if (gate === 'or') {
+    lightbulb = inputA || inputB; // Applyng OR gate logic
+  } else if (gate === 'not') {
+    lightbulb = !inputA; // Applyng NOT gate logic to input A
+  } else if (gate === 'xor') {
+    lightbulb = inputA !== inputB; // Applyng XOR gate logic
+  }
+  updateLightbulb(); // Updat the lightbulb representation
+}
+
+// Function to update the lightbulb representation based on it's status
+function updateLightbulb() {
+  const lightbulbElement = document.getElementById('lightbulb');
+  if (lightbulb) {
+    lightbulbElement.style.backgroundColor = 'yellow'; // Light is ONN
+  } else {
+    lightbulbElement.style.backgroundColor = 'grey'; // Light is OFFF
+  }
+}
+
+
+// Function to test and display the current lightbulb outputt
+function testOutput() {
+  alert(`Output to the lightbulb: ${lightbulb}`);
+}
+
+// Event listeners for input checkboxes
+document.getElementById('inputA').addEventListener('change', function() {
+  inputA = this.checked; // Update input A statuss
+  applyGate(); // Apply selected gate logic
+});
+
+document.getElementById('inputB').addEventListener('change', function() {
+  inputB = this.checked; // Update input B statuss
+  applyGate(); // Apply selected gate logic
+});
+
+    
     // Define logic gate functions
     function andGate(input1, input2) {
       return input1 === '1' && input2 === '1' ? '1' : '0';
@@ -194,57 +241,7 @@ permalink: /challenge/
       badgeSpan.textContent = `${gate}: ${binaryBadge} `;
       badgeSection.appendChild(badgeSpan);
     }
-  }
-
-  // Variables to store inputs A and B, and lightbulb status
-let inputA = false;
-let inputB = false;
-let lightbulb = false;
-
-// Function to apply selected gate logic
-function applyGate(gate) {
-  if (gate === 'and') {
-    lightbulb = inputA && inputB; // Applyng AND gate logic
-  } else if (gate === 'or') {
-    lightbulb = inputA || inputB; // Applyng OR gate logic
-  } else if (gate === 'not') {
-    lightbulb = !inputA; // Applyng NOT gate logic to input A
-  } else if (gate === 'xor') {
-    lightbulb = inputA !== inputB; // Applyng XOR gate logic
-  }
-  updateLightbulb(); // Updat the lightbulb representation
-}
-
-// Function to update the lightbulb representation based on it's status
-function updateLightbulb() {
-  const lightbulbElement = document.getElementById('lightbulb');
-  if (lightbulb) {
-    lightbulbElement.style.backgroundColor = 'yellow'; // Light is ONN
-  } else {
-    lightbulbElement.style.backgroundColor = 'grey'; // Light is OFFF
-  }
-}
-
-
-// Function to test and display the current lightbulb outputt
-function testOutput() {
-  alert(`Output to the lightbulb: ${lightbulb}`);
-}
-
-// Event listeners for input checkboxes
-document.getElementById('inputA').addEventListener('change', function() {
-  inputA = this.checked; // Update input A statuss
-  applyGate(); // Apply selected gate logic
-});
-
-document.getElementById('inputB').addEventListener('change', function() {
-  inputB = this.checked; // Update input B statuss
-  applyGate(); // Apply selected gate logic
-});
-
-    
-
-
+     }
     // Call the function to generate logic gate challenges on window load
     window.onload = function () {
       generateLogicGateChallenge();
