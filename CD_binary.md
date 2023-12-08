@@ -3,7 +3,6 @@ layout: base
 title: Binary Challenge
 permalink: /challenge/
 ---
-<!DOCTYPE html>
 <html>
 <head>
   <title>Logic Gates Game</title>
@@ -32,11 +31,21 @@ permalink: /challenge/
     </div>
   </div>
   <div id="instructions">
+   <div id="instructions">
     <h2>Instructions</h2>
     <p>Welcome to the Binary Logic Gates Challenge!</p>
-    <p>Input binary values (0 or 1) into the fields and select the correct logic gate operation.</p>
-    <p>Click "Check Answer" to verify your answer. Earn badges for each correct answer!</p>
+    <p>Binary operates with two digits: 0 and 1. Use these values to simulate logical operations.</p>
+    <p>Input binary values (0 or 1) into the fields and select the correct logic gate operation:</p>
+    <ul>
+      <li>AND Gate (&#8743;): Produces a 1 output only if both inputs are 1.</li>
+      <li>OR Gate (&#8744;): Produces a 1 output if either or both inputs are 1.</li>
+      <li>NOT Gate (&#172;): Produces a 1 output for the opposite value of the input.</li>
+      <li>XOR Gate (&#8853;): Produces a 1 output if inputs are different.</li>
+    </ul>
+    <p>Click "Test Output" to see the lightbulb illuminate according to the selected logic.</p>
+    <p>Click "Check Answer" to verify your result. Earn badges for each correct answer!</p>
   </div>
+
 
   <div id="challengeSection">
     <!-- Challenge items will be dynamically generated here -->
