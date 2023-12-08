@@ -224,7 +224,7 @@ function updateLightbulb() {
     lightbulbElement.style.backgroundColor = 'grey'; // Light is OFFF
   }
 }
-}
+
 
 // Function to test and display the current lightbulb outputt
 function testOutput() {
