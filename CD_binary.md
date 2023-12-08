@@ -48,7 +48,6 @@ permalink: /challenge/
       <li>NOR Gate (&#172;&#8744;): Produces a 0 output if either or both inputs are 1.</li>
       <li>XNOR Gate (&#8891;): Produces a 1 output if inputs are the same.</li>
     </ul>
-    </ul>
     <p>Click "Test Output" to see the lightbulb illuminate according to the selected logic.</p>
     <p>Click "Check Answer" to verify your result. Earn badges for each correct answer!</p>
   </div>
