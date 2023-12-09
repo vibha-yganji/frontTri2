@@ -17,7 +17,7 @@ permalink: /music/
     <h2>Instructions</h2>
     <p>Welcome to the Binary Music Composition tool!</p>
     <p>Enter a binary pattern consisting of '0's and '1's into the input field.</p>
-    <p>Each '0' will trigger a musical note, and each '1' will create a brief silence.</p>
+    <p>Each '1' will trigger a musical note, and each '0' will create a brief silence.</p>
     <p>Click the "Compose Music" button to hear the musical composition based on your binary input.</p>
   </div>
 
@@ -39,14 +39,14 @@ permalink: /music/
       for (let i = 0; i < binaryInput.length; i++) {
         const bit = binaryInput.charAt(i);
 
-        if (bit === '0') {
-          // Play a musical note for '0'
+        if (bit === '1') {
+          // Play a musical note for '1' to show 1 repersents an on state!
           const note = notes[i % notes.length];
           oscillator.frequency.setValueAtTime(noteToFrequency(note), time);
           oscillator.start(time);
           oscillator.stop(time + noteDuration);
-        } else if (bit === '1') {
-          // Create a short silence for '1'
+        } else if (bit === '0') {
+          // Create a short silence for '0' in binary string (to show that 0 repersents an off state)
           time += noteDuration + noteDelay;
         }
 
