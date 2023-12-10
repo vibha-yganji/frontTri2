@@ -35,14 +35,25 @@ Algorithms do exist that can correctly predict that the first program halts and 
 However, no algorithm exists that can analyze any program's code and determine whether it halts or not.
 
 # Turing's Proof Through Contradiction: (Anusha)
+defintion proof through contradiction: a form of proof that assumes a claim false and shows that this state leads to a known contradiction; therefore, the claim must be true
+1. **We assume the halting algoritm exists**
+So here's the basic code flowchart for the halting algorithm:
 
+Here's the reverser (which consists of its halting algorithm) which basically does the opposite of the halting algoritm returns.
 
+The Reverser works on programs such as Count Up or Count Down until 0.
 
+2. **The contradiction**
+But if we plug Reverser into itself....
 
+**Reverser does the opposite of HaltChecker so HaltChecker can never be right.**
 
+- Yellow path: If HaltChecker says that Reverser never halts; the Reverser will halt
+- Green Path: If HaltCheck says Reverser halts; the Reverser will never halt
 
-
-
+However, we said that HaltChecker exists and is always correct.
+3. **Conclusion**
+Therefore, HaltChecker cannot exist.
 
 
 
