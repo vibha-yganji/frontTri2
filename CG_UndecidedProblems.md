@@ -99,9 +99,9 @@ What are the consequences of the problem being undecidable?
 
 **D.** The tool will not be able to correctly identify any cases of unreachable code.
 
-<details style = border: 1px solid #aaa;
+<details style = "border: 1px solid #aaa;
   border-radius: 4px;
-  padding: 0.5em;>
+  padding: 0.5em;">
   <summary>Solution</summary>
   <strong>B</strong> is the correct answer as the definition of an undecided problem states that an algorithm may be able to solve the problem in some cases but no algorithm exists to solve all cases.  
 </details>
