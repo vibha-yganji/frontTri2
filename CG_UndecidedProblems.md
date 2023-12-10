@@ -52,7 +52,7 @@ However, no algorithm exists that can analyze any program's code and determine w
 
 
 
-## Implications and Further Undecidable Problems (10 minutes):(Justin)
+# Implications and Further Undecidable Problems (10 minutes):(Justin)
 - **Consequences:** Discuss the implications of proving the Halting Problem as undecidable in the realm of computer science.
 - **Additional Undecidable Problems:** Introduce other undecidable problems, highlighting their similarities to the Halting Problem.
 
