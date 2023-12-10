@@ -7,44 +7,6 @@ permalink: /binary_games/
 <head>
   <meta charset="UTF-8">
   <title>Binary Guessing Game</title>
-  <style>
-    select,
-    input[type="number"],
-    .btn {
-      padding: 8px 12px;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-    #binaryRepresentation {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    #result,
-    #previousGuesses {
-      margin-top: 15px;
-      font-style: italic;
-    }
-    .cell {
-      width: 40px;
-      height: 40px;
-      border: 1px solid #ccc;
-      display: inline-block;
-      text-align: center;
-      line-height: 40px;
-      font-size: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .cell:hover {
-      background-color: #f0f0f0;
-    }
-    .cell.clicked {
-      background-color: #007bff;
-      color: white;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -66,7 +28,7 @@ permalink: /binary_games/
       <input type="number" id="playerGuess" placeholder="Enter your guess">
       <button class="btn" onclick="checkGuess()">Submit</button>
 
-      <p id="result"></p>
+      <p id="result_games"></p>
       <p id="previousGuesses">Previous Guesses:</p>
     </div>
   </div>
@@ -100,9 +62,9 @@ permalink: /binary_games/
         if (playerGuess === randomNumber) {
           displayCongratulations();
         } else if (playerGuess < randomNumber) {
-          document.getElementById("result").innerText = "Try a higher number.";
+          document.getElementById("result_games").innerText = "Try a higher number.";
         } else {
-          document.getElementById("result").innerText = "Try a lower number.";
+          document.getElementById("result_games").innerText = "Try a lower number.";
         }
 
         // Reveal the binary representation for each incorrect guess
@@ -127,7 +89,7 @@ permalink: /binary_games/
         } else {
           message = "Congratulations! You guessed it!";
         }
-        document.getElementById("result").innerText = message;
+        document.getElementById("result_games").innerText = message;
       }
     }
   </script>

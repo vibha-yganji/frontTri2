@@ -307,7 +307,38 @@ input[type=“radio”] {
   border-radius: 50%;
   margin: 20px auto;
 }
-
+select,
+input[type="number"],
 #output button {
   margin-top: 10px;
+}
+
+#binaryRepresentation {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#result_games,
+#previousGuesses {
+  margin-top: 15px;
+  font-style: italic;
+}
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.cell:hover {
+  background-color: #f0f0f0;
+}
+.cell.clicked {
+  background-color: #007bff;
+  color: white;
 }
