@@ -79,12 +79,3 @@ However, no algorithm exists that can analyze any program's code and determine w
 
 
 
-### Additional Resources:
-- Provide supplementary resources such as articles, videos, or animations that offer further explanations about undecidable problems for students to explore in-depth.
-
-
-Undecidable problems are fundamental in computer science, representing tasks that cannot be solved by algorithms regardless of the resources or time available. While some problems might take an extremely long time to solve, undecidable problems have no algorithmic solution.
-
-## Examples of Undecidable Problems
-
-
