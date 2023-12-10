@@ -287,32 +287,163 @@ document.getElementById('inputB').addEventListener('change', function() {
       generateLogicGateChallenge();
     };
   </script>
+<html>
+<html>
+<head>
+  <title>Number Systems</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
 
-| System      | Base | Digits          | Representation               | Examples                  | Usage                                  |
-|-------------|------|-----------------|------------------------------|----------------------------|----------------------------------------|
-| Decimal     | 10   | 0-9             | Place value (base 10)        | 42, 105, 789               | Everyday numbering system              |
-| Binary      | 2    | 0, 1            | Powers of 2 (base 2)         | 1010, 1101, 11110011       | Computers, digital systems              |
-| Hexadecimal | 16   | 0-9, A-F        | Powers of 16 (base 16)       | 1A, 3D, FF7A               | Memory addressing (computers), colors   |
+<h2>Number Systems Overview</h2>
+<table>
+  <thead>
+    <tr>
+      <th>System</th>
+      <th>Base</th>
+      <th>Digits</th>
+      <th>Representation</th>
+      <th>Examples</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Decimal</td>
+      <td>10</td>
+      <td>0-9</td>
+      <td>Place value (base 10)</td>
+      <td>42, 105, 789</td>
+      <td>Everyday numbering system</td>
+    </tr>
+    <tr>
+      <td>Binary</td>
+      <td>2</td>
+      <td>0, 1</td>
+      <td>Powers of 2 (base 2)</td>
+      <td>1010, 1101, 11110011</td>
+      <td>Computers, digital systems</td>
+    </tr>
+    <tr>
+      <td>Hexadecimal</td>
+      <td>16</td>
+      <td>0-9, A-F</td>
+      <td>Powers of 16 (base 16)</td>
+      <td>1A, 3D, FF7A</td>
+      <td>Memory addressing (computers), colors</td>
+    </tr>
+  </tbody>
+</table>
 
-| Decimal | Binary  | Hexadecimal |
-| ------- | ------- | ----------- |
-| 1       | 0001    | 1           |
-| 2       | 0010    | 2           |
-| 3       | 0011    | 3           |
-| 4       | 0100    | 4           |
-| 5       | 0101    | 5           |
-| 6       | 0110    | 6           |
-| 7       | 0111    | 7           |
-| 8       | 1000    | 8           |
-| 9       | 1001    | 9           |
-| 10      | 1010    | A           |
-| 11      | 1011    | B           |
-| 12      | 1100    | C           |
-| 13      | 1101    | D           |
-| 14      | 1110    | E           |
-| 15      | 1111    | F           |
-| 16      | 10000   | 10          |
+<h2>Decimal, Binary, and Hexadecimal Equivalents</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Decimal</th>
+      <th>Binary</th>
+      <th>Hexadecimal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0001</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0010</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0011</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0100</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>0101</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0110</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>0111</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1000</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>1001</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>1010</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>1011</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>1100</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>1101</td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>1110</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>1111</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>10000</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
 
+</body>
+<html>
 <head>
   <title>Binary to Decimal Converter</title>
   <script>
