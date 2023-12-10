@@ -482,4 +482,172 @@ document.getElementById('inputB').addEventListener('change', function() {
   <p><a href="https://github.com/jplip/frontTri2/blob/main/images/printing_ascii_control_characters-f.png">Printing Control Characters</a></p>
 </body>
 </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binary Shifting</title>
+  <style>
+    /* Add your CSS styles here */
+    /* This is just a placeholder */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="infographic">
+    <h1>Understanding Binary Shift Operations</h1>
+
+    <!-- Section 1: Introduction -->
+    <section>
+      <h2>Introduction</h2>
+      <p>Binary shifting involves moving the digits of a binary number to the left or right. It's crucial in computer science and programming for optimizing calculations and algorithms.</p>
+    </section>
+
+    <!-- Section 2: What is Binary Representation? -->
+    <section>
+      <h2>What is Binary Representation?</h2>
+      <p>Binary representation uses only two digits, 0 and 1, to express numbers in the base-2 system. For example, the binary number 101010 represents 42 in decimal.</p>
+    </section>
+
+    <!-- Section 3: Binary Shifting -->
+    <section>
+      <h2>Binary Shifting</h2>
+      <p>Binary shifting involves left shift (<<) and right shift (>>). Left shifting a binary number multiplies it by powers of 2, while right shifting divides it.</p>
+      <p>For instance, left shifting '1010' by one position results in '10100' (which is 10 * 2), while right shifting '1010' by one position gives '101' (which is 10 / 2).</p>
+    </section>
+
+    <!-- Section 4: Common Use Cases -->
+    <section>
+      <h2>Common Use Cases</h2>
+      <p>Binary shifting finds use in programming for optimizing multiplication/division by powers of 2 and in algorithms like bit manipulation and data compression.</p>
+    </section>
+
+    <!-- Section 5: Types of Shifts -->
+    <section>
+      <h2>Types of Shifts</h2>
+      <p>Logical Shift: Fills shifted-in positions with 0s. Arithmetic Shift: Preserves the sign bit in signed numbers, filling shifted-in positions accordingly.</p>
+      <p>For instance, in an arithmetic right shift of a negative number, the leftmost bit (sign bit) is preserved, maintaining the number's negative value.</p>
+    </section>
+  </div>
+<html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Binary Shift Table</title>
+</head>
+
+<body>
+    <h2>Binary Shift Table</h2>
+
+    <label for="binaryInput">Enter a Binary Number:</label>
+    <input type="text" id="binaryInput" placeholder="Enter binary number (e.g., 1010)">
+    <br><br>
+    <label for="shiftType">Select Shift Type:</label>
+    <select id="shiftType">
+        <option value="left">Left Shift</option>
+        <option value="right">Right Shift</option>
+    </select>
+    <br><br>
+    <label for="shiftAmount">Enter Shift Amount:</label>
+    <input type="number" id="shiftAmount" placeholder="Enter shift amount">
+    <br><br>
+    <button onclick="generateTable()">Generate Table</button>
+
+    <h3>Before Shift</h3>
+    <table>
+        <caption>Before Shift</caption>
+        <tr>
+            <th>Position</th>
+            <th>Bit</th>
+            <th>Place Value</th>
+        </tr>
+        <tbody id="beforeShiftTable"></tbody>
+    </table>
+    <p id="beforeShiftTotal">Total: </p>
+
+    <h3>After Shift</h3>
+    <table>
+        <caption>After Shift</caption>
+        <tr>
+            <th>Position</th>
+            <th>Bit</th>
+            <th>Place Value</th>
+        </tr>
+        <tbody id="afterShiftTable"></tbody>
+    </table>
+    <p id="afterShiftTotal">Total: </p>
+
+    <script>
+        function generateTable() {
+            let binaryInput = document.getElementById("binaryInput").value;
+            let shiftType = document.getElementById("shiftType").value;
+            let shiftAmount = parseInt(document.getElementById("shiftAmount").value);
+
+            // Validate binary input
+            if (!/^[01]+$/.test(binaryInput)) {
+                alert("Please enter a valid binary number (0s and 1s only).");
+                return;
+            }
+
+            let number = parseInt(binaryInput, 2);
+
+            let beforeShiftTable = document.getElementById("beforeShiftTable");
+            let afterShiftTable = document.getElementById("afterShiftTable");
+            let beforeShiftTotal = document.getElementById("beforeShiftTotal");
+            let afterShiftTotal = document.getElementById("afterShiftTotal");
+
+            let beforeShiftHTML = "";
+            let afterShiftHTML = "";
+            let beforeShiftSum = 0;
+            let afterShiftSum = 0;
+
+            // Before Shift
+            for (let i = 7; i >= 0; i--) {
+                let bit = (number >> i) & 1;
+                let placeValue = 2 ** i;
+                beforeShiftHTML += `<tr>
+                                        <td>${i}</td>
+                                        <td>${bit}</td>
+                                        <td>${placeValue}</td>
+                                    </tr>`;
+                beforeShiftSum += placeValue;
+            }
+
+            // After Shift
+            let shiftedNumber = shiftType === "left" ? number << shiftAmount : number >> shiftAmount;
+            for (let i = 7 + shiftAmount; i >= 0 + shiftAmount; i--) {
+                let bit = (shiftedNumber >> i) & 1;
+                let placeValue = 2 ** i;
+                afterShiftHTML += `<tr>
+                                        <td>${i}</td>
+                                        <td>${bit}</td>
+                                        <td>${placeValue}</td>
+                                    </tr>`;
+                afterShiftSum += placeValue;
+            }
+
+            beforeShiftTable.innerHTML = beforeShiftHTML;
+            afterShiftTable.innerHTML = afterShiftHTML;
+            beforeShiftTotal.innerHTML = `Total: ${beforeShiftSum}`;
+            afterShiftTotal.innerHTML = `Total: ${afterShiftSum}`;
+        }
+    </script>
+</body>
+
+</html>
+
+
+</body>
+</html>
 
