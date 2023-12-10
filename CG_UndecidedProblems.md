@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Undecided Problems Team Tach 
+title: Undecided Problems 
 permalink: /undecidedproblems/
 ---
 
