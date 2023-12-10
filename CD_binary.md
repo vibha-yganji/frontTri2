@@ -287,5 +287,67 @@ document.getElementById('inputB').addEventListener('change', function() {
       generateLogicGateChallenge();
     };
   </script>
+</html>
+| System      | Base | Digits          | Representation               | Examples                  | Usage                                  |
+|-------------|------|-----------------|------------------------------|----------------------------|----------------------------------------|
+| Decimal     | 10   | 0-9             | Place value (base 10)        | 42, 105, 789               | Everyday numbering system              |
+| Binary      | 2    | 0, 1            | Powers of 2 (base 2)         | 1010, 1101, 11110011       | Computers, digital systems              |
+| Hexadecimal | 16   | 0-9, A-F        | Powers of 16 (base 16)       | 1A, 3D, FF7A               | Memory addressing (computers), colors   |
 
+| Decimal | Binary  | Hexadecimal |
+| ------- | ------- | ----------- |
+| 1       | 0001    | 1           |
+| 2       | 0010    | 2           |
+| 3       | 0011    | 3           |
+| 4       | 0100    | 4           |
+| 5       | 0101    | 5           |
+| 6       | 0110    | 6           |
+| 7       | 0111    | 7           |
+| 8       | 1000    | 8           |
+| 9       | 1001    | 9           |
+| 10      | 1010    | A           |
+| 11      | 1011    | B           |
+| 12      | 1100    | C           |
+| 13      | 1101    | D           |
+| 14      | 1110    | E           |
+| 15      | 1111    | F           |
+| 16      | 10000   | 10          |
+
+<html>
+<head>
+  <title>Binary to Decimal Converter</title>
+  <script>
+    function binaryToDecimal() {
+      var binaryInput = document.getElementById("binaryInput").value;
+      var decimalResult = 0;
+      var exponent = binaryInput.length - 1;
+      var exponentWork = [];
+
+      for (var i = 0; i < binaryInput.length; i++) {
+        if (binaryInput[i] === '1') {
+          decimalResult += Math.pow(2, exponent);
+          exponentWork.push("2^" + exponent);
+        }
+        exponent--;
+      }
+
+      document.getElementById("decimalResult").innerHTML = "Decimal: " + decimalResult;
+      document.getElementById("exponentWork").innerHTML = "Exponent work: " + exponentWork.join(" + ");
+    }
+  </script>
+</head>
+<body>
+  <h2>Binary to Decimal Converter</h2>
+  <label for="binaryInput">Enter a binary number: </label>
+  <input type="text" id="binaryInput" />
+  <button onclick="binaryToDecimal()">Convert</button>
+
+  <p id="decimalResult"></p>
+  <p id="exponentWork"></p>
+  <h2>ASCII Table</h2>
+  <p>Binary numbers can be converted into text characters using ASCII codes, aiding computers in storing information in their memory and processors. ASCII relies on a table of 128 characters, each character associated with a distinct decimal value.</p>
+  <img src="https://github.com/jplip/frontTri2/blob/main/images/ASCII_Codes_1.png" alt="ASCII Table Image" width="400">
+  <img src="https://github.com/jplip/frontTri2/blob/main/images/printing_ascii_control_characters-f.png" alt="ASCII Table Image" width="400">
+</body>
+</html>
 
