@@ -89,8 +89,6 @@ Therefore, HaltChecker cannot exist.
 
 **What are the consequences of the problem being undecidable?**
 
-What are the consequences of the problem being undecidable?
-
 **A.** The programmers can come up with an algorithm that will find 100% of the unreachable code, but it would take an unreasonable amount of time to run.
 
 **B.** The programmers can come up with an algorithm that correctly determines unreachable code most of the time, but it will not correctly identify unreachable code in all cases.
@@ -99,9 +97,7 @@ What are the consequences of the problem being undecidable?
 
 **D.** The tool will not be able to correctly identify any cases of unreachable code.
 
-<details style = "border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.5em;">
+<details>
   <summary>Solution</summary>
   <strong>B</strong> is the correct answer as the definition of an undecided problem states that an algorithm may be able to solve the problem in some cases but no algorithm exists to solve all cases.  
 </details>
@@ -119,9 +115,7 @@ Which of the following options best summarizes the Halting Problem?
 
 **D.** The Halting Problem is a theorem in number theory that deals with prime numbers.
 
-<details style = "border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.5em;">
+<details>
   <summary>Solution</summary>
   <strong>A</strong> is the correct answer as the Halting Problem was Turing's proof of the existence of an undecided problem.   
 </details>
