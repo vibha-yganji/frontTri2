@@ -287,7 +287,7 @@ document.getElementById('inputB').addEventListener('change', function() {
       generateLogicGateChallenge();
     };
   </script>
-</html>
+
 | System      | Base | Digits          | Representation               | Examples                  | Usage                                  |
 |-------------|------|-----------------|------------------------------|----------------------------|----------------------------------------|
 | Decimal     | 10   | 0-9             | Place value (base 10)        | 42, 105, 789               | Everyday numbering system              |
@@ -313,7 +313,6 @@ document.getElementById('inputB').addEventListener('change', function() {
 | 15      | 1111    | F           |
 | 16      | 10000   | 10          |
 
-<html>
 <head>
   <title>Binary to Decimal Converter</title>
   <script>
