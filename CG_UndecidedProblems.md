@@ -6,7 +6,7 @@ permalink: /undecidedproblems/
 
 
 
-## What is an Undecidable Problem? (Bella)
+# What is an Undecidable Problem? (Bella)
 
 Some problems take a very long time to solve, so we use algorithms that give approximate solutions. There are some problems that a computer can never solve, even the world's most powerful computer with infinite time: the undecidable problems.
 
