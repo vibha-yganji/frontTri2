@@ -91,17 +91,17 @@ Therefore, HaltChecker cannot exist.
 
 What are the consequences of the problem being undecidable?
 
-**A**  The programmers can come up with an algorithm that will find 100% of the unreachable code, but it would take an unreasonable amount of time to run.
+**A** - The programmers can come up with an algorithm that will find 100% of the unreachable code, but it would take an unreasonable amount of time to run.
 
-**B** The programmers can come up with an algorithm that correctly determines unreachable code most of the time, but it will not correctly identify unreachable code in all cases.
+**B** - The programmers can come up with an algorithm that correctly determines unreachable code most of the time, but it will not correctly identify unreachable code in all cases.
 
-**C** The programmers may be able to come up with an algorithm to find 100% of the unreachable code, but nobody has come up with the algorithm yet, so they will need more development time.
+**C** - The programmers may be able to come up with an algorithm to find 100% of the unreachable code, but nobody has come up with the algorithm yet, so they will need more development time.
 
-**D** The tool will not be able to correctly identify any cases of unreachable code.
+**D** - The tool will not be able to correctly identify any cases of unreachable code.
 
 <details>
-  <summary>Solution</summary>
-  <strong>B</strong> is the correct answer
+  <summary style = "font-weight: 800; font-size: 16px;">Solution</summary>
+  <strong>B</strong> is the correct answer as the definition of an undecided problem states that an algorithm may be able to solve the problem in some cases but no algorithm exists to solve all cases.  
 </details>
 
 
