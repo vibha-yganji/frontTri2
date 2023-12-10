@@ -24,18 +24,12 @@ The Halting Problem is a classic example of an undecidable problem in computer s
 The essence of the Halting Problem revolves around creating an algorithm that can accurately determine, for any program and input, whether that program will halt or continue running forever. Alan Turing proved that such an algorithm cannot exist.
 
 For example, consider this program that counts down:
-num ← 10
-REPEAT UNTIL (num = 0) {
-  DISPLAY(num)
-  num ← num - 1
-}
+![Alt text](images/decided.png)
+
 That program will halt, since num eventually becomes 0.
 Compare that to this program that counts up:
-num ← 1
-REPEAT UNTIL (num = 0) {
-  DISPLAY(num)
-  num ← num + 1
-}
+![Alt text](images/undecided.png)
+
 It counts up forever, since num will never equal 0.
 Algorithms do exist that can correctly predict that the first program halts and the second program never does. These are simple programs which don't change based on different inputs.
 However, no algorithm exists that can analyze any program's code and determine whether it halts or not.
