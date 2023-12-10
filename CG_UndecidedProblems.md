@@ -118,7 +118,7 @@ Which of the following options best summarizes the Halting Problem?
 **D.** The Halting Problem is a theorem in number theory that deals with prime numbers.
 
 <details>
-  <summary">Solution</summary>
+  <summary>Solution</summary>
   <strong>A</strong> is the correct answer as the Halting Problem was Turing's proof of the existence of an undecided problem.   
 </details>
 
