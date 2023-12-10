@@ -476,10 +476,10 @@ document.getElementById('inputB').addEventListener('change', function() {
   <p id="exponentWork"></p>
   <h2>ASCII Table</h2>
   <p>Binary numbers can be converted into text characters using ASCII codes, aiding computers in storing information in their memory and processors. ASCII relies on a table of 128 characters, each character associated with a distinct decimal value.</p>
-  <img src="https://github.com/jplip/frontTri2/blob/main/images/ASCII_Codes_1.png">
-  <img src="https://github.com/jplip/frontTri2/blob/main/images/printing_ascii_control_characters-f.png">
-  <img src="/mnt/c/Users/anush/frontTri2/images/printing_ascii_control_characters-f.png">
-  <img src="/mnt/c/Users/anush/frontTri2/images/ASCII_Codes_1.png">
+  <!-- <img src="https://github.com/jplip/frontTri2/blob/main/images/ASCII_Codes_1.png">
+  <img src="https://github.com/jplip/frontTri2/blob/main/images/printing_ascii_control_characters-f.png"> -->
+  <p><a href="https://github.com/jplip/frontTri2/blob/main/images/ASCII_Codes_1.png">Non Printing Codes</a></p>
+  <p><a href="https://github.com/jplip/frontTri2/blob/main/images/printing_ascii_control_characters-f.png">Printing Control Characters</a></p>
 </body>
 </html>
 
