@@ -104,7 +104,8 @@ The primary purpose of steganography is to conceal the existence of a secret mes
 <center>
     <img src="{{site.baseurl}}/images/encode.png" width="900" height=120>
 </center>
-- python encode.py './images/broccoli_thouse.png' 'skirt'
+- python encode.py './images/broccoli_thouse.png' 'yellow'
+    - the ' ' might be regular commas so retype them when copied
 - code being enabled in screenshot below
 <pre>
 import sys
@@ -178,6 +179,7 @@ if __name__ == '__main__':
     <img src="{{site.baseurl}}/images/decode.png" width="900" height=120>
 </center>
 - python decode.py './images/broccoli_thouse_lsb_embeded.png'
+    - the ' ' might be regular commas so retype them when copied
 - code being enabled in screenshot below
 <pre>
 import sys
