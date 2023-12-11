@@ -356,5 +356,3 @@ permalink: /Binary Representation/
         }
     </script>
 </body>
-
-</html>
