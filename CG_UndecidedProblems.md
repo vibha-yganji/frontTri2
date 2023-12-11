@@ -6,7 +6,7 @@ permalink: /undecidedproblems/
 
 
 
-# What is an Undecidable Problem? (Bella)
+# What is an Undecidable Problem? 
 
 Some problems take a very long time to solve, so we use algorithms that give approximate solutions. There are some problems that a computer can never solve, even the world's most powerful computer with infinite time: the undecidable problems.
 
@@ -17,7 +17,7 @@ Some problems take a very long time to solve, so we use algorithms that give app
 - An undecidable problem is one for which no algorith can be constructed that is always capable of providing a correct yes-or-no answer. (Collegeboard AAP-4.B.2) An undecidable problem may have some instances  that have an algorthimic solution, but there is no algorithmic solution that could solve all instances of the problem. 
 
 
-# Halting Problem (Bella )
+# Halting Problem 
 
 The Halting Problem is a classic example of an undecidable problem in computer science, formulated by Alan Turing in the 1930s. It addresses the fundamental question of whether a program, given any input, will eventually halt (terminate) or run indefinitely (enter an infinite loop).
 
