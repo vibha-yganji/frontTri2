@@ -1,14 +1,3 @@
----
-layout: page
-title: Undecided Problems 
-permalink: /undecidedproblems/
----
-
-
-
-# What is an Undecidable Problem? (Bella)
-
-Some problems take a very long time to solve, so we use algorithms that give approximate solutions. There are some problems that a computer can never solve, even the world's most powerful computer with infinite time: the undecidable problems.
 
 
 
@@ -97,13 +86,7 @@ Therefore, HaltChecker cannot exist.
 
 
 
-# Implications and Further Undecidable Problems (10 minutes):(Justin)
-- **Consequences:** Discuss the implications of proving the Halting Problem as undecidable in the realm of computer science.
-- **Additional Undecidable Problems:** Introduce other undecidable problems, highlighting their similarities to the Halting Problem.
 
-- The Post Correspondence Problem (PCP)
-- **Description:** Given a set of tiles with strings, the PCP seeks a sequence that concatenates to identical top and bottom strings.
-- **Undecidability:** Turing demonstrated that no algorithm can determine this sequence for all sets of tiles.
 
 - Rice's Theorem
 - **Description:** Deals with non-trivial properties of program behavior.
@@ -120,6 +103,9 @@ Therefore, HaltChecker cannot exist.
 -- The Entscheidungsproblem
 - **Description:** Focuses on determining the validity of logical statements within a logical system.
 - **Undecidability:** Gödel, Church, and Turing proved the Entscheidungsproblem to be undecidable.
+
+# Popcorn Hacks 
+
 
 
 
