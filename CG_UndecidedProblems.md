@@ -87,7 +87,6 @@ Therefore, HaltChecker cannot exist.
 
 
 
-
 - Rice's Theorem
 - **Description:** Deals with non-trivial properties of program behavior.
 - **Undecidability:** It states that determining properties like a program's output is undecidable.
@@ -104,19 +103,26 @@ Therefore, HaltChecker cannot exist.
 - **Description:** Focuses on determining the validity of logical statements within a logical system.
 - **Undecidability:** Gödel, Church, and Turing proved the Entscheidungsproblem to be undecidable.
 
-# Popcorn Hacks 
-
-
-
-
-
-
-
+    
 
 
 ### 3. Review of Alternative Examples of Undecided Problems
 
-Which of the following options is not an example of an undecided problem?
+Which of the following options is not an example of an undecidable problem?
+
+**A.** Halting Problem
+
+**B.** The Collatz Conjecture
+
+**C.** Rice's Theorem
+
+**D.** Bubble sorting
+
+
+<details>
+  <summary>Solution</summary>
+  <strong>D</strong> is the correct answer as the other three options are part of the previously discussed examples of undecided problems.   
+</details>
 
 
 
