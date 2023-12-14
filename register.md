@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Set Up Profile
-permalink: /set_up_profile/
+permalink: /set_up/
 ---
 
 <!DOCTYPE html>
