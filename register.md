@@ -4,7 +4,6 @@ title: Set Up Profile
 permalink: /set_up/
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
