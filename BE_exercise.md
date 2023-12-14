@@ -115,16 +115,24 @@ permalink: /exercise/
         function performAND(flag1, flag2) {
             return (flag1 && flag2) ? 1 : 0;
         }
-       function createBadge(flag) {
+        function createBinaryBadge(duration, isToday) {
             const binaryBadgeElement = document.getElementById('binaryDurationBadge');
-            if (flag) {
-                // Display ASCII art for badge (Example: "---")
+            binaryBadgeElement.innerHTML = '';
+            if (isToday) {
                 const asciiBadge = document.createElement('pre');
                 asciiBadge.style.fontSize = '24px';
                 asciiBadge.style.lineHeight = '1';
                 asciiBadge.style.color = 'green';
-                asciiBadge.textContent = '---';
+                asciiBadge.textContent = 'Today';
                 binaryBadgeElement.appendChild(asciiBadge);
+            } else if (duration >= 30) {
+                const binaryString = (duration >>> 0).toString(2); // Convert duration to binary string
+                for (let i = 0; i < binaryString.length; i++) {
+                    const span = document.createElement('span');
+                    span.textContent = binaryString[i];
+                    span.classList.add('binary-digit');
+                    binaryBadgeElement.appendChild(span);
+                }
             } else {
                 for (let i = 0; i < 6; i++) {
                     const span = document.createElement('span');
@@ -134,14 +142,26 @@ permalink: /exercise/
                 }
             }
         }
-
-
+    function displayBinaryBadge(duration, exerciseDate) {
+        const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+        binaryBadgeElement.innerHTML = '';
+        const today = new Date();
+        const exercise = new Date(exerciseDate);
+        const isToday = (
+            today.getFullYear() === exercise.getFullYear() &&
+            today.getMonth() === exercise.getMonth() &&
+            today.getDate() === exercise.getDate()
+        );
+        createBinaryBadge(duration, isToday);
+    }
     </script>
     <iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
 
 </body>
 
 </html>
+
+
 
 
 
