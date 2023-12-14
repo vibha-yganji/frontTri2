@@ -117,13 +117,13 @@ permalink: /exercise/
         }
         function createBadge(flag) {
             const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+            binaryBadgeElement.innerHTML = ''; // Clear previous badge
             if (flag) {
-                for (let i = 0; i < 6; i++) {
-                    const span = document.createElement('span');
-                    span.textContent = '1';
-                    span.classList.add('binary-digit', 'binary-one');
-                    binaryBadgeElement.appendChild(span);
-                }
+                // Display ASCII art for badge (Example: "---")
+                binaryBadgeElement.innerHTML = `
+                    <pre style="font-size: 24px; line-height: 1; color: green;">
+                    ---
+                    </pre>`;
             } else {
                 for (let i = 0; i < 6; i++) {
                     const span = document.createElement('span');
