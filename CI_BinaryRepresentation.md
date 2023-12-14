@@ -1,8 +1,8 @@
----
+<!---
 layout: page
 title: Binary Representation
 permalink: /Binary Representation/
----
+---> 
 <html>
 <head>
   <title>Number Systems</title>

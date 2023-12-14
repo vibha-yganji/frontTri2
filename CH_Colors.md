@@ -1,8 +1,8 @@
----
+<!---
 layout: page
 title: Binary Color
 permalink: /BinaryColor/
----
+--->
 <style>
   body {
     display: flex;

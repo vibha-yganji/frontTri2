@@ -1,8 +1,8 @@
----
+<!---
 layout: page
 title: Steganography
 permalink: /Steganography/
----
+--->
 <style>
     .image-container {
         display: flex;

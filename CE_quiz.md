@@ -1,8 +1,8 @@
----
+<!-----
 layout: page
 title: Binary Quiz
 permalink: /quiz/
----
+--->
 <html>
 <head>
   <style>
