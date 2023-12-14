@@ -115,24 +115,26 @@ permalink: /exercise/
         function performAND(flag1, flag2) {
             return (flag1 && flag2) ? 1 : 0;
         }
-        function createBadge(flag) {
-            const binaryBadgeElement = document.getElementById('binaryDurationBadge');
-            binaryBadgeElement.innerHTML = ''; // Clear previous badge
-            if (flag) {
-                // Display ASCII art for badge (Example: "---")
-                binaryBadgeElement.innerHTML = `
-                    <pre style="font-size: 24px; line-height: 1; color: green;">
-                    ---
-                    </pre>`;
-            } else {
-                for (let i = 0; i < 6; i++) {
-                    const span = document.createElement('span');
-                    span.textContent = '0';
-                    span.classList.add('binary-digit');
-                    binaryBadgeElement.appendChild(span);
-                }
+       function createBadge(flag) {
+        const binaryBadgeElement = document.getElementById('binaryDurationBadge');
+        if (flag) {
+            // Display ASCII art for badge (Example: "---")
+            const asciiBadge = document.createElement('pre');
+            asciiBadge.style.fontSize = '24px';
+            asciiBadge.style.lineHeight = '1';
+            asciiBadge.style.color = 'green';
+            asciiBadge.textContent = '---';
+            binaryBadgeElement.appendChild(asciiBadge);
+        } else {
+            for (let i = 0; i < 6; i++) {
+                const span = document.createElement('span');
+                span.textContent = '0';
+                span.classList.add('binary-digit');
+                binaryBadgeElement.appendChild(span);
             }
         }
+    }
+
     </script>
     <iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
 
