@@ -9,7 +9,7 @@ permalink: /profile/
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Binary Guessing Game</title>
+  <title></title>
 </head>
 <body>
 
