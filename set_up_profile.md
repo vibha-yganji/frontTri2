@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Profile
+title: Set Up Profile
 permalink: /set_up_profile/
 ---
 
