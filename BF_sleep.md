@@ -14,8 +14,10 @@ permalink: /sleep/
     <form id="sleepForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
         <label for="sleepHours">Hours of Sleep:</label>
         <input type="number" id="sleepHours" name="sleepHours" placeholder="Enter hours of sleep" required>
+
         <label for="quality">Quality of Sleep:</label>
         <select id="quality" name="quality" required>
             <option value="" disabled selected>Select quality</option>
@@ -24,8 +26,10 @@ permalink: /sleep/
             <option value="fair">Fair</option>
             <option value="poor">Poor</option>
         </select>
+
         <label for="sleepDate">Date:</label>
         <input type="date" id="sleepDate" name="sleepDate" required>
+
         <input type="submit" value="Submit">
     </form>
 </div>
@@ -33,8 +37,10 @@ permalink: /sleep/
 <script>
     document.getElementById('sleepForm').addEventListener('submit', function (event) {
         event.preventDefault();
-        const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); // was null before yikes!
-        console.log(userIDFromLocalStorage); //forgot to add this code
+
+        const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
+        console.log(userIDFromLocalStorage);
+
         const name = document.getElementById('name').value;
         const sleepHours = document.getElementById('sleepHours').value;
         const quality = document.getElementById('quality').value;
@@ -49,20 +55,24 @@ permalink: /sleep/
             "sleepDate": sleepDate
         };
 
+        const payload = {
+            "id": userIDFromLocalStorage, // ID from local storage
+            "name": name,
+            "uid": "life", // Database decides
+            "dob": "10/12/13", // Date of birth - adjust accordingly
+            "age": "16", // User's age - adjust accordingly
+            "exercise": [], // Empty exercise array
+            "tracking": {
+                "sleep": [sleepData] // Place sleepData within an array
+            }
+        };
+
         fetch(backendURL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                "id": userIDFromLocalStorage, // id from local storage
-                "name": name,
-                "uid": "life", // database decides
-                "dob": "10/12/13", //
-                "age": "16",
-                "exercise": [], // Corrected to an empty array
-                "tracking": sleepData // Corrected variable name to sleepData
-            })
+            body: JSON.stringify(payload)
         })
         .then(response => {
             if (!response.ok) {
@@ -72,12 +82,10 @@ permalink: /sleep/
         })
         .then(data => {
             console.log('Data submitted successfully:', data);
-            // You can add additional logic here after successful submission
+            // Additional logic after successful submission
         })
         .catch(error => {
             console.error('Error:', error);
         });
     });
 </script>
-
-
