@@ -356,8 +356,8 @@ input[type="number"],
 /* Style labels */
 .purple-form label {
   display: block;
-  margin-bottom: 6px;
-  color: whitesmoke; /* Darker purple text color */
+  margin-bottom: 6px; /* Darker purple text color */
+  color: plum; 
 }
 
 /* Style form inputs */
@@ -368,7 +368,8 @@ input[type="number"],
   padding: 8px;
   margin-bottom: 12px;
   border: none;
-  color:lavender;
+  background-color: lavenderblush;
+  color: plum;
   border-radius: 4px;
 }
 
