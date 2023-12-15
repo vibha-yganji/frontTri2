@@ -33,7 +33,8 @@ permalink: /sleep/
 <script>
     document.getElementById('sleepForm').addEventListener('submit', function (event) {
         event.preventDefault();
-
+        const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); // was null before yikes!
+        console.log(userIDFromLocalStorage); //forgot to add this code
         const name = document.getElementById('name').value;
         const sleepHours = document.getElementById('sleepHours').value;
         const quality = document.getElementById('quality').value;
