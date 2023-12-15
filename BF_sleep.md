@@ -52,7 +52,7 @@ permalink: /sleep/
                     const sleep = {
                         "name": name,
                         "sleepHours": sleepHours,
-                        "quality": date,
+                        "quality": quality, 
                         "sleepDate": sleepData
                     }
                     const updatedSleepData = [...originalSleepData, sleep];
