@@ -54,9 +54,7 @@ permalink: /sleep/
             "dob": "10/12/13", // Date of birth - adjust accordingly
             "age": "16", // User's age - adjust accordingly
             "exercise": [], // Empty exercise array
-            "tracking": {
-                "sleep": [sleepData] // Place sleepData within an array
-            }
+            "tracking": sleepData
         };
 
         fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
