@@ -35,12 +35,10 @@ permalink: /sleep/
 </div>
 
 <script>
+    const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); // changed to put before eventlistner
+    console.log(userIDFromLocalStorage);
     document.getElementById('sleepForm').addEventListener('submit', function (event) {
         event.preventDefault();
-
-        const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
-        console.log(userIDFromLocalStorage);
-
         const name = document.getElementById('name').value;
         const sleepHours = document.getElementById('sleepHours').value;
         const quality = document.getElementById('quality').value;
