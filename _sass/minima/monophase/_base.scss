@@ -343,18 +343,21 @@ input[type="number"],
 
 /* Styling the form */
 .purple-form {
-  max-width: 300px; /* Adjust width as needed */
+  max-width: 500px; /* Adjust width as needed */
   margin: 20px auto; /* Center the form */
   padding: 20px;
-  background-color: #e1bee7; /* Light purple background color */
+  background-color: #d1a6e1; /* Slightly darker purple background color */
   border-radius: 8px;
 }
+
+/* Rest of your existing CSS styles... */
+
 
 /* Style labels */
 .purple-form label {
   display: block;
   margin-bottom: 6px;
-  color: #4527a0; /* Darker purple text color */
+  color: whitesmoke; /* Darker purple text color */
 }
 
 /* Style form inputs */
@@ -365,6 +368,7 @@ input[type="number"],
   padding: 8px;
   margin-bottom: 12px;
   border: none;
+  color:lavender;
   border-radius: 4px;
 }
 
