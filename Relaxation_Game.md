@@ -3,27 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Meditation Session</title>
-    <style>
-        /* Some basic styles for the page */
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <h1>Guided Meditation Session</h1>
-    <button id="fetchMeditationBtn">Fetch Meditation Session</button>
+    <button class="btn fetchMeditationBtn">Fetch Meditation Session</button>
     <div id="meditationInfo"></div>
 
     <script>
-        document.getElementById('fetchMeditationBtn').addEventListener('click', function() {
+        document.querySelector('.fetchMeditationBtn').addEventListener('click', function() {
             fetch('/fetch_meditation') // Replace this URL with your server endpoint
                 .then(response => response.json())
                 .then(data => {
