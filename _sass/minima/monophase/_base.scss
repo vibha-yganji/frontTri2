@@ -339,3 +339,49 @@ input[type="number"],
     background-color: #f0f0f0;
   }
 }
+
+
+/* Styling the form */
+.purple-form {
+  max-width: 1000px; /* Adjust width as needed */
+  margin: 20px auto; /* Center the form */
+  padding: 20px;
+  background-color: #A69EEF; /* Slightly darker purple background color */
+  border-radius: 8px;
+}
+
+/* Rest of your existing CSS styles... */
+
+
+/* Style labels */
+.purple-form label {
+  display: block;
+  margin-bottom: 6px; /* Darker purple text color */
+  color: plum; 
+}
+
+/* Style form inputs */
+.purple-form input[type="text"],
+.purple-form input[type="email"],
+.purple-form input[type="submit"] {
+  width: calc(100% - 12px); /* Adjust width and spacing */
+  padding: 8px;
+  margin-bottom: 12px;
+  border: none;
+  background-color: lavenderblush;
+  color: plum;
+  border-radius: 4px;
+}
+
+/* Style submit button */
+.purple-form input[type="submit"] {
+  background-color: lavenderblush; /* Lavenderblush color for the submit button */
+  color: #4527a0; /* Darker purple text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for submit button */
+.purple-form input[type="submit"]:hover {
+  background-color: #f8bbd0; /* Lighter shade of lavenderblush on hover */
+}

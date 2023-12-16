@@ -3,6 +3,7 @@ layout: base
 title: Sleep 
 permalink: /sleep/
 --- 
+
 <meta charset="UTF-8">
 <title>Sleep Tracker</title>
 <style>
@@ -14,10 +15,8 @@ permalink: /sleep/
     <form id="sleepForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
         <label for="sleepHours">Hours of Sleep:</label>
         <input type="number" id="sleepHours" name="sleepHours" placeholder="Enter hours of sleep" required>
-
         <label for="quality">Quality of Sleep:</label>
         <select id="quality" name="quality" required>
             <option value="" disabled selected>Select quality</option>
@@ -26,16 +25,14 @@ permalink: /sleep/
             <option value="fair">Fair</option>
             <option value="poor">Poor</option>
         </select>
-
         <label for="sleepDate">Date:</label>
         <input type="date" id="sleepDate" name="sleepDate" required>
-
         <input type="submit" value="Submit">
     </form>
 </div>
 
 <script>
-    const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); // changed to put before eventlistner
+    const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
     console.log(userIDFromLocalStorage);
     document.getElementById('sleepForm').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -43,47 +40,50 @@ permalink: /sleep/
         const sleepHours = document.getElementById('sleepHours').value;
         const quality = document.getElementById('quality').value;
         const sleepDate = document.getElementById('sleepDate').value;
-
-        const backendURL = 'http://127.0.0.1:8240/api/users'; // Replace with your API endpoint
-
-        const sleepData = {
-            "name": name,
-            "sleepHours": sleepHours,
-            "quality": quality,
-            "sleepDate": sleepDate
-        };
-
-        const payload = {
-            "id": userIDFromLocalStorage, // ID from local storage
-            "name": name,
-            "uid": "life", // Database decides
-            "dob": "10/12/13", // Date of birth - adjust accordingly
-            "age": "16", // User's age - adjust accordingly
-            "exercise": [], // Empty exercise array
-            "tracking": {
-                "sleep": [sleepData] // Place sleepData within an array
-            }
-        };
-
-        fetch(backendURL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Data submitted successfully:', data);
-            // Additional logic after successful submission
-        })
-        .catch(error => {
-            console.error('Error:', error);
+        fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const originalSleepData = Array.isArray(data.sleep) ? data.sleep : [];
+                    const sleep = {
+                        "name": name,
+                        "sleepHours": sleepHours,
+                        "quality": quality, 
+                        "sleepDate": sleepDate
+                    }
+                    const updatedSleepData = [...originalSleepData, sleep];
+                    const data2 = {
+                        "id": userIDFromLocalStorage,
+                        "name": name,
+                        "uid": "life",
+                        "dob": "10/12/13",
+                        "age": "16",
+                        "exercise": updatedSleepData,
+                        "tracking": {}
+                    };
+                    var jsonData = JSON.stringify(data2);
+                    fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: jsonData
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Server response:', data);
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         });
-    });
+    
 </script>

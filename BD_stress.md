@@ -3,70 +3,66 @@ layout: base
 title: Stress
 permalink: /stress/
 --- 
-<html lang="en">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Are You Stressed?</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-  </style>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+</style>
 
-  <div class="container_stress">
-    <h1>Stress Quiz</h1>
+<div class="container_stress">
+  <h1>Stress Quiz</h1>
 
-    <form id="stressForm">
-      <div class="question" id="question1">
-        <label>
-          <strong>1. How often do you feel overwhelmed?</strong><br>
-          <input type="radio" name="question1" value="1"> Rarely<br>
-          <input type="radio" name="question1" value="2"> Occasionally<br>
-          <input type="radio" name="question1" value="3"> Frequently<br>
-          <input type="radio" name="question1" value="4"> Almost always<br>
-        </label>
-      </div>
+  <form id="stressForm">
+    <div class="question" id="question1">
+      <label>
+        <strong>1. How often do you feel overwhelmed?</strong><br>
+        <input type="radio" name="question1" value="1"> Rarely<br>
+        <input type="radio" name="question1" value="2"> Occasionally<br>
+        <input type="radio" name="question1" value="3"> Frequently<br>
+        <input type="radio" name="question1" value="4"> Almost always<br>
+      </label>
+    </div>
 
-      <div class="question" id="question2" style="display: none;">
-        <label>
-          <strong>2. Do you have trouble sleeping due to stress?</strong><br>
-          <input type="radio" name="question2" value="1"> Never<br>
-          <input type="radio" name="question2" value="2"> Rarely<br>
-          <input type="radio" name="question2" value="3"> Sometimes<br>
-          <input type="radio" name="question2" value="4"> Often<br>
-        </label>
-      </div>
+    <div class="question" id="question2" style="display: none;">
+      <label>
+        <strong>2. Do you have trouble sleeping due to stress?</strong><br>
+        <input type="radio" name="question2" value="1"> Never<br>
+        <input type="radio" name="question2" value="2"> Rarely<br>
+        <input type="radio" name="question2" value="3"> Sometimes<br>
+        <input type="radio" name="question2" value="4"> Often<br>
+      </label>
+    </div>
 
-      <div class="question" id="question3" style="display: none;">
-        <label>
-          <strong>3. How often do you experience physical symptoms of stress (headaches, muscle tension, etc.)?</strong><br>
-          <input type="radio" name="question3" value="1"> Rarely<br>
-          <input type="radio" name="question3" value="2"> Occasionally<br>
-          <input type="radio" name="question3" value="3"> Frequently<br>
-          <input type="radio" name="question3" value="4"> Almost always<br>
-        </label>
-      </div>
+    <div class="question" id="question3" style="display: none;">
+      <label>
+        <strong>3. How often do you experience physical symptoms of stress (headaches, muscle tension, etc.)?</strong><br>
+        <input type="radio" name="question3" value="1"> Rarely<br>
+        <input type="radio" name="question3" value="2"> Occasionally<br>
+        <input type="radio" name="question3" value="3"> Frequently<br>
+        <input type="radio" name="question3" value="4"> Almost always<br>
+      </label>
+    </div>
 
-      <div class="buttons">
-        <button type="button" onclick="prevQuestion()" class="btn">Previous</button>
-        <button type="button" onclick="nextQuestion()" class="btn">Next</button>
-      </div>
+    <div class="buttons">
+      <button type="button" onclick="prevQuestion()" class="btn">Previous</button>
+      <button type="button" onclick="nextQuestion()" class="btn">Next</button>
+    </div>
 
-      <div id="result"></div>
+    <div id="result"></div>
 
-      <div id="progress-bar-container">
-        <div id="progress-bar"></div>
-      </div>
-    </form>
-  </div>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+  </form>
+</div>
 
-  <script>
+<script>
   let currentQuestion = 1;
 
   function calculateStress() {
