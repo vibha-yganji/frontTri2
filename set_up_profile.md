@@ -114,15 +114,54 @@ textarea{
  border: none;
 }
 
+.upload-container {
+      text-align: center;
+    }
+
+    .upload-button {
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: rgb(163, 67, 125);
+      color: black;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    #upload-input {
+      display: none;
+    }
+
+    #preview {
+      max-width: 300px;
+      margin-top: 20px;
+    }
+
+    #general, #health {
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+}
+
+#panel2 {
+    display: none;
+}
+
     </style>
+<script type="text/javascript" src="jquery.2.1.0.js">
+    $('#btnNext').click(function() {
+    $('#general').hide();
+    $('#health').show();
+
+});
+</script>
 </head>
 <body>
    <div class="container">
        <header>
            <h1 id='title'> Profile Set-Up</h1>
        </header>
-
-       <form id='survey-form'>
+       <form id='survey-form' method = "post>
+       <div id = 'general'>
            <div class='form-input'>
                <label id='name-label'>Name</label>
                <input type='text' id='name' placeholder='Enter your name' class='form-input-size' required />
@@ -136,7 +175,6 @@ textarea{
                </label>
                <input type='number' id='number' placeholder='25' min='0' max='80' class='form-input-size' />
            </div>
-
            <div class='form-input'>
                <p>Which option best describes your current role?</p>
                <select id='dropdown' class='form-input-size' required>
@@ -148,14 +186,16 @@ textarea{
                    <option value='Other'>Other</option>
                </select>
            </div>
-
            <div class='form-input'>
                <p>Would you be comfortable sharing your anonymous health information for crowdsourcing?</p>
-               <input type='radio' name='answer' id='radio-btn' value='Definately' checked />Definately    </br>
+               <input type='radio' name='answer' id='radio-btn' value='Definately' checked /> Definately    </br>
                <input type='radio' name='answer' id='radio-btn' value='Maybe' />Maybe </br>
                <input type='radio' name='answer' id='radio-btn' value='Not sure' />No</br>
            </div>
+           <button type= "button" id="btnNext">Next</button>
+</div>
 
+<div id = 'health'>
            <div class='form-input'>
                <p>How much water (in oz) do you drink daily?
                    <span>(Check all that apply)</span>
@@ -174,6 +214,32 @@ textarea{
                <label><input type='checkbox' id='check-box' value='Other'>Other</label>
            </div>
 
+           <div class="upload-container">
+    <input type="file" id="upload-input" accept="image/*">
+    <label for="upload-input" class="upload-button">Upload Profile Image</label>
+    <img id="preview" src="#" alt="Preview">
+  </div>
+  </div>
+
+  <script>
+    document.getElementById('upload-input').addEventListener('change', function() {
+      const fileInput = this;
+      const previewImg = document.getElementById('preview');
+
+      if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+          previewImg.src = e.target.result;
+        };
+
+        reader.readAsDataURL(fileInput.files[0]);
+      }
+    });
+  </script>
+
+           
+
            <div class='form-input'>
                <p>Any comments or suggestions to a new Web Developers?</p>
                <textarea type='text' placeholder='Enter your comment here...'></textarea>
@@ -182,8 +248,13 @@ textarea{
            <div class='form-input'>
                <button type='submit' id='submit'>Submit</button>
            </div>
+
+           
        </form>
    </div>
 
+   
+
 </body>
 </html>
+
