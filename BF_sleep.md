@@ -40,42 +40,50 @@ permalink: /sleep/
         const sleepHours = document.getElementById('sleepHours').value;
         const quality = document.getElementById('quality').value;
         const sleepDate = document.getElementById('sleepDate').value;
-        const sleepData = {
-            "name": name,
-            "sleepHours": sleepHours,
-            "quality": quality,
-            "sleepDate": sleepDate
-        };
-
-        const payload = {
-            "id": userIDFromLocalStorage, // ID from local storage
-            "name": name,
-            "uid": "life", // Database decides
-            "dob": "10/12/13", // Date of birth - adjust accordingly
-            "age": "16", // User's age - adjust accordingly
-            "exercise": [], // Empty exercise array
-            "tracking": sleepData
-        };
-
-        fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Data submitted successfully:', data);
-            // Additional logic after successful submission
-        })
-        .catch(error => {
-            console.error('Error:', error);
+        fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const originalSleepData = Array.isArray(data.sleep) ? data.sleep : [];
+                    const sleep = {
+                        "name": name,
+                        "sleepHours": sleepHours,
+                        "quality": quality, 
+                        "sleepDate": sleepDate
+                    }
+                    const updatedSleepData = [...originalSleepData, sleep];
+                    const data2 = {
+                        "id": userIDFromLocalStorage,
+                        "name": name,
+                        "uid": "life",
+                        "dob": "10/12/13",
+                        "age": "16",
+                        "exercise": updatedSleepData,
+                        "tracking": {}
+                    };
+                    var jsonData = JSON.stringify(data2);
+                    fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: jsonData
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Server response:', data);
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         });
-    }); 
+    
 </script>
