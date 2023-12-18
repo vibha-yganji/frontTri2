@@ -15,20 +15,19 @@ permalink: /stress/
   }
 </style>
 
-<div class="container_stress">
+<div class="container_stress"> <!-- questions -->
   <h1>Stress Quiz</h1>
 
   <form id="stressForm">
     <div class="question" id="question1">
       <label>
         <strong>1. How often do you feel overwhelmed?</strong><br>
-        <input type="radio" name="question1" value="1"> Rarely<br>
+        <input type="radio" name="question1" value="1"> Rarely<br> <!-- Value 1 lowest, 4 highest -->
         <input type="radio" name="question1" value="2"> Occasionally<br>
         <input type="radio" name="question1" value="3"> Frequently<br>
         <input type="radio" name="question1" value="4"> Almost always<br>
       </label>
     </div>
-
     <div class="question" id="question2" style="display: none;">
       <label>
         <strong>2. Do you have trouble sleeping due to stress?</strong><br>
@@ -38,7 +37,6 @@ permalink: /stress/
         <input type="radio" name="question2" value="4"> Often<br>
       </label>
     </div>
-
     <div class="question" id="question3" style="display: none;">
       <label>
         <strong>3. How often do you experience physical symptoms of stress (headaches, muscle tension, etc.)?</strong><br>
@@ -48,14 +46,11 @@ permalink: /stress/
         <input type="radio" name="question3" value="4"> Almost always<br>
       </label>
     </div>
-
-    <div class="buttons">
+    <div class="buttons"> <!--buttons to next and previous questions -->
       <button type="button" onclick="prevQuestion()" class="btn">Previous</button>
       <button type="button" onclick="nextQuestion()" class="btn">Next</button>
     </div>
-
     <div id="result"></div>
-
     <div id="progress-bar-container">
       <div id="progress-bar"></div>
     </div>
@@ -75,21 +70,23 @@ permalink: /stress/
     });
 
     const resultDiv = document.getElementById('result');
-    let stressLevel;
+    let stressLevel, progressBarClass;
 
-    if (totalScore <= 6) {
+    if (totalScore <= 3) {
       stressLevel = 'Low stress';
-      setProgressBar(25, 'low-stress');
-    } else if (totalScore <= 9) {
+      progressBarClass = 'low-stress';
+    } else if (totalScore <= 6) {
       stressLevel = 'Moderate stress';
-      setProgressBar(50, 'moderate-stress');
-    } else if (totalScore <= 12) {
+      progressBarClass = 'moderate-stress';
+    } else if (totalScore <= 9) {
       stressLevel = 'High stress';
-      setProgressBar(75, 'high-stress');
-    } else {
+      progressBarClass = 'high-stress';
+    } else if (totalScore <= 12) {
       stressLevel = 'Very high stress';
-      setProgressBar(100, 'very-high-stress');
+      progressBarClass = 'very-high-stress';
     }
+
+    setProgressBar((totalScore / 12) * 100, progressBarClass);
 
     resultDiv.innerHTML = `<p>Your stress level is: <strong>${stressLevel}</strong></p>`;
   }
