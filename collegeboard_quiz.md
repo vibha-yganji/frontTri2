@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Test Corrections
+title: Collegeboard Quiz Reflection
 permalink: /corrections/
 ---
 
