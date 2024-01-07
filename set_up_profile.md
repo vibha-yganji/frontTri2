@@ -14,6 +14,7 @@ permalink: /set_up_profile/
     <meta name="keywords" content="your, keywords, here">
     <meta name="author" content="Your Name">
 
+<style>
    @import "compass/css3";
 
 * { box-sizing: border-box; margin: 0; padding:0; }
@@ -124,6 +125,7 @@ html {
   }
   
 }
+</style>
 
     
 </head>
