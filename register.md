@@ -4,17 +4,12 @@ title: Set Up Profile
 permalink: /register/
 ---
 
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Your website description here">
     <meta name="keywords" content="your, keywords, here">
-    <meta name="author" content="Your Name">
-
-    <title>Your Page Title</title>
 
     <style>
   $yellow:#f5ba1a;
@@ -379,7 +374,6 @@ body {
 	}
 }
   </style>
-    -->
 </head>
 
 <body>
@@ -392,15 +386,20 @@ body {
     <div class="row clearfix">
       <div class="">
         <form>
+
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
             <input type="email" name="email" placeholder="Email" required />
+
           </div>
+
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
             <input type="password" name="password" placeholder="Password" required />
           </div>
+
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
             <input type="password" name="password" placeholder="Re-type Password" required />
           </div>
+
           <div class="row clearfix">
             <div class="col_half">
               <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
@@ -413,20 +412,55 @@ body {
               </div>
             </div>
           </div>
-            	<div class="input_field radio_option">
-              <input type="radio" name="radiogroup1" id="rd1">
-              <label for="rd1">Male</label>
-              <input type="radio" name="radiogroup1" id="rd2">
-              <label for="rd2">Female</label>
-              </div>
+            	<div class="input_field checkbox_option">
+    <input type="checkbox" name="checkbox1" id="chk1">
+    <label for="chk1">Male</label>
+    <input type="checkbox" name="checkbox2" id="chk2">
+    <label for="chk2">Female</label>
+</div>
+
               <div class="input_field select_option">
                 <select>
-                  <option>Select a country</option>
-                  <option>Option 1</option>
-                  <option>Option 2</option>
+                  <option>How many cups of water do you drink daily?</option>
+                  <option> 1 cup </option>
+                  <option> 2 cups </option>
+                  <option> 3 cups </option>
+                  <option> 4 cups </option>
+                  <option> 5 cups </option>
+                  <option> 6 cups </option>
+                  <option> 7 cups </option>
+                  <option> 8 cups </option>
+                  <option> 9 cups </option>
                 </select>
                 <div class="select_arrow"></div>
               </div>
+
+
+
+              <div class="input_field select_option">
+                <select>
+                  <option>How many calories do you eat in a given day?</option>
+                  <option> 100-200 </option>
+                  <option> 200-500</option>
+                  <option> 500-1000 </option>
+                  <option> 1000-1400 </option>
+                  <option> 1400-1900 </option>
+                </select>
+                <div class="select_arrow"></div>
+              </div>
+
+              <div class="input_field select_option">
+                <select>
+                  <option>How many hours of cardiovascular activity do you get in a given week??</option>
+                  <option> 0-1 </option>
+                  <option> 1-3 </option>
+                  <option> 5-7 </option>
+                  <option> 8-10 </option>
+                  <option> 10+ </option>
+                </select>
+                <div class="select_arrow"></div>
+              </div>
+
             <div class="input_field checkbox_option">
             	<input type="checkbox" id="cb1">
     			<label for="cb1">I agree with terms and conditions</label>

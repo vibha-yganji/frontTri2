@@ -4,7 +4,6 @@ title: Login
 permalink: /login/
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
