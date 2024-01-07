@@ -4,7 +4,7 @@ title: Set Up Profile
 permalink: /register/
 ---
 
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
