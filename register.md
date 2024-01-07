@@ -1,762 +1,451 @@
 ---
 layout: page
 title: Set Up Profile
-permalink: /set_up/
+permalink: /register/
 ---
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Your website description here">
+    <meta name="keywords" content="your, keywords, here">
+    <meta name="author" content="Your Name">
 
-	<style>
+    <title>Your Page Title</title>
 
-.dropbtn {
-  background-color: #30eb39;
-   margin-top:12px;
-   margin-right:5px;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #30eb39;
-}
-
-.dropdown {
-  float: right;
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(0,0,0,0.9);
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  right: 0;
-  z-index: 1;
-  
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-
-* {
-  box-sizing: border-box;
-}
+    <style>
+  $yellow:#f5ba1a;
+$black:#000000;
+$grey:#cccccc;
 
 body {
-  /* background-color: #f1f1f1; */
-
-  /* background-image: radial-gradient(circle, #d16ba5, #d164ae, #cf5fb8, #ca5ac4, #c257d1, #ba57d9, #b157e1, #a658ea, #9c5aee, #915bf3, #855df7, #775ffb); */
-  background-image: radial-gradient(circle, #f64fae, #e645b1, #d53cb5, #c236b8, #ad32bb, #a132c0, #9433c4, #8534c9, #7e38d1, #763cd9, #6b40e2, #5e44ea);
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	background: #f2f2f2;
 }
-
-
-
-
-.img1 {
-  display: block
+.clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		height: 0;
+	}
 }
-@media (max-width: 650px) {
-  .img1 {
-    display: none
-  }
-}
-
-
-
-
-
-
-
-
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 50%;
-  min-width: 300px;
-  border-radius: 3%;
- 
-}
-@media only screen and (max-width: 600px) {
-  /* place here CSS for when the screen is less than 1000px wide */
-  #regForm {
-    width: 97%;
-  
-  }
-}
-input:focus { 
-    outline: none !important;
-    border-color: #37eb5e;
-    box-shadow: 0 0 10px #30eb39;
-}
-textarea:focus { 
-    outline: none !important;
-    border-color: #719ECE;
-    box-shadow: 0 0 10px #719ECE;
-}
-h1 {
-  text-align: center;  
-}
-.flc{
-  float: left;
-}
-input {
-  padding: 15px;
-  width: 100%;
- border: none !important;; 
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa;
-  border-radius: 40px;
-  background-color: whitesmoke;
-}
-
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
-}
-
-/* Hide all steps by default: */
-.tab {
-  display: none;
-}
-
-button {
-  background-color: #30eb39;
-  outline: none !important;
-    border-color: #0eb132 !important;
-    box-shadow: 0 0 10px #16b31e!important;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  font-family: Raleway;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
-  background-color: black;
-}
-
-#prevBtn {
-  background-color: #bbbbbb;
-}
-
-/* Make circles that indicate the steps of the form: */
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  border: none;  
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
-
-.step.active {
-  opacity: 1;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #04AA6D;
-}
-select{
-  width: 100%;
-  background-color: whitesmoke;
-  padding: 15px;
-  border-radius: 40px;
-border:none;
-
-}
-
-select:focus{
-  outline: none !important;
-    border-color: #37eb5e !important;
-    box-shadow: 0 0 10px #30eb39!important;
-}
-
-[class^='select2'] {
-  border-radius: 0px !important;
-}
-.select2-selection__rendered {
-  margin: 10px;
-  border-radius: 40px;
-}
-.select2-selection__arrow {
-  margin: 10px;
-  border-radius: 40px;
-}
-.select2-selection {
-  -webkit-box-shadow: 0;
-  box-shadow: 0;
-  background-color: whitesmoke;
-  border: 0;
-  border-radius: 40px !important;
-  color: #555555;
-  font-size: 14px;
-  outline: 0;
-  min-height: 48px;
-  text-align: left;
-}
-
-.select2-selection__rendered {
-  margin: 10px;
-  border-radius: 40px;
-}
-
-.select2-selection__arrow {
-  margin: 10px;
-  border-radius: 40px;
-}
-body, html{
-  margin:0;
-  padding:0;
-}
-
-	</style>
-
-	<script>
-
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
-function showTab(n) {
-  // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  //... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n)
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form...
-  if (currentTab >= x.length) {
-    // ... the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
+.form_wrapper {
+	background: #fff;
+	width: 400px;
+	max-width: 100%;
+	box-sizing: border-box;
+	padding: 25px;
+	margin: 8% auto 0;
+	position: relative;
+	z-index: 1;
+	border-top: 5px solid $yellow;
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transition: none;
+    transition: none;
+    -webkit-animation: expand 0.8s 0.6s ease-out forwards;
+    animation: expand 0.8s 0.6s ease-out forwards;
+    opacity: 0;
+	h2 {
+		font-size: 1.5em;
+		line-height: 1.5em;
+		margin: 0;
+	}
+	.title_container {
+		text-align: center;
+		padding-bottom: 15px;
+	}
+	h3 {
+		font-size: 1.1em;
+		font-weight: normal;
+		line-height: 1.5em;
+		margin: 0;
+	}
+    label {
+        font-size: 12px;
+    }
+	.row {
+		margin: 10px -15px;
+		>div {
+			padding: 0 15px;
+			box-sizing: border-box;
+		}
+	}
+	.col_half {
+		width: 50%;
+		float: left;
+	}
+	.input_field {
+		position: relative;
+		margin-bottom: 20px;
+        -webkit-animation: bounce 0.6s ease-out;
+  	     animation: bounce 0.6s ease-out;
+		>span {
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: #333;
+			height: 100%;
+			border-right: 1px solid $grey;
+			text-align: center;
+			width: 30px;
+			>i {
+				padding-top: 10px;
+			}
+		}
+	}
+	.textarea_field {
+		>span {
+			>i {
+				padding-top: 10px;
+			}
+		}
+	}
+	input {
+    &[type="text"], &[type="email"], &[type="password"] {
+      width: 100%;
+      padding: 8px 10px 9px 35px;
+      height: 35px;
+      border: 1px solid $grey;
+      box-sizing: border-box;
+      outline: none;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      transition: all 0.30s ease-in-out;
+    }
+    &[type="text"]:hover, &[type="email"]:hover, &[type="password"]:hover {
+      background: #fafafa;
+    }
+    &[type="text"]:focus, &[type="email"]:focus, &[type="password"]:focus {
+      -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+      -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+      box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+      border: 1px solid $yellow;
+      background: #fafafa;
+    }
+    &[type="submit"] {
+		background: $yellow;
+		height: 35px;
+		line-height: 35px;
+		width: 100%;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		color: #fff;
+		font-size: 1.1em;
+		margin-bottom: 10px;
+		-webkit-transition: all 0.30s ease-in-out;
+		-moz-transition: all 0.30s ease-in-out;
+		-ms-transition: all 0.30s ease-in-out;
+		transition: all 0.30s ease-in-out;
+		&:hover {
+			background: darken($yellow,7%);
+		}
+		&:focus {
+			background: darken($yellow,7%);
+		}
+	}    
+    &[type="checkbox"], &[type="radio"] {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
     }
   }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
+}
+.form_container {
+	.row {
+		.col_half.last {
+			border-left: 1px solid $grey;
+		}
+	}
+}
+.checkbox_option{
+    label{
+        margin-right: 1em;
+        position: relative;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 0.5em;
+          height: 0.5em;
+          margin-right: 0.5em;
+          vertical-align: -2px;
+          border: 2px solid $grey;
+          padding: 0.12em;
+          background-color: transparent;
+          background-clip: content-box;
+          transition: all 0.2s ease;
+        }
+        &:after {
+          border-right: 2px solid $black;
+          border-top: 2px solid $black;
+          content: "";
+          height: 20px;
+          left: 2px;
+          position: absolute;
+          top: 7px;
+          transform: scaleX(-1) rotate(135deg);
+          transform-origin: left top;
+          width: 7px;
+          display: none;
+        }
+    }
+    input {
+    &:hover + label:before {
+      border-color: $black;
+    }
+    &:checked + label {
+      &:before {
+        border-color: $black;
+      }
+      &:after {
+        -moz-animation: check 0.8s ease 0s running;
+        -webkit-animation: check 0.8s ease 0s running;
+        animation: check 0.8s ease 0s running;
+        display: block;
+        width: 7px;
+        height: 20px;
+        border-color: $black;
+      }
+    }
   }
-  return valid; // return the valid status
 }
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
+.radio_option {
+  label {
+      margin-right: 1em;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 0.5em;
+      height: 0.5em;
+      margin-right: 0.5em;
+      border-radius: 100%;
+      vertical-align: -3px;
+      border: 2px solid $grey;
+      padding: 0.15em;
+      background-color: transparent;
+      background-clip: content-box;
+      transition: all 0.2s ease;
+    }
   }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
+  input {
+    &:hover + label:before {
+      border-color: $black;
+    }
+    &:checked + label:before {
+      background-color: $black;
+      border-color: $black;
+    }
+  }
+}
+.select_option {
+  position: relative;
+  width: 100%;
+  select {
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    padding: 0px 15px;
+    cursor: pointer;
+    color: #7b7b7b;
+    border: 1px solid $grey;
+    border-radius: 0;
+    background: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.2s ease;
+    &::-ms-expand {
+      display: none;
+    }
+    &:hover, &:focus {
+      color: $black;
+      background: #fafafa;
+      border-color: $black;
+      outline: none;
+    }
+  }
+}
+.select_arrow {
+  position: absolute;
+  top: calc(50% - 4px);
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-width: 8px 5px 0 5px;
+  border-style: solid;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+
+.select_option select {
+  &:hover + .select_arrow, &:focus + .select_arrow {
+    border-top-color: $black;
+  }
+}
+.credit {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	padding: 15px;
+	color: $yellow;
+	a {
+		color: darken($yellow,7%);
+	}
+}
+@-webkit-keyframes check {
+  0% { height: 0; width: 0; }
+  25% { height: 0; width: 7px; }
+  50% { height: 20px; width: 7px; }
+}
+
+@keyframes check {
+  0% { height: 0; width: 0; }
+  25% { height: 0; width: 7px; }
+  50% { height: 20px; width: 7px; }
+}
+
+@-webkit-keyframes expand { 
+	0% { -webkit-transform: scale3d(1,0,1); opacity:0; }
+	25% { -webkit-transform: scale3d(1,1.2,1); }
+	50% { -webkit-transform: scale3d(1,0.85,1); }
+	75% { -webkit-transform: scale3d(1,1.05,1); }
+	100% { -webkit-transform: scale3d(1,1,1);  opacity:1; }
+}
+
+@keyframes expand { 
+	0% { -webkit-transform: scale3d(1,0,1); transform: scale3d(1,0,1);  opacity:0; }
+	25% { -webkit-transform: scale3d(1,1.2,1); transform: scale3d(1,1.2,1); }
+	50% { -webkit-transform: scale3d(1,0.85,1); transform: scale3d(1,0.85,1); }
+	75% { -webkit-transform: scale3d(1,1.05,1); transform: scale3d(1,1.05,1); }
+	100% { -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1);  opacity:1; }
 }
 
 
-$(function() {
-  $('#myselect').select2({
-    placeholder: "select option",
-    selectOnClose: true
-  });
-});
-$(function() {
-  $('#inputState').select2({
-    placeholder: "select option",
-    selectOnClose: true
-  });
-});
-$(function() {
-  $('#inputDistrict').select2({
-    placeholder: "select option",
-    selectOnClose: true
-  });
-});
-$(function() {
-  $('#occupation').select2({
-    placeholder: "select option",
-    selectOnClose: true
-  });
-});
-
-
-
-
-
-</script>
-<script>
-  var AndraPradesh = ["Anantapur","Chittoor","East Godavari","Guntur","Kadapa","Krishna","Kurnool","Prakasam","Nellore","Srikakulam","Visakhapatnam","Vizianagaram","West Godavari"];
-var ArunachalPradesh = ["Anjaw","Changlang","Dibang Valley","East Kameng","East Siang","Kra Daadi","Kurung Kumey","Lohit","Longding","Lower Dibang Valley","Lower Subansiri","Namsai","Papum Pare","Siang","Tawang","Tirap","Upper Siang","Upper Subansiri","West Kameng","West Siang","Itanagar"];
-var Assam = ["Baksa","Barpeta","Biswanath","Bongaigaon","Cachar","Charaideo","Chirang","Darrang","Dhemaji","Dhubri","Dibrugarh","Goalpara","Golaghat","Hailakandi","Hojai","Jorhat","Kamrup Metropolitan","Kamrup (Rural)","Karbi Anglong","Karimganj","Kokrajhar","Lakhimpur","Majuli","Morigaon","Nagaon","Nalbari","Dima Hasao","Sivasagar","Sonitpur","South Salmara Mankachar","Tinsukia","Udalguri","West Karbi Anglong"];
-var Bihar = ["Araria","Arwal","Aurangabad","Banka","Begusarai","Bhagalpur","Bhojpur","Buxar","Darbhanga","East Champaran","Gaya","Gopalganj","Jamui","Jehanabad","Kaimur","Katihar","Khagaria","Kishanganj","Lakhisarai","Madhepura","Madhubani","Munger","Muzaffarpur","Nalanda","Nawada","Patna","Purnia","Rohtas","Saharsa","Samastipur","Saran","Sheikhpura","Sheohar","Sitamarhi","Siwan","Supaul","Vaishali","West Champaran"];
-var Chhattisgarh = ["Balod","Baloda Bazar","Balrampur","Bastar","Bemetara","Bijapur","Bilaspur","Dantewada","Dhamtari","Durg","Gariaband","Janjgir Champa","Jashpur","Kabirdham","Kanker","Kondagaon","Korba","Koriya","Mahasamund","Mungeli","Narayanpur","Raigarh","Raipur","Rajnandgaon","Sukma","Surajpur","Surguja"];
-var Goa = ["North Goa","South Goa"];
-var Gujarat = ["Ahmedabad","Amreli","Anand","Aravalli","Banaskantha","Bharuch","Bhavnagar","Botad","Chhota Udaipur","Dahod","Dang","Devbhoomi Dwarka","Gandhinagar","Gir Somnath","Jamnagar","Junagadh","Kheda","Kutch","Mahisagar","Mehsana","Morbi","Narmada","Navsari","Panchmahal","Patan","Porbandar","Rajkot","Sabarkantha","Surat","Surendranagar","Tapi","Vadodara","Valsad"];
-var Haryana = ["Ambala","Bhiwani","Charkhi Dadri","Faridabad","Fatehabad","Gurugram","Hisar","Jhajjar","Jind","Kaithal","Karnal","Kurukshetra","Mahendragarh","Mewat","Palwal","Panchkula","Panipat","Rewari","Rohtak","Sirsa","Sonipat","Yamunanagar"];
-var HimachalPradesh = ["Bilaspur","Chamba","Hamirpur","Kangra","Kinnaur","Kullu","Lahaul Spiti","Mandi","Shimla","Sirmaur","Solan","Una"];
-var JammuKashmir = ["Anantnag","Bandipora","Baramulla","Budgam","Doda","Ganderbal","Jammu","Kargil","Kathua","Kishtwar","Kulgam","Kupwara","Leh","Poonch","Pulwama","Rajouri","Ramban","Reasi","Samba","Shopian","Srinagar","Udhampur"];
-var Jharkhand = ["Bokaro","Chatra","Deoghar","Dhanbad","Dumka","East Singhbhum","Garhwa","Giridih","Godda","Gumla","Hazaribagh","Jamtara","Khunti","Koderma","Latehar","Lohardaga","Pakur","Palamu","Ramgarh","Ranchi","Sahebganj","Seraikela Kharsawan","Simdega","West Singhbhum"];
-var Karnataka = ["Bagalkot","Bangalore Rural","Bangalore Urban","Belgaum","Bellary","Bidar","Vijayapura","Chamarajanagar","Chikkaballapur","Chikkamagaluru","Chitradurga","Dakshina Kannada","Davanagere","Dharwad","Gadag","Gulbarga","Hassan","Haveri","Kodagu","Kolar","Koppal","Mandya","Mysore","Raichur","Ramanagara","Shimoga","Tumkur","Udupi","Uttara Kannada","Yadgir"];
-var Kerala = ["Alappuzha","Ernakulam","Idukki","Kannur","Kasaragod","Kollam","Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta","Thiruvananthapuram","Thrissur","Wayanad"];
-var MadhyaPradesh = ["Agar Malwa","Alirajpur","Anuppur","Ashoknagar","Balaghat","Barwani","Betul","Bhind","Bhopal","Burhanpur","Chhatarpur","Chhindwara","Damoh","Datia","Dewas","Dhar","Dindori","Guna","Gwalior","Harda","Hoshangabad","Indore","Jabalpur","Jhabua","Katni","Khandwa","Khargone","Mandla","Mandsaur","Morena","Narsinghpur","Neemuch","Panna","Raisen","Rajgarh","Ratlam","Rewa","Sagar","Satna",
-"Sehore","Seoni","Shahdol","Shajapur","Sheopur","Shivpuri","Sidhi","Singrauli","Tikamgarh","Ujjain","Umaria","Vidisha"];
-var Maharashtra = ["Ahmednagar","Akola","Amravati","Aurangabad","Beed","Bhandara","Buldhana","Chandrapur","Dhule","Gadchiroli","Gondia","Hingoli","Jalgaon","Jalna","Kolhapur","Latur","Mumbai City","Mumbai Suburban","Nagpur","Nanded","Nandurbar","Nashik","Osmanabad","Palghar","Parbhani","Pune","Raigad","Ratnagiri","Sangli","Satara","Sindhudurg","Solapur","Thane","Wardha","Washim","Yavatmal"];
-var Manipur = ["Bishnupur","Chandel","Churachandpur","Imphal East","Imphal West","Jiribam","Kakching","Kamjong","Kangpokpi","Noney","Pherzawl","Senapati","Tamenglong","Tengnoupal","Thoubal","Ukhrul"];
-var Meghalaya = ["East Garo Hills","East Jaintia Hills","East Khasi Hills","North Garo Hills","Ri Bhoi","South Garo Hills","South West Garo Hills","South West Khasi Hills","West Garo Hills","West Jaintia Hills","West Khasi Hills"];
-var Mizoram = ["Aizawl","Champhai","Kolasib","Lawngtlai","Lunglei","Mamit","Saiha","Serchhip","Aizawl","Champhai","Kolasib","Lawngtlai","Lunglei","Mamit","Saiha","Serchhip"];
-var Nagaland = ["Dimapur","Kiphire","Kohima","Longleng","Mokokchung","Mon","Peren","Phek","Tuensang","Wokha","Zunheboto"];
-var Odisha = ["Angul","Balangir","Balasore","Bargarh","Bhadrak","Boudh","Cuttack","Debagarh","Dhenkanal","Gajapati","Ganjam","Jagatsinghpur","Jajpur","Jharsuguda","Kalahandi","Kandhamal","Kendrapara","Kendujhar","Khordha","Koraput","Malkangiri","Mayurbhanj","Nabarangpur","Nayagarh","Nuapada","Puri","Rayagada","Sambalpur","Subarnapur","Sundergarh"];
-var Punjab = ["Amritsar","Barnala","Bathinda","Faridkot","Fatehgarh Sahib","Fazilka","Firozpur","Gurdaspur","Hoshiarpur","Jalandhar","Kapurthala","Ludhiana","Mansa","Moga","Mohali","Muktsar","Pathankot","Patiala","Rupnagar","Sangrur","Shaheed Bhagat Singh Nagar","Tarn Taran"];
-var Rajasthan = ["Ajmer","Alwar","Banswara","Baran","Barmer","Bharatpur","Bhilwara","Bikaner","Bundi","Chittorgarh","Churu","Dausa","Dholpur","Dungarpur","Ganganagar","Hanumangarh","Jaipur","Jaisalmer","Jalore","Jhalawar","Jhunjhunu","Jodhpur","Karauli","Kota","Nagaur","Pali","Pratapgarh","Rajsamand","Sawai Madhopur","Sikar","Sirohi","Tonk","Udaipur"];
-var Sikkim = ["East Sikkim","North Sikkim","South Sikkim","West Sikkim"];
-var TamilNadu = ["Ariyalur","Chennai","Coimbatore","Cuddalore","Dharmapuri","Dindigul","Erode","Kanchipuram","Kanyakumari","Karur","Krishnagiri","Madurai","Nagapattinam","Namakkal","Nilgiris","Perambalur","Pudukkottai","Ramanathapuram","Salem","Sivaganga","Thanjavur","Theni","Thoothukudi","Tiruchirappalli","Tirunelveli","Tiruppur","Tiruvallur","Tiruvannamalai","Tiruvarur","Vellore","Viluppuram","Virudhunagar"];
-var Telangana = ["Adilabad","Bhadradri Kothagudem","Hyderabad","Jagtial","Jangaon","Jayashankar","Jogulamba","Kamareddy","Karimnagar","Khammam","Komaram Bheem","Mahabubabad","Mahbubnagar","Mancherial","Medak","Medchal","Nagarkurnool","Nalgonda","Nirmal","Nizamabad","Peddapalli","Rajanna Sircilla","Ranga Reddy","Sangareddy","Siddipet","Suryapet","Vikarabad","Wanaparthy","Warangal Rural","Warangal Urban","Yadadri Bhuvanagiri"];
-var Tripura = ["Dhalai","Gomati","Khowai","North Tripura","Sepahijala","South Tripura","Unakoti","West Tripura"];
-var UttarPradesh = ["Agra","Aligarh","Allahabad","Ambedkar Nagar","Amethi","Amroha","Auraiya","Azamgarh","Baghpat","Bahraich","Ballia","Balrampur","Banda","Barabanki","Bareilly","Basti","Bhadohi","Bijnor","Budaun","Bulandshahr","Chandauli","Chitrakoot","Deoria","Etah","Etawah","Faizabad","Farrukhabad","Fatehpur","Firozabad","Gautam Buddha Nagar","Ghaziabad","Ghazipur","Gonda","Gorakhpur","Hamirpur","Hapur","Hardoi","Hathras","Jalaun","Jaunpur","Jhansi","Kannauj","Kanpur Dehat","Kanpur Nagar","Kasganj","Kaushambi","Kheri","Kushinagar","Lalitpur","Lucknow","Maharajganj","Mahoba","Mainpuri","Mathura","Mau","Meerut","Mirzapur","Moradabad","Muzaffarnagar","Pilibhit","Pratapgarh","Raebareli","Rampur","Saharanpur","Sambhal","Sant Kabir Nagar","Shahjahanpur","Shamli","Shravasti","Siddharthnagar","Sitapur","Sonbhadra","Sultanpur","Unnao","Varanasi"];
-var Uttarakhand  = ["Almora","Bageshwar","Chamoli","Champawat","Dehradun","Haridwar","Nainital","Pauri","Pithoragarh","Rudraprayag","Tehri","Udham Singh Nagar","Uttarkashi"];
-var WestBengal = ["Alipurduar","Bankura","Birbhum","Cooch Behar","Dakshin Dinajpur","Darjeeling","Hooghly","Howrah","Jalpaiguri","Jhargram","Kalimpong","Kolkata","Malda","Murshidabad","Nadia","North 24 Parganas","Paschim Bardhaman","Paschim Medinipur","Purba Bardhaman","Purba Medinipur","Purulia","South 24 Parganas","Uttar Dinajpur"];
-var AndamanNicobar = ["Nicobar","North Middle Andaman","South Andaman"];
-var Chandigarh = ["Chandigarh"];
-var DadraHaveli = ["Dadra Nagar Haveli"];
-var DamanDiu = ["Daman","Diu"];
-var Delhi = ["Central Delhi","East Delhi","New Delhi","North Delhi","North East Delhi","North West Delhi","Shahdara","South Delhi","South East Delhi","South West Delhi","West Delhi"];
-var Lakshadweep = ["Lakshadweep"];
-var Puducherry = ["Karaikal","Mahe","Puducherry","Yanam"];
-
-
-$("#inputState").change(function(){
-var StateSelected = $(this).val();
-var optionsList;
-var htmlString = "";
-
-switch (StateSelected) {
-case "Andra Pradesh":
-    optionsList = AndraPradesh;
-    break;
-case "Arunachal Pradesh":
-    optionsList = ArunachalPradesh;
-    break;
-case "Assam":
-    optionsList = Assam;
-    break;
-case "Bihar":
-    optionsList = Bihar;
-    break;
-case "Chhattisgarh":
-    optionsList = Chhattisgarh;
-    break;
-case "Goa":
-    optionsList = Goa;
-    break;
-case  "Gujarat":
-    optionsList = Gujarat;
-    break;
-case "Haryana":
-    optionsList = Haryana;
-    break;
-case "Himachal Pradesh":
-    optionsList = HimachalPradesh;
-    break;
-case "Jammu and Kashmir":
-    optionsList = JammuKashmir;
-    break;
-case "Jharkhand":
-    optionsList = Jharkhand;
-    break;
-case  "Karnataka":
-    optionsList = Karnataka;
-    break;
-case "Kerala":
-    optionsList = Kerala;
-    break;
-case  "Madya Pradesh":
-    optionsList = MadhyaPradesh;
-    break;
-case "Maharashtra":
-    optionsList = Maharashtra;
-    break;
-case  "Manipur":
-    optionsList = Manipur;
-    break;
-case "Meghalaya":
-    optionsList = Meghalaya ;
-    break;
-case  "Mizoram":
-    optionsList = Mizoram;
-    break;
-case "Nagaland":
-    optionsList = Nagaland;
-    break;
-case  "Orissa":
-    optionsList = Orissa;
-    break;
-case "Punjab":
-    optionsList = Punjab;
-    break;
-case  "Rajasthan":
-    optionsList = Rajasthan;
-    break;
-case "Sikkim":
-    optionsList = Sikkim;
-    break;
-case  "Tamil Nadu":
-    optionsList = TamilNadu;
-    break;
-case  "Telangana":
-    optionsList = Telangana;
-    break;
-case "Tripura":
-    optionsList = Tripura ;
-    break;
-case  "Uttaranchal":
-    optionsList = Uttaranchal;
-    break;
-case  "Uttar Pradesh":
-    optionsList = UttarPradesh;
-    break;
-case "West Bengal":
-    optionsList = WestBengal;
-    break;
-case  "Andaman and Nicobar Islands":
-    optionsList = AndamanNicobar;
-    break;
-case "Chandigarh":
-    optionsList = Chandigarh;
-    break;
-case  "Dadar and Nagar Haveli":
-    optionsList = DadraHaveli;
-    break;
-case "Daman and Diu":
-    optionsList = DamanDiu;
-    break;
-case  "Delhi":
-    optionsList = Delhi;
-    break;
-case "Lakshadeep":
-    optionsList = Lakshadeep ;
-    break;
-case  "Pondicherry":
-    optionsList = Pondicherry;
-    break;
+@-webkit-keyframes bounce { 
+	0% { -webkit-transform: translate3d(0,-25px,0); opacity:0; }
+	25% { -webkit-transform: translate3d(0,10px,0); }
+	50% { -webkit-transform: translate3d(0,-6px,0); }
+	75% { -webkit-transform: translate3d(0,2px,0); }
+	100% { -webkit-transform: translate3d(0,0,0); opacity: 1; }
 }
 
-
-for(var i = 0; i < optionsList.length; i++){
-htmlString = htmlString+"<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
+@keyframes bounce { 
+	0% { -webkit-transform: translate3d(0,-25px,0); transform: translate3d(0,-25px,0); opacity:0; }
+	25% { -webkit-transform: translate3d(0,10px,0); transform: translate3d(0,10px,0); }
+	50% { -webkit-transform: translate3d(0,-6px,0); transform: translate3d(0,-6px,0); }
+	75% { -webkit-transform: translate3d(0,2px,0); transform: translate3d(0,2px,0); }
+	100% { -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; }
 }
-$("#inputDistrict").html(htmlString);
-
-});
-
-
-
-
-	</script>
+@media (max-width: 600px) {
+	.form_wrapper {
+		.col_half {
+			width: 100%;
+			float: none;
+		}
+	}
+	.bottom_row {
+		.col_half {
+			width: 50%;
+			float: left;
+		}
+	}
+	.form_container {
+		.row {
+			.col_half.last {
+				border-left: none;
+			}
+		}
+	}
+	.remember_me {
+		padding-bottom: 20px;
+	}
+}
+  </style>
+    -->
 </head>
+
 <body>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="ticon.png" sizes="32x32"/>
-	<meta name="description" content="Apply For job here Free !! Get your dream job ASAP so what are you waiting for? Apply Now">
-  <meta name="keywords" content="Job,company,apply for job, all kinds of job">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-<body>
- 
-
-<form id="regForm"  action="job.php" method='POST'>
-  <center>
-  <h1>Apply For Job</h1></center><hr style="width: 2in;">
-  <!-- One "tab" for each step in the form: -->
-  <div class="tab "><strong>Personal Details:</strong>
-<center>
-
-    <p><input  placeholder="Full Name " oninput="this.className = ''" name="fullname" type='text'></p>
-
-
-
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.js"></script>
-    
-    
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <p><input placeholder="Higest Education" oninput="this.className = ''" name="hed" type='text'></p>
-    <p><input  placeholder="Your Age " type="number" oninput="this.className = ''" name="age"></p>
-    <div>
-      <select id="myselect" name='gender' class='required'  style="width:100%;">
-      <option selected disabled >- Select Gender -</option>
-      <option value='Male'>Male</option>
-      <option value='Female'>Female</option>
-      <option value='Others'>Others</option>
-    </select>
-    
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Responsive Registration Form</h2>
     </div>
-<br>
-  </div>
-</center>
-  <div class="tab"><strong>Contact Informations :</strong>
-    <p><input placeholder="E-mail" oninput="this.className = ''" name="mail" type="email"></p>
-    <p><input placeholder="Phone Number" oninput="this.className = ''" name="phone" type="tel"></p>
-  </div>
-  <div class="tab"><strong> Address: </strong><p></p>
-     <!-- <p><input placeholder="" oninput="this.className = ''" name="dd"></p>
-    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p> -->
-    <div class="form-group col-md-4">
-       <!-- <label for="inputState">State:</label><p></p> --> 
-      <select class="form-control" style="width: 100%;" name='state' id="inputState">
-                          <option value="SelectState">Select State</option>
-                          <option value="Andra Pradesh">Andra Pradesh</option>
-                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                          <option value="Assam">Assam</option>
-                          <option value="Bihar">Bihar</option>
-                          <option value="Chhattisgarh">Chhattisgarh</option>
-                          <option value="Goa">Goa</option>
-                          <option value="Gujarat">Gujarat</option>
-                          <option value="Haryana">Haryana</option>
-                          <option value="Himachal Pradesh">Himachal Pradesh</option>
-                          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                          <option value="Jharkhand">Jharkhand</option>
-                          <option value="Karnataka">Karnataka</option>
-                          <option value="Kerala">Kerala</option>
-                          <option value="Madya Pradesh">Madya Pradesh</option>
-                          <option value="Maharashtra">Maharashtra</option>
-                          <option value="Manipur">Manipur</option>
-                          <option value="Meghalaya">Meghalaya</option>
-                          <option value="Mizoram">Mizoram</option>
-                          <option value="Nagaland">Nagaland</option>
-                          <option value="Orissa">Orissa</option>
-                          <option value="Punjab">Punjab</option>
-                          <option value="Rajasthan">Rajasthan</option>
-                          <option value="Sikkim">Sikkim</option>
-                          <option value="Tamil Nadu">Tamil Nadu</option>
-                          <option value="Telangana">Telangana</option>
-                          <option value="Tripura">Tripura</option>
-                          <option value="Uttaranchal">Uttaranchal</option>
-                          <option value="Uttar Pradesh">Uttar Pradesh</option>
-                          <option value="West Bengal">West Bengal</option>
-                          <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
-                          <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                          <option value="Chandigarh">Chandigarh</option>
-                          <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
-                          <option value="Daman and Diu">Daman and Diu</option>
-                          <option value="Delhi">Delhi</option>
-                          <option value="Lakshadeep">Lakshadeep</option>
-                          <option value="Pondicherry">Pondicherry</option>
-                        </select>
-    </div><p></p>
-    <div class="form-group col-md-4">
-     
-      <select class="form-control" name='dist' style="width: 100%;" id="inputDistrict">
-          <option value="">-- District -- </option>
-      </select>
-    </div>
-    <p><input placeholder="Pin Code" type='tel' oninput="this.className = ''" name="pin"></p>
-    <br>
-  </div> 
-  <div class="tab">
-
-      <legend>Job Type:</legend><p></p>
-      <select class=""  id="occupation" style="width: 100%;" name="jobtype">
-        <option value="" selected="selected" disabled="disabled">-- Select Job --</option>
-        <optgroup label="Healthcare Practitioners and Technical Occupations:">
-          <option>-  Chiropractor</option>
-          <option>-  Dentist</option>
-          <option>-  Dietitian or Nutritionist</option>
-          <option>-  Optometrist</option>
-          <option>-  Pharmacist</option>
-          <option>-  Physician</option>
-          <option>-  Physician Assistant</option>
-          <option>-  Podiatrist</option>
-          <option>-  Registered Nurse</option>
-          <option >-  Therapist</option>
-          <option >-  Veterinarian</option>
-          <option >-  Health Technologist or Technician</option>
-          <option >-  Other Healthcare Practitioners and Technical Occupation</option>
-        </optgroup>
-        <optgroup label="Healthcare Support Occupations:">
-          <option>-  Nursing, Psychiatric, or Home Health Aide</option>
-          <option>-  Occupational and Physical Therapist Assistant or Aide</option>
-          <option>-  Other Healthcare Support Occupation</option>
-        </optgroup>
-        <optgroup label="Business, Executive, Management, and Financial Occupations:">
-          <option>-  Chief Executive</option>
-          <option>-  General and Operations Manager</option>
-          <option>-  Advertising, Marketing, Promotions, Public Relations, and Sales Manager</option>
-          <option>-  Operations Specialties Manager (e.g., IT or HR Manager)</option>
-          <option>-  Construction Manager</option>
-          <option>-  Engineering Manager</option>
-          <option>-  Accountant, Auditor</option>
-          <option>-  Business Operations or Financial Specialist</option>
-          <option>-  Business Owner</option>
-          <option>-  Other Business, Executive, Management, Financial Occupation</option>
-        </optgroup>
-        <optgroup label="Architecture and Engineering Occupations:">
-          <option>-  Architect, Surveyor, or Cartographer</option>
-          <option>-  Engineer</option>
-          <option>-  Other Architecture and Engineering Occupation</option>
-        </optgroup>
-        <optgroup label="Education, Training, and Library Occupations:">
-          <option>-  Postsecondary Teacher (e.g., College Professor)</option>
-          <option>-  Primary, Secondary, or Special Education School Teacher</option>
-          <option>-  Other Teacher or Instructor</option>
-          <option>-  Other Education, Training, and Library Occupation</option>
-        </optgroup>
-        <optgroup label="Other Professional Occupations:">
-          <option>-  Arts, Design, Entertainment, Sports, and Media Occupations</option>
-          <option>-  Computer Specialist, Mathematical Science</option>
-          <option>-  Counselor, Social Worker, or Other Community and Social Service Specialist</option>
-          <option>-  Lawyer, Judge</option>
-          <option>-  Life Scientist (e.g., Animal, Food, Soil, or Biological Scientist, Zoologist)</option>
-          <option>-  Physical Scientist (e.g., Astronomer, Physicist, Chemist, Hydrologist)</option>
-          <option>-  Religious Worker (e.g., Clergy, Director of Religious Activities or Education)</option>
-          <option>-  Social Scientist and Related Worker</option>
-          <option>-  Other Professional Occupation</option>
-          <option>-  Delivery Boy</option>
-        </optgroup>
-        <optgroup label="Office and Administrative Support Occupations:">
-          <option>-  Supervisor of Administrative Support Workers</option>
-          <option>-  Financial Clerk</option>
-          <option>-  Secretary or Administrative Assistant</option>
-          <option>-  Material Recording, Scheduling, and Dispatching Worker</option>
-          <option>-  Other Office and Administrative Support Occupation</option>
-        </optgroup>
-        <!-- <optgroup label="Services Occupations:">
-          <option>-  Protective Service (e.g., Fire Fighting, Police Officer, Correctional Officer)</option>
-          <option>-  Chef or Head Cook</option>
-          <option>-  Cook or Food Preparation Worker</option>
-          <option>-  Food and Beverage Serving Worker (e.g., Bartender, Waiter, Waitress)</option>
-          <option>-  Building and Grounds Cleaning and Maintenance</option>
-          <option>-  Personal Care and Service (e.g., Hairdresser, Flight Attendant, Concierge)</option>
-          <option>-  Sales Supervisor, Retail Sales</option>
-          <option>-  Retail Sales Worker</option>
-          <option>-  Insurance Sales Agent</option>
-          <option>-  Sales Representative</option>
-          <option>-  Real Estate Sales Agent</option>
-          <option>-  Other Services Occupation</option>
-        </optgroup> -->
-        <!-- <optgroup label="Agriculture, Maintenance, Repair, and Skilled Crafts Occupations:">
-          <option>-  Construction and Extraction (e.g., Construction Laborer, Electrician)</option>
-          <option>-  Farming, Fishing, and Forestry</option>
-          <option>-  Installation, Maintenance, and Repair</option>
-          <option>-  Production Occupations</option>
-          <option>-  Other Agriculture, Maintenance, Repair, and Skilled Crafts Occupation</option>
-        </optgroup>
-        <optgroup label="Transportation Occupations:">
-          <option>-  Aircraft Pilot or Flight Engineer</option>
-          <option>-  Motor Vehicle Operator (e.g., Ambulance, Bus, Taxi, or Truck Driver)</option>
-          <option>-  Other Transportation Occupation</option>
-        </optgroup> -->
-        <optgroup label="Other Occupations:">
-       
-          <option>-  Homemaker</option>
-          <option>-  Other Occupation</option>
-          <option>-  Don't Know</option>
-          <option>-  Not Applicable</option>
-        </optgroup>
-      </select>
-      
-
-    <p><input placeholder="Tell us about yourself" style="height: 1in; border-radius: 3px;" oninput="this.className = ''" type='text' name="about"></p>
-    
-
-    
-   <br>
-  </div>
-
-  <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    <div class="row clearfix">
+      <div class="">
+        <form>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="password" placeholder="Password" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="password" placeholder="Re-type Password" required />
+          </div>
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="name" placeholder="First Name" />
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="name" placeholder="Last Name" required />
+              </div>
+            </div>
+          </div>
+            	<div class="input_field radio_option">
+              <input type="radio" name="radiogroup1" id="rd1">
+              <label for="rd1">Male</label>
+              <input type="radio" name="radiogroup1" id="rd2">
+              <label for="rd2">Female</label>
+              </div>
+              <div class="input_field select_option">
+                <select>
+                  <option>Select a country</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                </select>
+                <div class="select_arrow"></div>
+              </div>
+            <div class="input_field checkbox_option">
+            	<input type="checkbox" id="cb1">
+    			<label for="cb1">I agree with terms and conditions</label>
+            </div>
+            <div class="input_field checkbox_option">
+            	<input type="checkbox" id="cb2">
+    			<label for="cb2">I want to receive the newsletter</label>
+            </div>
+          <input class="button" type="submit" value="Register" />
+        </form>
+      </div>
     </div>
   </div>
-   <!--<input type='submit' name='submit'>-->
-  <!-- Circles which indicates the steps of the form: -->
-  <div style="text-align:center;margin-top:40px;">
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
-  </div>
-</form>
-<p style="color:#FF0000;"></p>
+</div>
+
+    
     
 </body>
+
 </html>
+
+

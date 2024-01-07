@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Set Up Profile
-permalink: /set_up_profile/
+title: Login
+permalink: /login/
 ---
 
 <!DOCTYPE html>
