@@ -1,6 +1,6 @@
 ---
 title: Checkpoint A Team Review Ticket
-courses: {compsci: {week: 6}}
+courses: {'compsci': {'week': 6}}
 type: tangibles
 layout: default
 ---
@@ -8,32 +8,23 @@ layout: default
 ## Create Frontend Design
 Isabel, Anusha, Vibha, and Justin used Canva to build a frontend design with one page and a description of input and output.  Here is the product.
 
-![Alt text](/frontTri2/images/HomePage.png)
-
 ![Alt text](/frontTri2/images/CreateUserPage.png)
 
 ![Alt text](/frontTri2/images/SleepTracker.png)
 
-![Alt text](/frontTri2/images/StressTracker.png)
+![Alt text](/frontTri2/Nighthawk-Pages/images/StressTracker.png)
 
-![Alt text](/frontTri2/images/WaterTracker.png)
+![Alt text](/frontTri2/Nighthawk-Pages/images/WaterTracker.png)
 
-![Alt text](/frontTri2/images/Login.png)
+![Alt text](/frontTri2/Nighthawk-Pages/images/Login.png)
 
 ![Alt text](/frontTri2/images/ExerciseTracker.png)
 
 ![Alt text](/frontTri2/images/FoodTracker.png)
 
+![Alt text](/frontTri2/images/HomePage.png)
+
 ![Alt text](/frontTri2/images/InformationalPage.png)
-
-## Isabel-Scrum Master
-
-Isabel is responsible for setting up Create User Page/Register Page using Create Method (POST), as well as Tracking Pages (Exercise/Sleep)
-(UPDATE) Anusha and Isabel  plan on adding more attributes later, such as coins, as an incentive for more people to exercise. We will plan how exactly to track and store that data. For now, our data uml model only includes sleeping/exercise but Anusha and Isabel  plan on adding more to format the data.
-
-## Vibha-Frontend
-
-Vibha is responsible for frontend design/ setting up profile aspect (JWT) of site. She has already started multiple aspects of the site and added forms to accomplish this. 
 
 
 ## Build a Data Model(s) using UML
@@ -55,3 +46,19 @@ Anusha  made  Backend Repo using Flask/Flask. We made a team repository from fla
 ### JWT Story Map
 
 ![Alt text](/frontTri2/images/storymap.png)
+
+## Work Completed
+# Isabel - Scrum Master + Developer
+- Responsible for: Create User, Exercise, Sleep, Coin system (w/Anusha), Team Management 
+- Completed so far: Home Page (design + buttons), Basic Frontend + User Interaction/ Log (w/o backend integration + api) for Exercise + Sleep
+# Justin - Devops + Developer
+- Responsible for: AWS deployment, stress, CSP term connection page
+- Completed: Stress Quiz + User Interaction (w/o backend integration), Github Deployment, SAS button bindings
+# Anusha - Developer + Documentation
+- Responsible for: Water, Food, Coin system (w/Anusha), Relaxation/Meditation Game, Commenting, Read Me
+- Completed: Basic Front end + User Interaction/Log (w/o integration) for water, nutrition graphs with user interaction + USDA recommended for Food, Relaxation game front end integration (not posted yet on website but on repo), Relaxation game back end integration
+# Vibha - Developer + User Interface
+- Responsible for: Interuser interactions (profile cards), User profile, User profile set up, Badges
+- Completed: User profile set up page + User Interaction (w/o backend integration), SAS button bindings, User Profile cars (work in progress), Login page front end (w/o backend integration)
+### Work in Progress/To do
+[Github Schedule](https://github.com/users/iKAN2025/projects/2/views/1)
