@@ -12,6 +12,46 @@ permalink: /register/
     <meta name="keywords" content="your, keywords, here">
 
     <style>
+   
+    .checkbox_option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .checkbox_option input[type="checkbox"] {
+      display: none; /* Hide the default checkbox */
+    }
+
+    .checkbox_option label {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+
+    /* Style the custom checkbox */
+    .checkbox_option .custom-checkbox {
+      width: 18px;
+      height: 18px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      position: relative;
+    }
+
+    .checkbox_option .custom-checkbox:before {
+      content: '\2713';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: transparent;
+    }
+
+    /* Style the custom checkbox when checked */
+    .checkbox_option input[type="checkbox"]:checked + .custom-checkbox:before {
+      color: #6f8296; /* Change the color when checked */
+    }
+
   $yellow:#f5ba1a;
 $black:#000000;
 $grey:#cccccc;
@@ -612,16 +652,19 @@ function assertFilesValid(fileList) {
   
   </script>
 
-            <div class="input_field checkbox_option">
-            	<input type="checkbox" id="cb1">
-    			<label for="cb1">I agree with terms and conditions</label>
-            </div>
-            <div class="input_field checkbox_option">
-            	<input type="checkbox" id="cb2">
-    			<label for="cb2">I want to receive the newsletter</label>
-            </div>
-          <input class="button" type="submit" value="Register" />
-        </form>
+           <div class="input_field checkbox_option">
+    <input type="checkbox" id="cb1" class="styled-checkbox">
+    <div class="custom-checkbox"></div>
+    <label for="cb1">I agree with terms and conditions</label>
+  </div>
+
+  <div class="input_field checkbox_option">
+    <input type="checkbox" id="cb2" class="styled-checkbox">
+    <div class="custom-checkbox"></div>
+    <label for="cb2">I want to receive the newsletter</label>
+  </div>
+
+  <input class="button" type="submit" value="Register" />
       </div>
     </div>
   </div>
