@@ -4,6 +4,75 @@ title: Food Tracker
 permalink: "/food/"
 search_exclude: false
 ---
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weight to Cups Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #converter {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Weight to Cups Converter</h2>
+
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" placeholder="Enter quantity" oninput="convertToCups()">
+  </div>
+
+  <div>
+    <label for="unit">Select unit:</label>
+    <select id="unit" onchange="convertToCups()">
+      <option value="grams">Grams</option>
+      <option value="ounces">Ounces</option>
+      <option value="pounds">Pounds</option>
+    </select>
+  </div>
+
+  <div id="converter">
+    <p id="result">Cups: 0</p>
+  </div>
+
+  <script>
+    function convertToCups() {
+      // Get the value and unit from the input
+      var quantity = parseFloat(document.getElementById('quantity').value);
+      var unit = document.getElementById('unit').value;
+
+      // Conversion factors
+      var gramsToCups = 0.24;
+      var ouncesToCups = 0.125;
+      var poundsToCups = 2;
+
+      // Perform the conversion
+      var cups;
+      switch (unit) {
+        case 'grams':
+          cups = quantity * gramsToCups;
+          break;
+        case 'ounces':
+          cups = quantity * ouncesToCups;
+          break;
+        case 'pounds':
+          cups = quantity * poundsToCups;
+          break;
+        default:
+          cups = 0;
+      }
+
+      // Display the result
+      document.getElementById('result').innerHTML = 'Cups: ' + cups.toFixed(2);
+    }
+  </script>
+</body>
 <html lang="en">
 <head>
   <title>Food Tracker</title>
