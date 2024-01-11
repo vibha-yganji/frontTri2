@@ -475,13 +475,10 @@ body {
 
   <p>
     <strong>Uploading status:</strong>
-    <span id="statusMessage">🤷‍♂ Nothing's uploaded</span>
+    <span id="statusMessage"> Nothing's uploaded</span>
   </p>
 
-  <p>
-    <strong>Uploaded files:</strong>
-    <span id="fileNum">0</span>
-  </p>
+
 
   <ul id="fileListMetadata"></ul>
 
