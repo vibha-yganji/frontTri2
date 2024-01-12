@@ -415,6 +415,8 @@ body {
       <div class="">
         <form>
 
+<h2> General Information </h2>
+
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
             <input type="email" name="email" placeholder="Email" required />
 
@@ -446,6 +448,9 @@ body {
     <input type="checkbox" name="checkbox2" id="chk2">
     <label for="chk2">Female</label>
 </div>
+
+<hr>
+<h2> Health Information </h2>
 
               <div class="input_field select_option">
                 <select>
@@ -493,7 +498,7 @@ body {
 
 
               <hr>
-              <h2> Profile Pictyre </h2>
+              <h2> Profile Picture Selection </h2>
     <input
       name="file"
       type="file"
