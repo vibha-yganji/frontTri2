@@ -490,6 +490,10 @@ body {
               </div>
 
               <form>
+
+
+              <hr>
+              <h2> Profile Pictyre </h2>
     <input
       name="file"
       type="file"
