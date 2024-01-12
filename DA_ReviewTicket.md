@@ -1,6 +1,6 @@
 ---
 title: Checkpoint A Team Review Ticket
-courses: {'compsci': {'week': 8}}
+courses: {compsci: {week: 6}}
 type: tangibles
 layout: default
 ---
@@ -8,21 +8,21 @@ layout: default
 ## Create Frontend Design
 Isabel, Anusha, Vibha, and Justin used Canva to build a frontend design with one page and a description of input and output.  Here is the product.
 
+![Alt text](/frontTri2/images/HomePage.png)
+
 ![Alt text](/frontTri2/images/CreateUserPage.png)
 
 ![Alt text](/frontTri2/images/SleepTracker.png)
 
-![Alt text](/frontTri2/Nighthawk-Pages/images/StressTracker.png)
+![Alt text](/frontTri2/images/StressTracker.png)
 
-![Alt text](/frontTri2/Nighthawk-Pages/images/WaterTracker.png)
+![Alt text](/frontTri2/images/WaterTracker.png)
 
-![Alt text](/frontTri2/Nighthawk-Pages/images/Login.png)
+![Alt text](/frontTri2/images/Login.png)
 
 ![Alt text](/frontTri2/images/ExerciseTracker.png)
 
 ![Alt text](/frontTri2/images/FoodTracker.png)
-
-![Alt text](/frontTri2/images/HomePage.png)
 
 ![Alt text](/frontTri2/images/InformationalPage.png)
 
