@@ -431,12 +431,12 @@ body {
           <div class="row clearfix">
             <div class="col_half">
               <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input type="text" name="name" placeholder="First Name" />
+                <input type="text" name="name" placeholder="Preferred Name" />
               </div>
             </div>
             <div class="col_half">
               <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input type="text" name="name" placeholder="Last Name" required />
+                <input type="text" name="name" placeholder="Username" required />
               </div>
             </div>
           </div>
