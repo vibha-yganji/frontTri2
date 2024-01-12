@@ -656,6 +656,11 @@ function assertFilesValid(fileList) {
   
   </script>
 
+
+  <hr>
+
+  <h2> Privacy Information/Newsletter </h2>
+
           <div class="input_field checkbox_option">
   <input type="checkbox" id="cb1" class="styled-checkbox">
   <label for="cb1">
