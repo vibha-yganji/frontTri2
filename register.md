@@ -11,9 +11,8 @@ permalink: /profile_set_up/
     <meta name="description" content="Your website description here">
     <meta name="keywords" content="your, keywords, here">
 
-    <style>
-   
-    /* Style the custom checkbox */
+  <style>
+   /* Style the custom checkbox */
 .checkbox_option input[type="checkbox"] {
   display: none; /* Hide the default checkbox */
 }
