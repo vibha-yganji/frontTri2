@@ -1,5 +1,5 @@
 ---
-title:  
+title: Checkpoint A Team Review Ticket
 courses: {'compsci': {'week': 8}}
 type: tangibles
 layout: default
@@ -54,4 +54,4 @@ Anusha  made  Backend Repo using Flask/Flask. We made a team repository from fla
 
 ### JWT Story Map
 
-![Alt text](/frontTri2/images/datamodel.png)
+![Alt text](/frontTri2/images/storymap.png)
