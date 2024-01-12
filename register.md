@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Set Up Profile
-permalink: /register/
+title: Profile Creation
+permalink: /profile_set_up/
 ---
 
 <html lang="en">
@@ -666,15 +666,4 @@ function assertFilesValid(fileList) {
 
 
   <input class="button" type="submit" value="Register" />
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-    
-</body>
-
-</html>
-
 

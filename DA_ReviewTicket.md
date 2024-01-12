@@ -50,7 +50,7 @@ Justin made a team repository from the student repo.  He got rid of Time Box or 
 
 
 ### Flask Repo
-Anusha  made  Backend Repo using Flask/Flask. We made a team repository from flask portfolio and review flask anatomy and start to customize for your needs, such as app roots.   According to UML design, I thought about defining APIs with static data to support development. Early testing is done with a tool called Postman, this would meet requirements of this step in process.  She will work on the motivational games, food/water tracker, spinners, and badges. 
+Anusha  made  Backend Repo using Flask/Flask. We made a team repository from flask portfolio and review flask anatomy and start to customize for your needs, such as app roots.  According to UML design, I thought about defining APIs with static data to support development. Early testing is done with a tool called Postman, this would meet requirements of this step in process.  She will work on the motivational games, food/water tracker, spinners, and badges. 
 
 ### JWT Story Map
 
