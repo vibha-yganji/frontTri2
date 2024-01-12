@@ -409,7 +409,7 @@ body {
 <div class="form_wrapper">
   <div class="form_container">
     <div class="title_container">
-      <h2>Responsive Registration Form</h2>
+      <h2> Profile Set-Up </h2>
     </div>
     <div class="row clearfix">
       <div class="">
