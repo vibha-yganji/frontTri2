@@ -31,16 +31,6 @@ search_exclude: false
 </style>
 
 <html lang="en">
-    <h1>XOR GATE CHECKBOX</h1>
-  
-  <!-- Feature: Completed Exercise -->
-   <label for="checkboxA">Checkbox A</label>
-  <input type="checkbox" id="checkboxA">
-  <br>
-  <label for="checkboxB">Checkbox B</label>
-  <input type="checkbox" id="checkboxB">
-  <div class="result" id="xorResult">XOR Gate Result: </div>
-
   <a href="https://jplip.github.io/frontTri2/login/"><button class="btn">Login</button></a>
     <a href="https://jplip.github.io/frontTri2/Register/"><button class="btn">Register</button></a>
     <div class="top-container">
