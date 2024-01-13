@@ -8,7 +8,7 @@
     <h1>Guided Meditation Session</h1>
     <button class="btn fetchMeditationBtn">Fetch Meditation Session</button>
     <div id="meditationInfo"></div>
-
+<!-- 
     <script>
         document.querySelector('.fetchMeditationBtn').addEventListener('click', function() {
             fetch('/fetch_meditation') // Replace this URL with your server endpoint
@@ -26,6 +26,6 @@
                     console.error('Error fetching meditation:', error);
                 });
         });
-    </script>
+    </script> -->
 </body>
 </html>
