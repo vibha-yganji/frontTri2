@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Spinner 
-permalink: /spiner/
+permalink: /spinner/
 ---
 <html>
 <head>

@@ -64,24 +64,3 @@ search_exclude: false
     </div>
 </html>
 
-<script>
-    const checkboxA = document.getElementById('checkboxA');
-    const checkboxB = document.getElementById('checkboxB');
-
-
-    // Event listeners for checkboxes
-    checkboxA.addEventListener('change', () => {
-        performXORLogic();
-    });
-
-    checkboxB.addEventListener('change', () => {
-        performXORLogic();
-    });
-
-    function performXORLogic() {
-        const isCheckedA = checkboxA.checked;
-        const isCheckedB = checkboxB.checked;
-        const xorResult = (isCheckedA || isCheckedB) && !(isCheckedA &&     isCheckedB);
-        resultDiv.textContent = `XOR Gate Result: ${xorResult}`;
-        }
-</script>
