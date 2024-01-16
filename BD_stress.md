@@ -17,8 +17,7 @@ permalink: /stress/
 
 <div class="purple-form"> <!-- questions -->
   <h1>Stress Quiz</h1>
-
-  <form id="stressForm">
+  <form id="purple-form">
     <div class="question" id="question1">
       <label>
         <strong>1. How often do you feel overwhelmed?</strong><br>
