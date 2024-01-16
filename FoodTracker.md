@@ -21,7 +21,7 @@ search_exclude: false
   </style>
 </head>
 <body>
-  <h2>Weight to Cups Converter</h2>
+  <h2>Cups Calculator</h2>
 
   <div>
     <label for="quantity">Quantity:</label>
@@ -74,9 +74,7 @@ search_exclude: false
   </script>
 </body>
 <html lang="en">
-<head>
-  <title>Food Tracker</title>
-</head>
+  <h2>Plate Distribution</h2>
 <body>
   <div>
     <label for="proteinRatio" class="label">Cups of Protein:</label>
@@ -108,9 +106,10 @@ search_exclude: false
   <svg id="usdaChart" width="300" height="300"></svg>
 
   <div id="legend"></div>
-
-  <h2>Food Intake in Binary</h2>
-  <div id="foodBinaryDisplay"></div>
+  <h2>Suggestion</h2>
+  <button class="btn" onclick="showDifferences()">Show Differences</button>
+<div id="suggestion"></div>
+  <div id="suggestion"></div>
 
   <script>
     function createPieChart() {
@@ -201,35 +200,42 @@ search_exclude: false
       legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFD700;"></span> Dairy</div>';
       legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#E6A8D7;"></span> Grain</div>';
     }
-     
-    function updateBinaryDisplay() {
-      const protein = parseFloat(document.getElementById('proteinRatio').value);
-      const vegetable = parseFloat(document.getElementById('vegetableRatio').value);
-      const fruit = parseFloat(document.getElementById('fruitRatio').value);
-      const dairy = parseFloat(document.getElementById('dairyRatio').value);
-      const grain = parseFloat(document.getElementById('grainRatio').value);
+  function showDifferences() {
+    const proteinUser = parseFloat(document.getElementById('proteinRatio').value);
+    const vegetableUser = parseFloat(document.getElementById('vegetableRatio').value);
+    const fruitUser = parseFloat(document.getElementById('fruitRatio').value);
+    const dairyUser = parseFloat(document.getElementById('dairyRatio').value);
+    const grainUser = parseFloat(document.getElementById('grainRatio').value);
 
-      const binaryProtein = protein.toString(2);
-      const binaryVegetable = vegetable.toString(2);
-      const binaryFruit = fruit.toString(2);
-      const binaryDairy = dairy.toString(2);
-      const binaryGrain = grain.toString(2);
+    const proteinUSDA = 20; // USDA suggested ratio for protein
+    const vegetableUSDA = 30; // USDA suggested ratio for vegetables
+    const fruitUSDA = 20; // USDA suggested ratio for fruits
+    const dairyUSDA = 20; // USDA suggested ratio for dairy
+    const grainUSDA = 30; // USDA suggested ratio for grains
 
-      const totalIntake = protein + vegetable + fruit + dairy + grain;
-      const binaryTotalIntake = totalIntake.toString(2);
-      
-      const foodBinaryDisplay = document.getElementById('foodBinaryDisplay');
+    const diffProtein = proteinUser - proteinUSDA;
+    const diffVegetable = vegetableUser - vegetableUSDA;
+    const diffFruit = fruitUser - fruitUSDA;
+    const diffDairy = dairyUser - dairyUSDA;
+    const diffGrain = grainUser - grainUSDA;
 
-      foodBinaryDisplay.innerHTML = `
-        <p>Protein in Binary: ${binaryProtein}</p>
-        <p>Vegetable in Binary: ${binaryVegetable}</p>
-        <p>Fruit in Binary: ${binaryFruit}</p>
-        <p>Dairy in Binary: ${binaryDairy}</p>
-        <p>Grain in Binary: ${binaryGrain}</p>
-        <p>Total Food Intake in Binary: ${binaryTotalIntake}</p>
-      `;
+    const suggestion = document.getElementById('suggestion');
+
+    suggestion.innerHTML = `<p>Numerical Differences:</p>
+                            <p>Protein: ${diffProtein.toFixed(2)} cups</p>
+                            <p>Vegetable: ${diffVegetable.toFixed(2)} cups</p>
+                            <p>Fruit: ${diffFruit.toFixed(2)} cups</p>
+                            <p>Dairy: ${diffDairy.toFixed(2)} cups</p>
+                            <p>Grain: ${diffGrain.toFixed(2)} cups</p>`;
+
+    // Provide a suggestion based on differences
+    if (diffProtein < 0 || diffVegetable < 0 || diffFruit < 0 || diffDairy < 0 || diffGrain < 0) {
+      suggestion.innerHTML += "<p>Your ratios are lower than the USDA suggestions. Consider adjusting to meet nutritional recommendations.</p>";
+    } else {
+      suggestion.innerHTML += "<p>Your ratios are in line with or higher than the USDA suggestions. Great job!</p>";
     }
-
+  }     
+    showDifferences();
     // Call necessary functions
     createPieChart(); // Or createUSDAChart() based on the initial action
   </script>
