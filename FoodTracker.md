@@ -21,7 +21,7 @@ search_exclude: false
   </style>
 </head>
 <body>
-  <h2>Weight to Cups Converter</h2>
+  <h2>Cups Calculator</h2>
 
   <div>
     <label for="quantity">Quantity:</label>
@@ -74,9 +74,7 @@ search_exclude: false
   </script>
 </body>
 <html lang="en">
-<head>
-  <title>Food Tracker</title>
-</head>
+  <h2>Plate Distribution</h2>
 <body>
   <div>
     <label for="proteinRatio" class="label">Cups of Protein:</label>
