@@ -170,9 +170,9 @@ function showCharts() {
   // Overall Nutrition Pie Chart
   const overallProtein = savedProtein;
   const overallVegetable = savedVegetable;
-  const overallFruit = /* Calculate overall fruit value */;
-  const overallDairy = /* Calculate overall dairy value */;
-  const overallGrain = /* Calculate overall grain value */;
+  const overallFruit = savedFruit;
+  const overallDairy = savedDairy;
+  const overallGrain = savedGrain;
 
   const overallTotal = overallProtein + overallVegetable + overallFruit + overallDairy + overallGrain;
 
@@ -193,11 +193,11 @@ function showCharts() {
   drawSegment(overallChart, 150, 150, 100, overallProteinAngle + overallVegetableAngle + overallFruitAngle + overallDairyAngle, 360, '#E6A8D7');
 
   // Current Meal Pie Chart
-  const currentProtein = /* Calculate current protein value */;
-  const currentVegetable = /* Calculate current vegetable value */;
-  const currentFruit = /* Calculate current fruit value */;
-  const currentDairy = /* Calculate current dairy value */;
-  const currentGrain = /* Calculate current grain value */;
+  const currentProtein = proteinUser;
+  const currentVegetable = vegetableUser;
+  const currentFruit = fruitUser;
+  const currentDairy = dairyUser;
+  const currentGrain = grainUser;
 
   const currentTotal = currentProtein + currentVegetable + currentFruit + currentDairy + currentGrain;
 
