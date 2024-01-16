@@ -107,6 +107,8 @@ search_exclude: false
 
   <div id="legend"></div>
   <h2>Suggestion</h2>
+  <button class="btn" onclick="showDifferences()">Show Differences</button>
+<div id="suggestion"></div>
   <div id="suggestion"></div>
 
   <script>
