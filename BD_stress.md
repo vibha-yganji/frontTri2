@@ -15,7 +15,7 @@ permalink: /stress/
   }
 </style>
 
-<div class="container_stress"> <!-- questions -->
+<div class="purple-form"> <!-- questions -->
   <h1>Stress Quiz</h1>
 
   <form id="stressForm">
