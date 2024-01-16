@@ -55,14 +55,14 @@ permalink: /water/
       <div class="ascii-bar" id="asciiWater"></div>
       </div>
     </div>
-    <div class="box">
+    <div class="purple-form">
       <h2>Enter Cups</h2>
       <div class="input-section">
         <input type="number" id="waterIntake" placeholder="Enter amount">
       </div>
       <button onclick="trackWater()">Track</button>
     </div>
-    <div class="box">
+    <div class="purple-form">
       <h2>Consumed Cups</h2>
       <div class="counter-box">
         <div class="counter">
