@@ -45,7 +45,7 @@ permalink: /water/
   <h1>Water Tracker with Progress Bar</h1>
 
   <div class="container">
-    <div class="box">
+    <div class="purple-form">
       <h2>Water Progress</h2>
       <div class="progress-bar" id="waterProgress">
         <div class="water-bar">
