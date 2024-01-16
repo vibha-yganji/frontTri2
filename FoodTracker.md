@@ -106,6 +106,8 @@ search_exclude: false
   <svg id="usdaChart" width="300" height="300"></svg>
 
   <div id="legend"></div>
+  <h2>Suggestion</h2>
+  <div id="suggestion"></div>
 
   <script>
     function createPieChart() {
@@ -196,8 +198,42 @@ search_exclude: false
       legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#FFD700;"></span> Dairy</div>';
       legend.innerHTML += '<div><span style="display:inline-block;width:20px;height:20px;background-color:#E6A8D7;"></span> Grain</div>';
     }
-     
+  function showDifferences() {
+    const proteinUser = parseFloat(document.getElementById('proteinRatio').value);
+    const vegetableUser = parseFloat(document.getElementById('vegetableRatio').value);
+    const fruitUser = parseFloat(document.getElementById('fruitRatio').value);
+    const dairyUser = parseFloat(document.getElementById('dairyRatio').value);
+    const grainUser = parseFloat(document.getElementById('grainRatio').value);
 
+    const proteinUSDA = 20; // USDA suggested ratio for protein
+    const vegetableUSDA = 30; // USDA suggested ratio for vegetables
+    const fruitUSDA = 20; // USDA suggested ratio for fruits
+    const dairyUSDA = 20; // USDA suggested ratio for dairy
+    const grainUSDA = 30; // USDA suggested ratio for grains
+
+    const diffProtein = proteinUser - proteinUSDA;
+    const diffVegetable = vegetableUser - vegetableUSDA;
+    const diffFruit = fruitUser - fruitUSDA;
+    const diffDairy = dairyUser - dairyUSDA;
+    const diffGrain = grainUser - grainUSDA;
+
+    const suggestion = document.getElementById('suggestion');
+
+    suggestion.innerHTML = `<p>Numerical Differences:</p>
+                            <p>Protein: ${diffProtein.toFixed(2)} cups</p>
+                            <p>Vegetable: ${diffVegetable.toFixed(2)} cups</p>
+                            <p>Fruit: ${diffFruit.toFixed(2)} cups</p>
+                            <p>Dairy: ${diffDairy.toFixed(2)} cups</p>
+                            <p>Grain: ${diffGrain.toFixed(2)} cups</p>`;
+
+    // Provide a suggestion based on differences
+    if (diffProtein < 0 || diffVegetable < 0 || diffFruit < 0 || diffDairy < 0 || diffGrain < 0) {
+      suggestion.innerHTML += "<p>Your ratios are lower than the USDA suggestions. Consider adjusting to meet nutritional recommendations.</p>";
+    } else {
+      suggestion.innerHTML += "<p>Your ratios are in line with or higher than the USDA suggestions. Great job!</p>";
+    }
+  }     
+    showDifferences();
     // Call necessary functions
     createPieChart(); // Or createUSDAChart() based on the initial action
   </script>
