@@ -2,7 +2,6 @@
 layout: base
 title: Daily Tracking
 permalink: /tracking
-search_exclude: false
 ---
 
 # This page is meant to be used for Night At the Musuem purposes! Try out our different features!
