@@ -59,8 +59,7 @@ Tangibles:
 Encouraging physical activity aligns with the promotion of overall student well-being. A fitness tracker project could contribute to fostering a healthier lifestyle among students, which can positively impact their academic performance and general health.
 
 **Data-Driven Insights:**
-Fitness trackers generate data on students' physical activity levels, sleep patterns, and other health metrics. This data can be valuable for educational institutions to gain insights into students' well-being, potentially identifying trends or patterns that could inform campus wellness programs.
-
+Fitness trackers generate data on students' physical activity levels, sleep patterns, and other health metrics. This data handling can be complex (tracking over long periods of time, repersenting this data, storing it in backend)
 ### Work in Progress/To do
 [Github Schedule](https://github.com/users/iKAN2025/projects/2/views/1)
 
