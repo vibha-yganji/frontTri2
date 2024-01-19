@@ -50,6 +50,9 @@ Tangibles:
 [Profile Page](https://jplip.github.io/frontTri2/profile_set_up/)
 
 
+## Story Map
+![Alt text](images/draw.io.png)
+
 ## Why would Collegeboard like this project?
 
 **Wellness Promotion:**
