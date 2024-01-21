@@ -2,7 +2,7 @@
 title: Checkpoint A Team Review Ticket
 courses: {'compsci': {'week': 6}}
 type: tangibles
-layout: default
+layout: base
 ---
 ### JWT
 

@@ -1,7 +1,7 @@
 ---
 layout: base
 permalink: /exercisegraph/
-title:  Exercise Graphs
+title:  Sleep Graphs
 search_exclude: true
 ---
 <html lang="en">
@@ -42,7 +42,7 @@ search_exclude: true
                 console.log('Fetched User Data:', userData);
 
                 // Extract exercise data from the user's exercise array
-                const exerciseData = userData.exercise || [];
+                const exerciseData = userData.tracking || [];
 
                 // Extract dates and durations from the exercise data
                 const exerciseDates = exerciseData.map(exercise => exercise.exerciseDate);
