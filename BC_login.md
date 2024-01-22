@@ -26,7 +26,7 @@ permalink: /login/
             uid: uid,
             password: password
         };
-        fetch('http://127.0.0.1:8240/api/users/login', {
+        fetch('http://127.0.0.1:8240/api/users/authenticate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
