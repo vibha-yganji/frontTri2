@@ -9,13 +9,15 @@ permalink: /login/
 </head>
 <body>
     <h1>Login</h1>
-    <form id='loginForm'>
-        <label for="uid">Username:</label>
-        <input type="text" id="uid" name="uid" required><br><br>        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>       
-        <input type="submit" value="Login">
-    </form>
+    <div class="purple-form">
+        <form id='loginForm'>
+            <label for="uid">Username:</label>
+            <input type="text" id="uid" name="uid" required><br><br>        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>       
+            <input type="submit" value="Login">
+        </form>
+    </div>
     <div id="userDisplayName"></div>
     <button id="updateButton" style="display: none;">Update</button>
     <script>
