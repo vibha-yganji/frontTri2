@@ -31,6 +31,7 @@ search_exclude: false
 </style>
 
 <html lang="en">
+  <a href="https://jplip.github.io/frontTri2/tracking/"><button class="btn">Daily</button></a>
   <a href="https://jplip.github.io/frontTri2/login/"><button class="btn">Login</button></a>
     <a href="https://jplip.github.io/frontTri2/Register/"><button class="btn">Register</button></a>
     <div class="top-container">
