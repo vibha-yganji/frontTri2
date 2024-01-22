@@ -3,7 +3,6 @@ layout: base
 title: Water 
 permalink: /water/
 ---
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -62,25 +61,12 @@ permalink: /water/
                 progressBar.style.width = percentage + '%';
                 progressText.innerText = totalCups + ' cups';
                 if (totalCups >= 8) {
-                    confetti({
-                        particleCount: 100,
-                        spread: 70,
-                        origin: { y: 0.6 }
-                    });
                     progressBar.style.width = '100%';
                 }
                 cupInfo.innerText = 'You have drank ' + totalCups + ' cups.';
-                if (totalCups <= 3) {
-                    cupInfo.innerText += ' Keep going!';
-                } else if (totalCups <= 7) {
-                    cupInfo.innerText += ' Good job! Stay hydrated!';
-                } else {
-                    cupInfo.innerText += ' Amazing! You are well-hydrated!';
-                }
                 inputElement.value = '';
             }
         }
     </script>
-
 </body>
 </html>

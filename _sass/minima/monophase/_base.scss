@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-$light-blue: deepskyblue; 
+$light-blue: rgb(0, 191, 255); 
 
 body {
   color: var(--body-color);
@@ -249,14 +249,14 @@ b {
   max-width: 1000px; /* Adjust width as needed */
   margin: 20px auto; /* Center the form */
   padding: 20px;
-  background-color: #A69EEF; /* Slightly darker purple background color */
+  background-color: #9c92f5; /* Slightly darker purple background color */
   border-radius: 8px;
 
   /* Style labels */
   label {
     display: block;
     margin-bottom: 6px; /* Darker purple text color */
-    color: plum;
+    color: rgb(166, 97, 166);
   }
 
   /* Style form inputs */
@@ -268,7 +268,7 @@ b {
     margin-bottom: 12px;
     border: none;
     background-color: lavenderblush;
-    color: plum;
+    color: rgb(166, 97, 166);
     border-radius: 4px;
   }
 
