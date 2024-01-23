@@ -47,14 +47,14 @@ permalink: /login/
                 }
             })
             .then(data => {
-                const loggedInUserName = data.user.name;
-                const loggedInUserId = data.user.id;
-                localStorage.setItem('loggedInUserName', loggedInUserName);
-                localStorage.setItem('loggedInUserId', loggedInUserId);
-                document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
-                document.getElementById('loginForm').style.display = 'none';
-                const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
-                console.log(userIDFromLocalStorage);
+               // const loggedInUserName = data.user.name;
+               // const loggedInUserId = data.user.id;
+               // localStorage.setItem('loggedInUserName', loggedInUserName);
+               // localStorage.setItem('loggedInUserId', loggedInUserId);
+                // document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
+               // document.getElementById('loginForm').style.display = 'none';
+               // const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
+               // console.log(userIDFromLocalStorage);
             })
             .catch(error => {
                 console.error('Error:', error.message);
@@ -64,3 +64,5 @@ permalink: /login/
     </script>
 </body>
 </html>
+
+
