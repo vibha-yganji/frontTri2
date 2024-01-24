@@ -1,6 +1,5 @@
 ---
 layout: base
-title: Update
 permalink: /update/
 --- 
 <style>
@@ -23,7 +22,7 @@ permalink: /update/
 		background: #272726;
 		padding: 40px;
 		z-index: 2;
-        color: #ffffff
+		color: #ffffff
 	}
 
 	.close-modal {
@@ -50,6 +49,7 @@ permalink: /update/
 	<tr>
 		<th>Name</th>
 		<th>Username</th>
+		<th>Password</th>
 		<th>Edit</th>
 		<th>Delete</th>
 	</tr>
@@ -61,11 +61,11 @@ permalink: /update/
 		<form id="editForm">
 			<input type="hidden" id="editId" name="editId" />
 
-			<label for="editGithubUsername">GitHub Username:</label>
-			<input type="text" id="editGithubUsername" name="editGithubUsername" /><br /><br />
-
-			<label for="editFullName">Full Name:</label>
+			<label for="editFullName">Name:</label>
 			<input type="text" id="editFullName" name="editFullName" /><br /><br />
+
+			<label for="editGithubUsername">Username:</label>
+			<input type="text" id="editGithubUsername" name="editGithubUsername" /><br /><br />
 
 			<input type="submit" value="Update" />
 		</form>
@@ -89,7 +89,7 @@ permalink: /update/
 					const row = table.insertRow();
 
 					row.setAttribute("data-id", user.id);
-					["name", "uid"].forEach(
+					["name", "uid", "password"].forEach(
 						(field) => {
 							const cell = row.insertCell();
 							if (user[field] === "none") {
@@ -149,6 +149,7 @@ permalink: /update/
 				[
 					data.name,
 					data.uid,
+					data.password,
 				].forEach((value) => {
 					const cell = row.insertCell();
 					cell.innerText = value;

@@ -17,6 +17,7 @@ permalink: /login/
         <input type="submit" value="Login">
     </form>
     <div id="userDisplayName"></div>
+    <button id="updateButton" style="display: none;">Update</button>
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
@@ -56,10 +57,14 @@ permalink: /login/
                 document.getElementById('loginForm').style.display = 'none';
                 const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
                 console.log(userIDFromLocalStorage);
+                document.getElementById('updateButton').style.display = 'block';
             })
             .catch(error => {
                 console.error('Error:', error.message);
                 alert(error.message);
+            });
+            document.getElementById('updateButton').addEventListener('click', function() {
+                window.location.href = '/frontTri2/update/';
             });
         });
     </script>
