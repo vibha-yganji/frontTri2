@@ -1,6 +1,7 @@
 ---
 layout: base
-permalink: /profile_set_up/
+title: Profile Creation
+permalink: /Profile/
 ---
 
 <html lang="en">
