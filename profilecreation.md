@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: base
 permalink: /profile_set_up/
 ---
 
