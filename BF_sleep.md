@@ -62,8 +62,8 @@ permalink: /sleep/
                         "uid": "life",
                         "dob": "10/12/13",
                         "age": "16",
-                        "exercise": updatedSleepData,
-                        "tracking": {}
+                        "exercise": "",
+                        "tracking": updatedSleepData
                     };
                     var jsonData = JSON.stringify(data2);
                     fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
