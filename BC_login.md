@@ -50,9 +50,11 @@ permalink: /login/
                 }
             })
             .then(data => {
+               const token = data.token;
                const loggedInUserName = data.data.user.name;
                const loggedInUserId = data.data.user.id;
                console.log(loggedInUserName);
+               console.log(data.token);
                localStorage.setItem('loggedInUserName', loggedInUserName);
                localStorage.setItem('loggedInUserId', loggedInUserId);
                 document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
