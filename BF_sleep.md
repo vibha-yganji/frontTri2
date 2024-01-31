@@ -48,7 +48,7 @@ permalink: /sleep/
                     return response.json();
                 })
                 .then(data => {
-                    const originalSleepData = Array.isArray(data.sleep) ? data.sleep : [];
+                    const originalSleepData = Array.isArray(data.tracking) ? data.tracking : [];
                     console.log(originalSleepData)
                     const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
                     const sleep = {
