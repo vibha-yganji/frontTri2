@@ -43,6 +43,7 @@ permalink: /exercise/
                 })
                 .then(data => {
                     const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
+                    const originalSleepData = Array.isArray(data.sleep) ? data.sleep : [];
                     const exercise = {
                         "name": name,
                         "exerciseType": exerciseType,
@@ -57,7 +58,7 @@ permalink: /exercise/
                         "dob": "10/12/13",
                         "age": "16",
                         "exercise": updatedExerciseData,
-                        "tracking": {}
+                        "tracking": originalSleepData
                     };
                     var jsonData = JSON.stringify(data2);
                     fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {

@@ -48,6 +48,7 @@ permalink: /sleep/
                     return response.json();
                 })
                 .then(data => {
+                    const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
                     const originalSleepData = Array.isArray(data.sleep) ? data.sleep : [];
                     const sleep = {
                         "name": name,
@@ -62,7 +63,7 @@ permalink: /sleep/
                         "uid": "life",
                         "dob": "10/12/13",
                         "age": "16",
-                        "exercise": "",
+                        "exercise": originalExerciseData,
                         "tracking": updatedSleepData
                     };
                     var jsonData = JSON.stringify(data2);
