@@ -43,7 +43,7 @@ permalink: /exercise/
                 })
                 .then(data => {
                     const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
-                    const originalSleepData = Array.isArray(data.sleep) ? data.sleep : [];
+                    const originalSleepData = Array.isArray(data.tracking) ? data.tracking : [];
                     const exercise = {
                         "name": name,
                         "exerciseType": exerciseType,
