@@ -88,7 +88,7 @@ permalink: /sleep/
                     console.error('Error:', error);
                 });
         });
+     </script>
+ <iframe src="https://jplip.github.io/frontTri2/sleepgraph/" width="800" height="600" frameborder="0"></iframe>
     
-    <iframe src="https://jplip.github.io/frontTri2/sleepgraph/" width="800" height="600" frameborder="0"></iframe>
-    
-</script>
+<html>
