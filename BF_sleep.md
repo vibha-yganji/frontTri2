@@ -49,6 +49,7 @@ permalink: /sleep/
                 })
                 .then(data => {
                     const originalSleepData = Array.isArray(data.sleep) ? data.sleep : [];
+                    console.log(originalSleepData)
                     const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
                     const sleep = {
                         "name": name,
