@@ -57,6 +57,7 @@ permalink: /sleep/
                         "sleepDate": sleepDate
                     }
                     const updatedSleepData = [...originalSleepData, sleep];
+                    console.log(updatedSleepData);
                     const data2 = {
                         "id": userIDFromLocalStorage,
                         "name": name,
