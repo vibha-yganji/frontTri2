@@ -45,8 +45,8 @@ search_exclude: true
                 const exerciseData = userData.tracking || [];
 
                 // Extract dates and durations from the exercise data
-                const exerciseDates = exerciseData.map(exercise => exercise.exerciseDate);
-                const exerciseDurations = exerciseData.map(exercise => parseInt(exercise.duration)); // Parse duration to an integer
+                const exerciseDates = exerciseData.map(tracking => tracking.sleepDate);
+                const exerciseDurations = exerciseData.map(tracking => parseInt(tracking.sleepHours)); // Parse duration to an integer
 
                 // Create the chart using Chart.js
                 const ctx = document.getElementById('exerciseChart').getContext('2d');
