@@ -65,7 +65,7 @@ permalink: /login/
             })
             .catch(error => {
                 console.error('Error:', error.message);
-                alert(error.message);
+                alert("Login Failed. ");
             });
             document.getElementById('updateButton').addEventListener('click', function() {
                 window.location.href = '/frontTri2/update/';
