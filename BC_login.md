@@ -38,6 +38,7 @@ permalink: /login/
                 body: JSON.stringify(loginData)
             })
 
+
             .then(response => {
                 if (response.ok) {
                     return response.json();
