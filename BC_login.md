@@ -34,6 +34,7 @@ permalink: /login/
                 headers: {
                     'Content-Type': 'application/json'
                 },
+                withCredentials: true
                 body: JSON.stringify(loginData)
             })
             .then(response => {
