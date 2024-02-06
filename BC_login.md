@@ -53,11 +53,11 @@ permalink: /login/
                 }
             })
             .then(data => {
-               const token = data.data.token;
+               const token = data.data.jwt.token;
                const loggedInUserName = data.data.user.name;
                const loggedInUserId = data.data.user.id;
                console.log(loggedInUserName);
-               console.log(data.data.token);
+               console.log(token);
                localStorage.setItem('loggedInUserName', loggedInUserName);
                localStorage.setItem('loggedInUserId', loggedInUserId);
                 document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
