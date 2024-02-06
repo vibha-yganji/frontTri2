@@ -60,13 +60,10 @@ permalink: /update/
 		<button id="closeModal" class="close-modal">X</button>
 		<form id="editForm">
 			<input type="hidden" id="editId" name="editId" />
-
 			<label for="editFullName">Name:</label>
 			<input type="text" id="editFullName" name="editFullName" /><br /><br />
-
 			<label for="editGithubUsername">Username:</label>
 			<input type="text" id="editGithubUsername" name="editGithubUsername" /><br /><br />
-
 			<input type="submit" value="Update" />
 		</form>
 	</div>

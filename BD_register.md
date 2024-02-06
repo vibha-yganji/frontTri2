@@ -51,6 +51,7 @@ permalink: /Register/
                     window.location.href = '/frontTri2/login/'; // Redirect upon successful user creation
                 } else {
                     console.error('User creation failed');
+                    alert("User Creation failed. Try again.");
                 }
             })
             .catch(error => {

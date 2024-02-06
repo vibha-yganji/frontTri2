@@ -42,19 +42,22 @@ permalink: /login/
                 } else {
                     if (response.status === 401) {
                         throw new Error('Wrong username or password. Please retype.');
+                        alert("Wrong username or password. Please retype")
                     } else if (response.status === 404) {
                         throw new Error('Username or password not found. Please register first.');
+                        alert("Wrong username or password. Please retype")
                     } else {
                         throw new Error('Login failed');
+                        alert("'Login failed'")
                     }
                 }
             })
             .then(data => {
-               const token = data.token;
+               const token = data.data.token;
                const loggedInUserName = data.data.user.name;
                const loggedInUserId = data.data.user.id;
                console.log(loggedInUserName);
-               console.log(data.token);
+               console.log(data.data.token);
                localStorage.setItem('loggedInUserName', loggedInUserName);
                localStorage.setItem('loggedInUserId', loggedInUserId);
                 document.getElementById('userDisplayName').textContent = `Welcome, ${loggedInUserName}!`;
