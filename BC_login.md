@@ -34,9 +34,10 @@ permalink: /login/
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                withCredentials: true
+                credentials: 'include',
                 body: JSON.stringify(loginData)
             })
+
             .then(response => {
                 if (response.ok) {
                     return response.json();
