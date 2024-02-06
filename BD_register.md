@@ -6,20 +6,22 @@ permalink: /Register/
 
 <html lang="en">
     <title>User Registration</title>
-    <h1>User Registration</h1>
-    <form id="registrationForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>     
-        <label for="uid">Username</label>  
-        <input type="text" id="uid" name="uid" required><br><br>
-        <label for="password">Password</label> 
-        <input type="password" id="password" name="password" required><br><br>
-        <label for="confirmPassword">Confirm Password</label> 
-        <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
-        <label for="dob">Date of Birth</label>
-        <input type="text" id="dob" name="dob" required><br><br>
-        <input type="submit" value="Create User">
-    </form>
+    <div class="purple-form">
+        <h1>User Registration</h1>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>     
+            <label for="uid">Username</label>  
+            <input type="text" id="uid" name="uid" required><br><br>
+            <label for="password">Password</label> 
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="confirmPassword">Confirm Password</label> 
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+            <label for="dob">Date of Birth</label>
+            <input type="text" id="dob" name="dob" required><br><br>
+            <input type="submit" value="Create User">
+        </form>
+    </div>
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
