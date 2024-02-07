@@ -3,6 +3,7 @@ layout: base
 title: Water 
 permalink: /water/
 ---
+![Alt text](images/Water Tracker Logo.png)
 <html lang="en">
 <head>
     <meta charset="UTF-8">
