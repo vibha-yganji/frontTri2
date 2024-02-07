@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Food Tracker
+title: Eating Healthy
 permalink: "/food/"
 search_exclude: false
 ---
