@@ -3,7 +3,7 @@ layout: base
 title: Sleep 
 permalink: /sleep/
 --- 
-
+![Alt text](images/Sleep Tracker Logo.png)
 <meta charset="UTF-8">
 <title>Sleep Tracker</title>
 <style>

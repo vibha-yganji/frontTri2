@@ -13,39 +13,39 @@ search_exclude: false
 <title>Cups Converter</title>
 </head>
 <body>
-
-<h2>Cups Converter</h2>
-<div>
-    <label for="weightInput">Enter Weight:</label>
-    <input type="number" id="weightInput" onchange="convertToCups()">
-    <select id="weightUnit" onchange="convertToCups()">
-        <option value="grams">Grams</option>
-        <option value="pounds">Pounds</option>
-    </select>
+<div class="purple-form">
+    <h2>Cups Converter</h2>
+    <div>
+        <label for="weightInput">Enter Weight:</label>
+        <input type="number" id="weightInput" onchange="convertToCups()">
+        <select id="weightUnit" onchange="convertToCups()">
+            <option value="grams">Grams</option>
+            <option value="pounds">Pounds</option>
+        </select>
+    </div>
+    <div>
+        <label for="cupsOutput">Cups:</label>
+        <span id="cupsOutput"></span>
+    </div>
 </div>
-<div>
-    <label for="cupsOutput">Cups:</label>
-    <span id="cupsOutput"></span>
-</div>
-
-<script>
-function convertToCups() {
-    const weightInput = parseFloat(document.getElementById('weightInput').value) || 0;
-    const weightUnit = document.getElementById('weightUnit').value;
-
-    let cupsOutput;
-    if (weightUnit === 'grams') {
-        // Standard density assumed for grams to cups conversion (approximate)
-        const densityGramsToCups = 0.00422675; // 1 gram ≈ 0.00422675 cups
-        cupsOutput = weightInput * densityGramsToCups;
-    } else if (weightUnit === 'pounds') {
-        // Standard density assumed for pounds to cups conversion (approximate)
-        const densityPoundsToCups = 2.08635; // 1 pound ≈ 2.08635 cups
-        cupsOutput = weightInput * densityPoundsToCups;
+<div class="purple-form">
+    <script>
+    function convertToCups() {
+        const weightInput = parseFloat(document.getElementById('weightInput').value) || 0;
+        const weightUnit = document.getElementById('weightUnit').value;
+        let cupsOutput;
+        if (weightUnit === 'grams') {
+            // Standard density assumed for grams to cups conversion (approximate)
+            const densityGramsToCups = 0.00422675; // 1 gram ≈ 0.00422675 cups
+            cupsOutput = weightInput * densityGramsToCups;
+        } else if (weightUnit === 'pounds') {
+            // Standard density assumed for pounds to cups conversion (approximate)
+            const densityPoundsToCups = 2.08635; // 1 pound ≈ 2.08635 cups
+            cupsOutput = weightInput * densityPoundsToCups;
+        }
+        document.getElementById('cupsOutput').textContent = cupsOutput.toFixed(2);
     }
-
-    document.getElementById('cupsOutput').textContent = cupsOutput.toFixed(2);
-}
+</div>
 </script>
 
 </body>

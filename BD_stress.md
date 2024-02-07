@@ -3,6 +3,7 @@ layout: base
 title: Stress
 permalink: /stress/
 --- 
+![Alt text](images/Stress Tracker Logo.png)
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
