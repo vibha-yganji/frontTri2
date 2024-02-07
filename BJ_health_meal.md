@@ -4,6 +4,8 @@ title: Eating Healthy
 permalink: "/food/"
 search_exclude: false
 ---
+![Alt text](images/Food Tracker Icon.png)
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
