@@ -11,34 +11,26 @@ permalink: /Profile/
     <meta name="description" content="Your website description here">
     <meta name="keywords" content="your, keywords, here">
 </head>
-
 <body>
+
 
 <div class="form_wrapper">
     <div class="form_container">
         <div class="title_container">
-            <h2> Profile Set-Up </h2>
+            <h2> Profile</h2>
         </div>
         <div class="row clearfix">
             <div class="">
                 <form class="purple-form">
                     <h2> General Information </h2>
-
-                    <div class="input_field">
-                        <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                        <input type="email" name="email" placeholder="Email" required/>
-                    </div>
-
                     <div class="input_field">
                         <span><i aria-hidden="true" class="fa fa-lock"></i></span>
                         <input type="password" name="password" placeholder="Password" required />
                     </div>
-
                     <div class="input_field">
                         <span><i aria-hidden="true" class="fa fa-lock"></i></span>
                         <input type="password" name="password" placeholder="Re-type Password" required />
                     </div>
-
                     <div class="">
                         <div class="">
                             <div class="input_field">
@@ -53,17 +45,14 @@ permalink: /Profile/
                             </div>
                         </div>
                     </div>
-
                     <div class="input_field radio_option">
                         <input type="radio" name="gender" id="male" checked>
                         <label for="male">Male</label>
                         <input type="radio" name="gender" id="female">
                         <label for="female">Female</label>
                     </div>
-
                     <hr>
                     <h2> Health Information </h2>
-
                     <div class="input_field select_option">
                         <select>
                             <option>How many cups of water do you drink daily?</option>
@@ -79,7 +68,6 @@ permalink: /Profile/
                         </select>
                         <div class="select_arrow"></div>
                     </div>
-
                     <div class="input_field select_option">
                         <select>
                             <option>How many calories do you eat in a given day?</option>
@@ -91,7 +79,6 @@ permalink: /Profile/
                         </select>
                         <div class="select_arrow"></div>
                     </div>
-
                     <div class="input_field select_option">
                         <select>
                             <option>How many hours of cardiovascular activity do you get in a given week??</option>
@@ -103,9 +90,7 @@ permalink: /Profile/
                         </select>
                         <div class="select_arrow"></div>
                     </div>
-
                     <form>
-
                     <hr>
                     <h2> Profile Picture Selection </h2>
                     <input
@@ -116,16 +101,12 @@ permalink: /Profile/
                     />
                     <button class="btn">Upload</button>
                     </form>
-
                     <progress value="0" max="100"></progress>
-
                     <p>
                         <strong>Uploading status:</strong>
                         <span id="statusMessage"> Nothing's uploaded</span>
                     </p>
-
                     <ul id="fileListMetadata"></ul>
-
                     <script>
                         const form = document.querySelector('form');
                         const statusMessage = document.getElementById('statusMessage');
@@ -134,16 +115,13 @@ permalink: /Profile/
                         const progressBar = document.querySelector('progress');
                         const fileNum = document.getElementById('fileNum');
                         const fileListMetadata = document.getElementById('fileListMetadata');
-
                         form.addEventListener('submit', handleSubmit);
                         fileInput.addEventListener('change', handleInputChange);
-
                         function handleSubmit(event) {
                             event.preventDefault();
                             showPendingState();
                             uploadFiles();
                         }
-
                         function handleInputChange() {
                             resetFormState();
                             try {
@@ -154,7 +132,6 @@ permalink: /Profile/
                             }
                             submitButton.disabled = false;
                         }
-
                         function uploadFiles() {
                             const url = 'https://httpbin.org/post';
                             const method = 'post';
@@ -164,7 +141,6 @@ permalink: /Profile/
                                 updateStatusMessage(`⏳ Uploaded ${event.loaded} bytes of ${event.total}`);
                                 updateProgressBar(event.loaded / event.total);
                             });
-
                             xhr.addEventListener('loadend', () => {
                                 if (xhr.status === 200) {
                                     updateStatusMessage('✅ Success');
