@@ -1,9 +1,7 @@
 ---
-layout: page
+layout: base
 permalink: /profile home/
 ---
-
-   
 
 <h1>ASCII Profile Selector</h1>
 
