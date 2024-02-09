@@ -74,7 +74,7 @@ permalink: /profile home/
   |  |  |  |
   |__|__|__|
   `,
-    // Add more ASCII art for additional profiles
+`
   };
 
   function updateAscii() {
