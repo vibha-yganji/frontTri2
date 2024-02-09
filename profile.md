@@ -4,6 +4,21 @@ title: Profile Creation
 permalink: /profile home/
 ---
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Profile Selector</title>
+  <style>
+    #ascii-container {
+      white-space: pre;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
 <h1>ASCII Profile Selector</h1>
 
 <label for="profile-select">Select a profile:</label>
@@ -31,7 +46,7 @@ permalink: /profile home/
 |      |]
 \      / 
  `    '  
-    `,
+    `, `
     lightningBolt: `
        ⚡
      \   /
@@ -73,7 +88,7 @@ permalink: /profile home/
   |  |  |  |
   |__|__|__|
   `,
-`
+    
   };
 
   function updateAscii() {
@@ -91,3 +106,4 @@ permalink: /profile home/
 
 </body>
 </html>
+
