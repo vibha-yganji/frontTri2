@@ -1,5 +1,6 @@
 ---
 layout: base
+title: Profile Creation
 permalink: /profile home/
 ---
 
