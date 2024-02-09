@@ -244,6 +244,7 @@ b {
 }
 
 
+
 // purple form SCSS
 .purple-form {
   max-width: 1000px; /* Adjust width as needed */
@@ -284,4 +285,9 @@ b {
       background-color: #f8bbd0; /* Lighter shade of lavenderblush on hover */
     }
   }
+}
+
+#ascii-container {
+  white-space: pre;
+  font-family: monospace;
 }
