@@ -80,11 +80,7 @@ function getSelectedProfile() {
 
 // Function to set a default profile in local storage
 function setDefaultProfile() {
-    // Check if a profile is already selected
-    if (!getSelectedProfile()) {
-        // If not, set a default profile
-        localStorage.setItem('selectedProfile', 'profile1');
-    }
+     var selectedProfile = localStorage.getItem('selectedProfile');
 }
 
 // ASCII art functions (unchanged)
