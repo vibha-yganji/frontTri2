@@ -39,7 +39,6 @@ permalink: /profile/
     <title>Exercise Profiles</title>
 </head>
 <body>
-
     <div id="navbar">
         <h2>Exercise Profiles</h2>
         <label for="profileSelect">Select Profile:</label>
@@ -53,7 +52,6 @@ permalink: /profile/
         <img id="profileImage" src="" alt="Profile Image">
         <div id="profileAscii"></div>
     </div>
-
     <div>
         <h3>All Options:</h3>
         <div class="profileOption" id="profile1">
@@ -90,29 +88,23 @@ permalink: /profile/
             <_/ 
         </div>
     </div>
-
     <script>
         function updateProfile() {
             // Get the selected profile value
             var selectedProfile = document.getElementById("profileSelect").value;
-
             // Show the selected profile's ASCII art
             document.getElementById("profileAscii").textContent = getProfileAscii(selectedProfile);
-
             // Hide the selected profile's option
             var allOptions = document.getElementsByClassName("profileOption");
             for (var i = 0; i < allOptions.length; i++) {
                 allOptions[i].style.display = "none";
             }
-
             // Show all options
             document.getElementById(selectedProfile).style.display = "block";
-
             // Set the profile image based on the selected profile
             var profileImage = document.getElementById("profileImage");
             profileImage.src = getProfileImage(selectedProfile);
         }
-
         // ASCII art functions
         function getProfileAscii(profile) {
             switch (profile) {
@@ -158,7 +150,6 @@ permalink: /profile/
                     return ""; // Set a default ASCII art or leave it empty
             }
         }
-
         // Profile image function
         function getProfileImage(profile) {
             switch (profile) {
@@ -180,6 +171,5 @@ permalink: /profile/
         // Initial update when the page loads
         updateProfile();
     </script>
-
 </body>
 </html>
