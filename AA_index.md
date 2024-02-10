@@ -5,7 +5,29 @@ permalink: "/"
 search_exclude: false
 ---
 <style>
-   
+    /* CSS for styling purposes (optional) */
+    .feature {
+      margin-bottom: 10px;
+    }
+
+    .top-container,
+    .bottom-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .element {
+      margin: 10px;
+    }
+
+    /* Added styles for scaling images */
+    .element img {
+      width: 300px; /* Set your desired width */
+      height: 300px; /* Set your desired height */
+      object-fit: cover; /* Maintain aspect ratio */
+    }
 </style>
 
 <html lang="en">
