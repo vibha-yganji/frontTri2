@@ -41,83 +41,117 @@ permalink: /profile/
         <div id="profileAscii"></div>
     </div>
 
+    <div>
+        <h3>All Options:</h3>
+        <div id="allOptions">
+            <div id="profile1" style="display: none;">
+                <pre>
+                ________
+                |      |
+                |      O
+                |     /|\\
+                |     / \\
+                |_________
+                </pre>
+            </div>
+            <div id="profile2" style="display: none;">
+                <pre>
+                \\    O
+                 \\   |\\
+                  \\  / \\
+                   \\/___\\
+                </pre>
+            </div>
+            <div id="profile3" style="display: none;">
+                <pre>
+                __
+                ( o>
+                /)__)
+                - \\ \\
+                   / /
+                </pre>
+            </div>
+            <div id="profile4" style="display: none;">
+                <pre>
+                +----+
+                |o o |
+                | \\  |
+                |  | |  
+                +-----+
+                </pre>
+            </div>
+            <div id="profile5" style="display: none;">
+                <pre>
+                \\_o< 
+                | \\ 
+                <_/ 
+                </pre>
+            </div>
+        </div>
+    </div>
+
     <script>
         function updateProfile() {
             // Get the selected profile value
             var selectedProfile = document.getElementById("profileSelect").value;
 
-            // Get the element to display ASCII art
-            var profileAscii = document.getElementById("profileAscii");
+            // Show the selected profile's ASCII art
+            document.getElementById("profileAscii").textContent = getProfileAscii(selectedProfile);
 
-            // Set the ASCII art based on the selected profile
-            switch (selectedProfile) {
-                case "profile1":
-                    profileAscii.textContent = getProfile1Ascii();
-                    break;
-                case "profile2":
-                    profileAscii.textContent = getProfile2Ascii();
-                    break;
-                case "profile3":
-                    profileAscii.textContent = getProfile3Ascii();
-                    break;
-                case "profile4":
-                    profileAscii.textContent = getProfile4Ascii();
-                    break;
-                case "profile5":
-                    profileAscii.textContent = getProfile5Ascii();
-                    break;
-                default:
-                    profileAscii.textContent = ""; // Set a default ASCII art or leave it empty
+            // Hide all other options
+            var allOptions = document.getElementById("allOptions").children;
+            for (var i = 0; i < allOptions.length; i++) {
+                allOptions[i].style.display = "none";
             }
+
+            // Show the selected profile's option
+            document.getElementById(selectedProfile).style.display = "block";
         }
 
         // ASCII art functions
-        function getProfile1Ascii() {
-            return `
-            ________
-            |      |
-            |      O
-            |     /|\\
-            |     / \\
-            |_________
-            `;
-        }
-
-        function getProfile2Ascii() {
-            return `
-            \\    O
-             \\   |\\
-              \\  / \\
-               \\/___\\
-            `;
-        }
-
-        function getProfile3Ascii() {
-            return `
-            __
-            ( o>
-            /)__)
-            - \\ \\
-               / /
-            `;
-        }
-
-        function getProfile4Ascii() {
-            return `
-            +----+
-            |o o |
-            | \\  |
-            |  | |  
-            +-----+
-            `;
-        }
-
-        function getProfile5Ascii() {
-            return `
-            \\_o< 
-            | \\ 
-            <_/ 
-            `;
+        function getProfileAscii(profile) {
+            switch (profile) {
+                case "profile1":
+                    return `
+                    ________
+                    |      |
+                    |      O
+                    |     /|\\
+                    |     / \\
+                    |_________
+                    `;
+                case "profile2":
+                    return `
+                    \\    O
+                     \\   |\\
+                      \\  / \\
+                       \\/___\\
+                    `;
+                case "profile3":
+                    return `
+                    __
+                    ( o>
+                    /)__)
+                    - \\ \\
+                       / /
+                    `;
+                case "profile4":
+                    return `
+                    +----+
+                    |o o |
+                    | \\  |
+                    |  | |  
+                    +-----+
+                    `;
+                case "profile5":
+                    return `
+                    \\_o< 
+                    | \\ 
+                    <_/ 
+                    `;
+                default:
+                    return ""; // Set a default ASCII art or leave it empty
+            }
         }
 
         // Initial update when the page loads
