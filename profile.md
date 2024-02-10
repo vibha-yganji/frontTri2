@@ -1,8 +1,9 @@
 ---
 layout: base
 title: Profile Creation
-permalink: /profile/
+permalink: /Profile/
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,15 +17,17 @@ permalink: /profile/
             padding: 10px;
             text-align: center;
         }
-        #profileImage {
-            max-width: 100%;
-            height: auto;
+
+        #profileAscii {
+            font-family: monospace;
+            white-space: pre;
             margin-top: 10px;
         }
     </style>
     <title>Exercise Profiles</title>
 </head>
 <body>
+
     <div id="navbar">
         <h2>Exercise Profiles</h2>
         <label for="profileSelect">Select Profile:</label>
@@ -35,37 +38,88 @@ permalink: /profile/
             <option value="profile4">Profile 4</option>
             <option value="profile5">Profile 5</option>
         </select>
-        <div>
-            <img id="profileImage" src="" alt="Selected Profile Image">
-        </div>
+        <div id="profileAscii"></div>
     </div>
+
     <script>
         function updateProfile() {
             // Get the selected profile value
             var selectedProfile = document.getElementById("profileSelect").value;
-            // Get the image element
-            var profileImage = document.getElementById("profileImage");
-            // Set the source of the image based on the selected profile
+
+            // Get the element to display ASCII art
+            var profileAscii = document.getElementById("profileAscii");
+
+            // Set the ASCII art based on the selected profile
             switch (selectedProfile) {
                 case "profile1":
-                    profileImage.src = "ascii_profile1.txt"; // Replace with the actual path to your ASCII art file
+                    profileAscii.textContent = getProfile1Ascii();
                     break;
                 case "profile2":
-                    profileImage.src = "ascii_profile2.txt";
+                    profileAscii.textContent = getProfile2Ascii();
                     break;
                 case "profile3":
-                    profileImage.src = "ascii_profile3.txt";
+                    profileAscii.textContent = getProfile3Ascii();
                     break;
                 case "profile4":
-                    profileImage.src = "ascii_profile4.txt";
+                    profileAscii.textContent = getProfile4Ascii();
                     break;
                 case "profile5":
-                    profileImage.src = "ascii_profile5.txt";
+                    profileAscii.textContent = getProfile5Ascii();
                     break;
                 default:
-                    profileImage.src = ""; // Set a default image or leave it empty
+                    profileAscii.textContent = ""; // Set a default ASCII art or leave it empty
             }
         }
+
+        // ASCII art functions
+        function getProfile1Ascii() {
+            return `
+            ________
+            |      |
+            |      O
+            |     /|\\
+            |     / \\
+            |_________
+            `;
+        }
+
+        function getProfile2Ascii() {
+            return `
+            \\    O
+             \\   |\\
+              \\  / \\
+               \\/___\\
+            `;
+        }
+
+        function getProfile3Ascii() {
+            return `
+            __
+            ( o>
+            /)__)
+            - \\ \\
+               / /
+            `;
+        }
+
+        function getProfile4Ascii() {
+            return `
+            +----+
+            |o o |
+            | \\  |
+            |  | |  
+            +-----+
+            `;
+        }
+
+        function getProfile5Ascii() {
+            return `
+            \\_o< 
+            | \\ 
+            <_/ 
+            `;
+        }
+
         // Initial update when the page loads
         updateProfile();
     </script>
