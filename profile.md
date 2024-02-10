@@ -121,6 +121,8 @@ permalink: /profile/
             }
         }
         // Initial update when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
         updateProfile();
+    });
     </script>
 </html>

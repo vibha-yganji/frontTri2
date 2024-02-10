@@ -143,7 +143,12 @@ function displaySelectedProfile() {
 }
 
 // Initial display when the page loads
-displaySelectedProfile();
+document.addEventListener('DOMContentLoaded', function () {
+        displaySelectedProfile();
+    });
+
+
+
 
 </script>
 
