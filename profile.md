@@ -16,11 +16,11 @@ permalink: /profile/
             font-family: monospace;
             white-space: pre;
         }
-        /* #profileAscii {
+         #profileAscii {
             font-family: monospace;
             white-space: pre;
             margin-top: 10px;
-        } */
+        } 
         .profileOption {
             font-family: monospace;
             white-space: pre;
