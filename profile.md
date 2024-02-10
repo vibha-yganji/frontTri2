@@ -121,8 +121,9 @@ permalink: /profile/
                     return ""; // Set a default ASCII art or leave it empty
             }
         }
+          updateProfile();
         });
         // Initial update when the page loads
-        updateProfile();
+      
     </script>
 </html>
