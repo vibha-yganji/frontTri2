@@ -8,9 +8,6 @@ function getSelectedProfile() {
     return localStorage.getItem('selectedProfile');
 }
 
-
-
-
 // ASCII art functions (unchanged)
 function getProfileAscii(profile) {
             switch (profile) {
