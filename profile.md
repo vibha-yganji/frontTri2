@@ -4,7 +4,6 @@ title: profile
 permalink: /profile/
 ---
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +17,7 @@ permalink: /profile/
             padding: 10px;
             text-align: center;
         }
+
         #profileAscii {
             font-family: monospace;
             white-space: pre;
@@ -25,7 +25,10 @@ permalink: /profile/
         }
 
         .profileOption {
+            font-family: monospace;
+            white-space: pre;
             display: none;
+            margin-top: 10px;
         }
     </style>
     <title>Exercise Profiles</title>
@@ -48,47 +51,37 @@ permalink: /profile/
     <div>
         <h3>All Options:</h3>
         <div class="profileOption" id="profile1">
-            <pre>
             ________
             |      |
             |      O
             |     /|\\
             |     / \\
             |_________
-            </pre>
         </div>
         <div class="profileOption" id="profile2">
-            <pre>
             \\    O
              \\   |\\
               \\  / \\
                \\/___\\
-            </pre>
         </div>
         <div class="profileOption" id="profile3">
-            <pre>
             __
             ( o>
             /)__)
             - \\ \\
                / /
-            </pre>
         </div>
         <div class="profileOption" id="profile4">
-            <pre>
             +----+
             |o o |
             | \\  |
             |  | |  
             +-----+
-            </pre>
         </div>
         <div class="profileOption" id="profile5">
-            <pre>
             \\_o< 
             | \\ 
             <_/ 
-            </pre>
         </div>
     </div>
 
@@ -100,14 +93,14 @@ permalink: /profile/
             // Show the selected profile's ASCII art
             document.getElementById("profileAscii").textContent = getProfileAscii(selectedProfile);
 
-            // Hide all other options
+            // Show all options
             var allOptions = document.getElementsByClassName("profileOption");
             for (var i = 0; i < allOptions.length; i++) {
-                allOptions[i].style.display = "none";
+                allOptions[i].style.display = "block";
             }
 
-            // Show the selected profile's option
-            document.getElementById(selectedProfile).style.display = "block";
+            // Hide the selected profile's option
+            document.getElementById(selectedProfile).style.display = "none";
         }
 
         // ASCII art functions
