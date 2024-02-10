@@ -74,30 +74,38 @@ search_exclude: false
     </div>
 
 <script>
-    function getSelectedProfile() {
-        return localStorage.getItem('selectedProfile');
+// exercise-profiles.js
+
+// Function to retrieve the selected profile from local storage
+function getSelectedProfile() {
+    return localStorage.getItem('selectedProfile');
+}
+
+// Function to set a default profile in local storage
+function setDefaultProfile() {
+    // Check if a profile is already selected
+    if (!getSelectedProfile()) {
+        // If not, set a default profile
+        localStorage.setItem('selectedProfile', 'profile1');
     }
-    
+}
 
-    // ASCII art functions (unchanged)
+// ASCII art functions (unchanged)
 
-    function displaySelectedProfile() {
-        // Get the selected profile value
-        var selectedProfile = getSelectedProfile();
-        console.log(selectedProfile);
-        if (selectedProfile) {
-            // Show the selected profile's ASCII art in the upper right corner
-            var selectedAscii = document.getElementById("selectedAscii");
-            selectedAscii.textContent = getProfileAscii(selectedProfile);
-        } else {
-            // If no profile is selected, you can handle this case accordingly
-            console.log("No profile selected");
-        }
-    }
+function displaySelectedProfile() {
+    // Set a default profile if none is selected
+    setDefaultProfile();
 
-    // Initial display when the page loads
-    displaySelectedProfile();
+    // Get the selected profile value
+    var selectedProfile = getSelectedProfile();
 
+    // Show the selected profile's ASCII art in the upper right corner
+    var selectedAscii = document.getElementById("selectedAscii");
+    selectedAscii.textContent = getProfileAscii(selectedProfile);
+}
+
+// Initial display when the page loads
+displaySelectedProfile();
 
 
 </script>
