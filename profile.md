@@ -85,7 +85,7 @@ permalink: /profile/
         <div class="profileOption">
             \\_o< 
             | \\ 
-            <_/ 
+            <   
         </div>
    </div>
     </div>
