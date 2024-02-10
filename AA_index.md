@@ -67,5 +67,6 @@ search_exclude: false
 
 <script src="assets/js/exercise.js" defer></script>
 
+
 </html>
 

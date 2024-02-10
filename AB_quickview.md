@@ -37,3 +37,5 @@ permalink: /tracking/
 
 
 # More Info 
+<div id="selectedAscii"></div>
+<script src="assets/js/exercise.js" defer></script>

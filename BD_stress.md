@@ -133,3 +133,6 @@ permalink: /stress/
     setProgressBar(progressPercentage, 'moderate-stress'); // Using moderate-stress color for simplicity
   }
 </script>
+
+<div id="selectedAscii"></div>
+<script src="assets/js/exercise.js" defer></script>

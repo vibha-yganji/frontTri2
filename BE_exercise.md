@@ -11,7 +11,8 @@ permalink: /exercise/
     <title>Exercise</title>
 </head>
 <body>
-    <div class="purple-form">
+<div id="selectedAscii"></div>
+<div class="purple-form">
         <div id="binaryDurationBadge" class="binary-badge"></div>
         <form id="exerciseForm">
             <label for="name">Name:</label>
@@ -157,7 +158,7 @@ permalink: /exercise/
     }
     </script>
     <iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
-
+<script src="assets/js/exercise.js" defer></script>
 </body>
 
 </html>
