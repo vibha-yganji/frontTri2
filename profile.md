@@ -52,7 +52,8 @@ permalink: /profile/
     <div id="profileAscii"></div>
     <script>
            function updateSelectedProfile(profile) {
-                localStorage.setItem('selectedProfile', profile);
+                var selectedProfile = localStorage.setItem('selectedProfile', profile);
+                console.log(selectedProfile);
             }
             // Function to retrieve the selected profile from local storage
             function getSelectedProfile() {
