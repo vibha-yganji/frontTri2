@@ -63,5 +63,20 @@ search_exclude: false
             </a>
         </div>
     </div>
+  <script>
+ // Load the header dynamically
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.querySelector('body').insertAdjacentHTML('afterbegin', html);
+            // You can also initialize any scripts for the header here
+        });
+</script>
+
+
+
+
+
+
 </html>
 
