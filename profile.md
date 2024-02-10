@@ -53,40 +53,32 @@ permalink: /profile/
         <div id="profileAscii"></div>
     </div>
     <div>
-        <h3>All Options:</h3>
-        <div class="profileOption" id="profile1">
-            ________
+        <h3>All Options:</h3>    ________
             |      |
             |      O
             |     /|\\
             |     / \\
             |_________
-        </div>
-        <div class="profileOption" id="profile2">
+          
             \\    O
              \\   |\\
               \\  / \\
                \\/___\\
-        </div>
-        <div class="profileOption" id="profile3">
             __
             ( o>
             /)__)
             - \\ \\
                / /
-        </div>
-        <div class="profileOption" id="profile4">
+
             +----+
             |o o |
             | \\  |
             |  | |  
             +-----+
-        </div>
-        <div class="profileOption" id="profile5">
             \\_o< 
             | \\ 
             <_/ 
-        </div>
+   </div>
     </div>
     <script>
         function updateProfile() {
