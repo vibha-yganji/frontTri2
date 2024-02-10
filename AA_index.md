@@ -84,7 +84,7 @@ search_exclude: false
     function displaySelectedProfile() {
         // Get the selected profile value
         var selectedProfile = getSelectedProfile();
-        console.log(selectedprofile);
+        console.log(selectedProfile);
         if (selectedProfile) {
             // Show the selected profile's ASCII art in the upper right corner
             var selectedAscii = document.getElementById("selectedAscii");
