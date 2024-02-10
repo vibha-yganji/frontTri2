@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Profile Creation
+title: profile
 permalink: /profile/
 ---
 
