@@ -3,6 +3,7 @@ layout: base
 title: profile
 permalink: /profile/
 ---
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,21 +15,12 @@ permalink: /profile/
             color: white;
             padding: 10px;
             text-align: center;
-            position: relative; /* Set position to relative for positioning the ASCII art div */
         }
 
         #profileImage {
             max-width: 50px; /* Adjust the size of the profile image as needed */
             height: auto;
             margin-top: 10px;
-        }
-
-        #selectedAscii {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-family: monospace;
-            white-space: pre;
         }
 
         #profileAscii {
@@ -59,7 +51,6 @@ permalink: /profile/
             <option value="profile5">Profile 5</option>
         </select>
         <img id="profileImage" src="" alt="Profile Image">
-        <div id="selectedAscii"></div>
         <div id="profileAscii"></div>
     </div>
 
@@ -101,29 +92,26 @@ permalink: /profile/
     </div>
 
     <script>
-       function updateProfile() {
-      // Get the selected profile value
-      var selectedProfile = document.getElementById("profileSelect").value;
+        function updateProfile() {
+            // Get the selected profile value
+            var selectedProfile = document.getElementById("profileSelect").value;
 
-      // Show the selected profile's ASCII art in the upper right corner
-      var selectedAscii = document.getElementById("selectedAscii");
-      selectedAscii.textContent = getProfileArt(selectedProfile);
+            // Show the selected profile's ASCII art
+            document.getElementById("profileAscii").textContent = getProfileAscii(selectedProfile);
 
-      // Hide the selected profile's option
-      var allOptions = document.getElementsByClassName("profileOption");
-      for (var i = 0; i < allOptions.length; i++) {
-          allOptions[i].style.display = "none";
-      }
+            // Hide the selected profile's option
+            var allOptions = document.getElementsByClassName("profileOption");
+            for (var i = 0; i < allOptions.length; i++) {
+                allOptions[i].style.display = "none";
+            }
 
-      // Show the selected profile's option
-      var selectedOption = document.getElementById(selectedProfile);
-      selectedOption.style.display = "block";
+            // Show all options
+            document.getElementById(selectedProfile).style.display = "block";
 
-      // Set the profile image based on the selected profile
-      var profileImage = document.getElementById("profileImage");
-      profileImage.src = ""; 
-  }
-
+            // Set the profile image based on the selected profile
+            var profileImage = document.getElementById("profileImage");
+            profileImage.src = getProfileImage(selectedProfile);
+        }
 
         // ASCII art functions
         function getProfileAscii(profile) {
@@ -172,52 +160,22 @@ permalink: /profile/
         }
 
         // Profile image function
-        // Profile art function
-function getProfileArt(profile) {
-    switch (profile) {
-        case "profile1":
-            return `
-            ________
-            |      |
-            |      O
-            |     /|\\
-            |     / \\
-            |_________
-            `;
-        case "profile2":
-            return `
-            \\    O
-             \\   |\\
-              \\  / \\
-               \\/___\\
-            `;
-        case "profile3":
-            return `
-            __
-            ( o>
-            /)__)
-            - \\ \\
-               / /
-            `;
-        case "profile4":
-            return `
-            +----+
-            |o o |
-            | \\  |
-            |  | |  
-            +-----+
-            `;
-        case "profile5":
-            return `
-            \\_o< 
-            | \\ 
-            <_/ 
-            `;
-        default:
-            return ""; // Set a default ASCII art or leave it empty
-    }
-}
-
+        function getProfileImage(profile) {
+            switch (profile) {
+                case "profile1":
+                    return "path_to_profile1_image.jpg"; // Replace with the actual path to your profile image
+                case "profile2":
+                    return "path_to_profile2_image.jpg";
+                case "profile3":
+                    return "path_to_profile3_image.jpg";
+                case "profile4":
+                    return "path_to_profile4_image.jpg";
+                case "profile5":
+                    return "path_to_profile5_image.jpg";
+                default:
+                    return ""; // Set a default image or leave it empty
+            }
+        }
 
         // Initial update when the page loads
         updateProfile();
