@@ -65,7 +65,7 @@ search_exclude: false
         </div>
     </div>
 
-<script src="assets/exercise.js" defer></script>
+<script src="assets/js/exercise.js" defer></script>
 
 </script>
 
