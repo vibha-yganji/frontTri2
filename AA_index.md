@@ -138,7 +138,7 @@ function getProfileAscii(profile) {
                     return ""; // Set a default ASCII art or leave it empty
             }
         }
-}
+
 
 function displaySelectedProfile() {
     // Set a default profile if none is selected
