@@ -28,6 +28,14 @@ search_exclude: false
       height: 300px; /* Set your desired height */
       object-fit: cover; /* Maintain aspect ratio */
     }
+
+    #selectedAscii {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: monospace;
+    white-space: pre;
+}
 </style>
 
 <html lang="en">
@@ -65,7 +73,33 @@ search_exclude: false
         </div>
     </div>
 
-<script src="/assets/js/exercise.js" defer></script>
+<script>
+    function getSelectedProfile() {
+        return localStorage.getItem('selectedProfile');
+    }
+
+    // ASCII art functions (unchanged)
+
+    function displaySelectedProfile() {
+        // Get the selected profile value
+        var selectedProfile = getSelectedProfile();
+
+        if (selectedProfile) {
+            // Show the selected profile's ASCII art in the upper right corner
+            var selectedAscii = document.getElementById("selectedAscii");
+            selectedAscii.textContent = getProfileAscii(selectedProfile);
+        } else {
+            // If no profile is selected, you can handle this case accordingly
+            console.log("No profile selected");
+        }
+    }
+
+    // Initial display when the page loads
+    displaySelectedProfile();
+
+
+
+</script>
 
 
 
