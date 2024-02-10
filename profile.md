@@ -3,34 +3,7 @@ layout: base
 title: profile
 permalink: /profile/
 ---
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Add some styling to the navbar */
-        #selectedAscii {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-family: monospace;
-            white-space: pre;
-        }
-         #profileAscii {
-            font-family: monospace;
-            white-space: pre;
-            margin-top: 10px;
-        } 
-        .profileOption {
-            font-family: monospace;
-            white-space: pre;
-            margin-top: 10px; /* Adjust margin as needed */
-            display: none;
-        }
-    </style>
-    <title>Exercise Profiles</title>
-</head>
-<body>
+<html>
     <div class="purple-form">
         <h2>Exercise Profiles</h2>
         <label for="profileSelect">Select Profile:</label>
@@ -141,6 +114,4 @@ permalink: /profile/
         // Initial update when the page loads
         updateProfile();
     </script>
-
-</body>
 </html>
