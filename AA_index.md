@@ -77,13 +77,14 @@ search_exclude: false
     function getSelectedProfile() {
         return localStorage.getItem('selectedProfile');
     }
+    
 
     // ASCII art functions (unchanged)
 
     function displaySelectedProfile() {
         // Get the selected profile value
         var selectedProfile = getSelectedProfile();
-
+        console.log(selectedprofile);
         if (selectedProfile) {
             // Show the selected profile's ASCII art in the upper right corner
             var selectedAscii = document.getElementById("selectedAscii");
