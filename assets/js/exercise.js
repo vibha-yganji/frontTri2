@@ -13,13 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Function to set a default profile in local storage
+    // Function to set a default profile in local storage
     function setDefaultProfile() {
-        // Check if a profile is already selected
-        if (!getSelectedProfile()) {
+    // Get the currently selected profile
+        var currentProfile = getSelectedProfile();
+        console.log(currentProfile)
+
+        // Check if no profile is selected
+        if (!currentProfile) {
             // If not, set a default profile
             localStorage.setItem('selectedProfile', 'profile1');
         }
     }
+
 
     // ASCII art functions (unchanged)
     function getProfileAscii(profile) {
