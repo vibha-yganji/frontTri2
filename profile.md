@@ -3,8 +3,6 @@ layout: base
 title: profile
 permalink: /profile/
 ---
-</body>
-</html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
