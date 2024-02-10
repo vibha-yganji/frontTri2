@@ -11,5 +11,9 @@
   {%- endif -%}
 
   {%- include custom-head.html -%}
+
+  {% if site.minima.profile_image %}
+  <img src="{{ site.minima.profile_image }}" alt="Profile Image" class="profile-image">
+{% endif %}
   
 </head>
