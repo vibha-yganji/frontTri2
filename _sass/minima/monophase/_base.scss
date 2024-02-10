@@ -287,7 +287,21 @@ b {
   }
 }
 
-#ascii-container {
-  white-space: pre;
+#selectedAscii {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-family: monospace;
+  white-space: pre;
+}
+#profileAscii {
+  font-family: monospace;
+  white-space: pre;
+  margin-top: 10px;
+} 
+.profileOption {
+  font-family: monospace;
+  white-space: pre;
+  margin-top: 10px; /* Adjust margin as needed */
+  display: none;
 }
