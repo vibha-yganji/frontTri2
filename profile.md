@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Profile Creation
-permalink: /Profile/
+permalink: /profile/
 ---
 
 <!DOCTYPE html>
