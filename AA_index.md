@@ -73,6 +73,8 @@ search_exclude: false
 
 // Function to retrieve the selected profile from local storage
 function getSelectedProfile() {
+    var storedProfile = localStorage.getItem('selectedProfile');
+    console.log(storedProfile);
     return localStorage.getItem('selectedProfile');
 }
 
