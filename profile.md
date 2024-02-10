@@ -51,6 +51,7 @@ permalink: /profile/
     <div id="selectedAscii"></div>
     <div id="profileAscii"></div>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
            function updateSelectedProfile(profile) {
                 localStorage.setItem('selectedProfile', profile);
             }
@@ -120,6 +121,7 @@ permalink: /profile/
                     return ""; // Set a default ASCII art or leave it empty
             }
         }
+        });
         // Initial update when the page loads
         updateProfile();
     </script>
