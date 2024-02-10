@@ -4,6 +4,7 @@ title: profile
 permalink: /profile/
 ---
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +23,10 @@ permalink: /profile/
             font-family: monospace;
             white-space: pre;
             margin-top: 10px;
+        }
+
+        .profileOption {
+            display: none;
         }
     </style>
     <title>Exercise Profiles</title>
@@ -43,50 +48,48 @@ permalink: /profile/
 
     <div>
         <h3>All Options:</h3>
-        <div id="allOptions">
-            <div id="profile1" style="display: none;">
-                <pre>
-                ________
-                |      |
-                |      O
-                |     /|\\
-                |     / \\
-                |_________
-                </pre>
-            </div>
-            <div id="profile2" style="display: none;">
-                <pre>
-                \\    O
-                 \\   |\\
-                  \\  / \\
-                   \\/___\\
-                </pre>
-            </div>
-            <div id="profile3" style="display: none;">
-                <pre>
-                __
-                ( o>
-                /)__)
-                - \\ \\
-                   / /
-                </pre>
-            </div>
-            <div id="profile4" style="display: none;">
-                <pre>
-                +----+
-                |o o |
-                | \\  |
-                |  | |  
-                +-----+
-                </pre>
-            </div>
-            <div id="profile5" style="display: none;">
-                <pre>
-                \\_o< 
-                | \\ 
-                <_/ 
-                </pre>
-            </div>
+        <div class="profileOption" id="profile1">
+            <pre>
+            ________
+            |      |
+            |      O
+            |     /|\\
+            |     / \\
+            |_________
+            </pre>
+        </div>
+        <div class="profileOption" id="profile2">
+            <pre>
+            \\    O
+             \\   |\\
+              \\  / \\
+               \\/___\\
+            </pre>
+        </div>
+        <div class="profileOption" id="profile3">
+            <pre>
+            __
+            ( o>
+            /)__)
+            - \\ \\
+               / /
+            </pre>
+        </div>
+        <div class="profileOption" id="profile4">
+            <pre>
+            +----+
+            |o o |
+            | \\  |
+            |  | |  
+            +-----+
+            </pre>
+        </div>
+        <div class="profileOption" id="profile5">
+            <pre>
+            \\_o< 
+            | \\ 
+            <_/ 
+            </pre>
         </div>
     </div>
 
@@ -99,7 +102,7 @@ permalink: /profile/
             document.getElementById("profileAscii").textContent = getProfileAscii(selectedProfile);
 
             // Hide all other options
-            var allOptions = document.getElementById("allOptions").children;
+            var allOptions = document.getElementsByClassName("profileOption");
             for (var i = 0; i < allOptions.length; i++) {
                 allOptions[i].style.display = "none";
             }
