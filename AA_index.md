@@ -77,6 +77,9 @@ search_exclude: false
 // exercise-profiles.js
 
 // Function to retrieve the selected profile from local storage
+// exercise-profiles.js
+
+// Function to retrieve the selected profile from local storage
 function getSelectedProfile() {
     return localStorage.getItem('selectedProfile');
 }
@@ -91,6 +94,51 @@ function setDefaultProfile() {
 }
 
 // ASCII art functions (unchanged)
+function getProfileAscii(profile) {
+            switch (profile) {
+                case "profile1":
+                    return `
+                    ________
+                    |      |
+                    |      O
+                    |     /|\\
+                    |     / \\
+                    |_________
+                    `;
+                case "profile2":
+                    return `
+                    \\    O
+                     \\   |\\
+                      \\  / \\
+                       \\/___\\
+                    `;
+                case "profile3":
+                    return `
+                    __
+                    ( o>
+                    /)__)
+                    - \\ \\
+                       / /
+                    `;
+                case "profile4":
+                    return `
+                    +----+
+                    |o o |
+                    | \\  |
+                    |  | |  
+                    +-----+
+                    `;
+                case "profile5":
+                    return `
+                    \\_o< 
+                    | \\ 
+                    <_/ 
+                    `;
+                default:
+                    return ""; // Set a default ASCII art or leave it empty
+            }
+        }
+}
 
 function displaySelectedProfile() {
     // Set a default profile if none is selected
@@ -106,7 +154,6 @@ function displaySelectedProfile() {
 
 // Initial display when the page loads
 displaySelectedProfile();
-
 
 </script>
 
