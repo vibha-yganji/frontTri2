@@ -51,16 +51,6 @@ permalink: /profile/
     <div id="selectedAscii"></div>
     <div id="profileAscii"></div>
     <script>
-        function updateSelectedProfile(profile) {
-                var selectedProfile = localStorage.setItem('selectedProfile', profile);
-                console.log(selectedProfile);
-            }
-            // Function to retrieve the selected profile from local storage
-            function getSelectedProfile() {
-                var storedProfile = localStorage.getItem('selectedProfile');
-                console.log(storedProfile);
-                return localStorage.getItem('selectedProfile');
-            }
         // Initial update when the page loads        
         function updateProfile() {
             // Get the selected profile value
@@ -123,5 +113,15 @@ permalink: /profile/
             }
         }
           updateProfile();  
+          function updateSelectedProfile(profile) {
+                var selectedProfile = localStorage.setItem('selectedProfile', profile);
+                console.log(selectedProfile);
+            }
+            // Function to retrieve the selected profile from local storage
+            function getSelectedProfile() {
+                var storedProfile = localStorage.getItem('selectedProfile');
+                console.log(storedProfile);
+                return localStorage.getItem('selectedProfile');
+            }
     </script>
 </html>
