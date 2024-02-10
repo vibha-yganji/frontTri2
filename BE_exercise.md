@@ -26,6 +26,7 @@ permalink: /exercise/
             <input type="submit" value="Submit">
         </form>
     </div>
+    <script src="assets/js/exercise.js" defer></script>
     <script>
         const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
         console.log(userIDFromLocalStorage);
@@ -158,7 +159,6 @@ permalink: /exercise/
     }
     </script>
     <iframe src="https://jplip.github.io/frontTri2/exercisegraph/" width="800" height="600" frameborder="0"></iframe>
-<script src="assets/js/exercise.js" defer></script>
 </body>
 
 </html>
