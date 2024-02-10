@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(currentProfile)
 
         // Check if no profile is selected
-        if (!currentProfile) {
-            // If not, set a default profile
-            localStorage.setItem('selectedProfile', 'profile1');
-        }
+        // if (!currentProfile) {
+        //     // If not, set a default profile
+        //     localStorage.setItem('selectedProfile', 'profile1');
+        // }
     }
 
 
