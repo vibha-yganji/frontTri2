@@ -11,11 +11,6 @@ permalink: /profile/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* Add some styling to the navbar */
-        #profileImage {
-            max-width: 50px; /* Adjust the size of the profile image as needed */
-            height: auto;
-            margin-top: 10px;
-        }
         #selectedAscii {
             position: absolute;
             top: 10px;
