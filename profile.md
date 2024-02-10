@@ -51,6 +51,13 @@ permalink: /profile/
     <div id="selectedAscii"></div>
     <div id="profileAscii"></div>
     <script>
+           function updateSelectedProfile(profile) {
+                localStorage.setItem('selectedProfile', profile);
+            }
+            // Function to retrieve the selected profile from local storage
+            function getSelectedProfile() {
+                return localStorage.getItem('selectedProfile');
+            }
         function updateProfile() {
             // Get the selected profile value
             var selectedProfile = document.getElementById("profileSelect").value;
