@@ -18,7 +18,6 @@ permalink: /profile/
             padding: 10px;
             text-align: center;
         }
-
         #profileAscii {
             font-family: monospace;
             white-space: pre;
