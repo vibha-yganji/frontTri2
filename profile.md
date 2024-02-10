@@ -1,3 +1,13 @@
+---
+layout: base
+title: Profile Creation
+permalink: /Profile/
+---
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +21,6 @@
             padding: 10px;
             text-align: center;
         }
-
         #profileImage {
             max-width: 100%;
             height: auto;
@@ -21,7 +30,6 @@
     <title>Exercise Profiles</title>
 </head>
 <body>
-
     <div id="navbar">
         <h2>Exercise Profiles</h2>
         <label for="profileSelect">Select Profile:</label>
@@ -36,15 +44,12 @@
             <img id="profileImage" src="" alt="Selected Profile Image">
         </div>
     </div>
-
     <script>
         function updateProfile() {
             // Get the selected profile value
             var selectedProfile = document.getElementById("profileSelect").value;
-
             // Get the image element
             var profileImage = document.getElementById("profileImage");
-
             // Set the source of the image based on the selected profile
             switch (selectedProfile) {
                 case "profile1":
@@ -66,7 +71,6 @@
                     profileImage.src = ""; // Set a default image or leave it empty
             }
         }
-
         // Initial update when the page loads
         updateProfile();
     </script>
