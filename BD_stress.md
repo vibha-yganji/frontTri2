@@ -16,6 +16,7 @@ permalink: /stress/
   }
 </style>
 
+<div id="selectedAscii"></div>
 <div class="purple-form"> <!-- questions -->
   <h1>Stress Quiz</h1>
   <form id="purple-form">
@@ -135,4 +136,4 @@ permalink: /stress/
 </script>
 
 <div id="selectedAscii"></div>
-<script src="assets/js/exercise.js" defer></script>
+<script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
