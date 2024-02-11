@@ -65,7 +65,7 @@ search_exclude: false
         </div>
     </div>
 
-<script src="assets/js/exercise.js" defer></script>
+<script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
 
 
 </html>
