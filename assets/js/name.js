@@ -3,6 +3,7 @@ async function updateName() {
 
     // Assuming you have the user's ID available, replace '123' with the actual user ID
     const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
+    console.log(userIDFromLocalStorage)
 
     try {
         const response = await fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
