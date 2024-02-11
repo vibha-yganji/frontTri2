@@ -5,7 +5,6 @@ permalink: /exercise/
 --- 
 ![Alt text](images/exerciseheader.png)
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Exercise</title>
