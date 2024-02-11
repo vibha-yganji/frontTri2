@@ -7,13 +7,14 @@ permalink: /profile/
     <div class="purple-form">
         <h2>Exercise Profiles</h2>
         <label for="profileSelect">Select Profile:</label>
-        <select id="profileSelect" onchange="updateProfile()">
-            <option value="profile1">Profile 1</option>
-            <option value="profile2">Profile 2</option>
-            <option value="profile3">Profile 3</option>
-            <option value="profile4">Profile 4</option>
-            <option value="profile5">Profile 5</option>
-        </select>
+        <select id="profileSelect" onchange="updateSelectedProfile()">
+    <option value="profile1">Profile 1</option>
+    <option value="profile2">Profile 2</option>
+    <option value="profile3">Profile 3</option>
+    <option value="profile4">Profile 4</option>
+    <option value="profile5">Profile 5</option>
+</select>
+
     </div>
     <div class="profileOption" id="profile1">
         ________
@@ -115,14 +116,19 @@ function getProfileAscii(profile) {
 }
 
 // Function to update and store the selected profile
-function updateSelectedProfile(profile) {
-    localStorage.setItem('selectedProfile', profile);
-    updateProfile(); // Update the profile immediately after setting it
+function updateSelectedProfile() {
+    // Get the selected profile value from the select element
+    var selectedProfile = document.getElementById("profileSelect").value;
+    // Update and store the selected profile in local storage
+    localStorage.setItem('selectedProfile', selectedProfile);
+    // Update the profile immediately after setting it
+    updateProfile();
 }
 
 // Function to retrieve the selected profile from local storage
 function getSelectedProfile() {
     var storedProfile = localStorage.getItem('selectedProfile');
+    return storedProfile || 'profile1'; // Default to 'profile1' if not found
 }
 
 // Initial update when the page loads
