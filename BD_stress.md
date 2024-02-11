@@ -135,5 +135,5 @@ permalink: /stress/
   }
 </script>
 
-<div id="selectedAscii"></div>
+
 <script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
