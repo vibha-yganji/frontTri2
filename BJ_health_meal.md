@@ -45,9 +45,8 @@ search_exclude: false
         }
         document.getElementById('cupsOutput').textContent = cupsOutput.toFixed(2);
     }
-</div>
 </script>
-
+</div>
 </body>
 </html>
 <html lang="en">
