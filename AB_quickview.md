@@ -3,8 +3,6 @@ layout: base
 title: Daily Tracking
 permalink: /tracking/
 ---
-
-<!DOCTYPE html>
 <html lang="en">
 <div id="selectedAscii"></div>
     <h1>This page is meant to be used for Night At the Museum purposes! Try out our different features!</h1>
