@@ -5,7 +5,7 @@ async function updateName() {
     const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
 
     try {
-        const response = await fetch(`http://your-api-endpoint/user/${userIDFromLocalStorage}`, {
+        const response = await fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
