@@ -14,7 +14,6 @@ permalink: /profile/
     <option value="profile4">Profile 4</option>
     <option value="profile5">Profile 5</option>
 </select>
-
     </div>
     <div class="profileOption" id="profile1">
         ________
@@ -51,6 +50,12 @@ permalink: /profile/
     </div>
     <div id="selectedAscii"></div>
     <div id="profileAscii"></div>
+    <form id="profileForm">
+        <label for="newName">New Name:</label>
+        <input type="text" id="newName" name="newName" required>
+        <button type="button" onclick="updateName()">Update Name</button>
+    </form>
+    <div id="result"></div>
     <script>
        // Initial update when the page loads
 function updateProfile() {
