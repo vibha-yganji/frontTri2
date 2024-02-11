@@ -54,8 +54,8 @@ permalink: /profile/
         <label for="newName">New Name:</label>
         <input type="text" id="newName" name="newName" required>
         <button type="button" onclick="updateName()">Update Name</button>
-    </form>
     <div id="result"></div>
+    <script src="https://jplip.github.io/frontTri2/assets/js/name.js" defer></script>
     <script>
        // Initial update when the page loads
 function updateProfile() {
