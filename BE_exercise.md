@@ -12,6 +12,7 @@ permalink: /exercise/
 </head>
 <body>
 <div id="selectedAscii"></div>
+<script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
 <div class="purple-form">
         <div id="binaryDurationBadge" class="binary-badge"></div>
         <form id="exerciseForm">
@@ -26,7 +27,6 @@ permalink: /exercise/
             <input type="submit" value="Submit">
         </form>
     </div>
-    <script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
     <script>
         const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
         console.log(userIDFromLocalStorage);
