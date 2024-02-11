@@ -4,6 +4,13 @@ title: Daily Tracking
 permalink: /tracking/
 ---
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night At the Museum - Features</title>
+    <script src="assets/js/exercise.js" defer></script>
+</head>
+<body>
 <div id="selectedAscii"></div>
     <h1>This page is meant to be used for Night At the Museum purposes! Try out our different features!</h1>
     <h2>Exercise Tracker</h2>
