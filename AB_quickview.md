@@ -18,6 +18,5 @@ permalink: /tracking/
     <iframe src="https://jplip.github.io/frontTri2/stress/" width="800" height="600" frameborder="0"></iframe>
     <h2>Casino Spinner</h2>
     <iframe src="https://jplip.github.io/frontTri2/spinner/" width="800" height="600" frameborder="0"></iframe>
-    <h2>More Info</h2>
 <script src="assets/js/exercise.js" defer></script>
 </html>
