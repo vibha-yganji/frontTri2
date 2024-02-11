@@ -65,7 +65,8 @@ permalink: /spinner/
   </style>
 </head>
 <body>
-
+ <div id="selectedAscii"></div>
+    <script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
 <div class="slot-machine">
   <h1>Casino Slot Machine</h1>
   <div class="slot">

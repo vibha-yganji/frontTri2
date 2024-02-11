@@ -26,7 +26,7 @@ permalink: /exercise/
             <input type="submit" value="Submit">
         </form>
     </div>
-    <script src="assets/js/exercise.js" defer></script>
+    <script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
     <script>
         const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
         console.log(userIDFromLocalStorage);

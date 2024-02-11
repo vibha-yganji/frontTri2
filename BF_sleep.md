@@ -10,7 +10,8 @@ permalink: /sleep/
     /* Basic styling for demonstration purposes */
     /* Your CSS styles here */
 </style>
-
+<div id="selectedAscii"></div>
+<script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
 <div class="purple-form">
     <form id="sleepForm">
         <label for="name">Name:</label>

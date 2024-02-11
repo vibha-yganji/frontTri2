@@ -36,6 +36,8 @@ permalink: /water/
     </style>
 </head>
 <body>
+    <div id="selectedAscii"></div>
+    <script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
     <div class="purple-form">
         <label for="cupInput">Enter number of cups: </label>
         <input type="number" id="cupInput" min="0">

@@ -13,6 +13,8 @@ search_exclude: false
 <title>Cups Converter</title>
 </head>
 <body>
+ <div id="selectedAscii"></div>
+    <script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
 <div class="purple-form">
     <h2>Cups Converter</h2>
     <div>
@@ -99,6 +101,7 @@ search_exclude: false
 </div>
 
 <script>
+
 function generateCharts() {
     const userFoodGroups = ['Grains', 'Vegetables', 'Fruits', 'Dairy', 'Protein'];
     const userQuantities = [];
