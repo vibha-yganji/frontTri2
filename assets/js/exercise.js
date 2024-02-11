@@ -4,7 +4,7 @@
 // exercise-profiles.js
 
 // Function to retrieve the selected profile from local storage
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
     // Code inside this block will execute after the DOM is fully loaded
 
     // Function to get the selected profile from local storage
@@ -88,4 +88,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initial display when the page loads
     displaySelectedProfile();
-});
+//});
