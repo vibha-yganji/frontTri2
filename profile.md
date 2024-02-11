@@ -50,7 +50,7 @@ permalink: /profile/
     </div>
     <div id="selectedAscii"></div>
     <div id="profileAscii"></div>
-    <form id="profileForm">
+    <div class="purple-form">
         <label for="newName">New Name:</label>
         <input type="text" id="newName" name="newName" required>
         <button type="button" onclick="updateName()">Update Name</button>
