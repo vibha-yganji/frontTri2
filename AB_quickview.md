@@ -1,7 +1,8 @@
 ---
 layout: base
 title: Daily Tracking
-permalink: /tracking/
+permalink: "/tracking/"
+search_exclude: false
 ---
 <html lang="en">
 <div id="selectedAscii"></div>
