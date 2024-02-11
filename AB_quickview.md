@@ -21,6 +21,6 @@ permalink: /tracking/
 
 
 
-    
-<script src="assets/js/exercise.js" defer></script>
+
+<script src="/assets/js/exercise.js" defer></script>
 </html>
