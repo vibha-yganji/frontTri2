@@ -51,77 +51,82 @@ permalink: /profile/
     <div id="selectedAscii"></div>
     <div id="profileAscii"></div>
     <script>
-        // Initial update when the page loads        
-        function updateProfile() {
-            // Get the selected profile value
-            var selectedProfile = document.getElementById("profileSelect").value;
-            // Show the selected profile's ASCII art in the upper right corner
-            var selectedAscii = document.getElementById("selectedAscii");
-            selectedAscii.textContent = getProfileAscii(selectedProfile);
-            // Hide all profile options
-            var allOptions = document.getElementsByClassName("profileOption");
-            for (var i = 0; i < allOptions.length; i++) {
-                allOptions[i].style.display = "none";
-            }
-            // Show the selected profile's option
-            var selectedOption = document.getElementById(selectedProfile);
-            selectedOption.style.display = "block";
-        }
-        // ASCII art functions
-        function getProfileAscii(profile) {
-            switch (profile) {
-                case "profile1":
-                    return `
-                    ________
-                    |      |
-                    |      O
-                    |     /|\\
-                    |     / \\
-                    |_________
-                    `;
-                case "profile2":
-                    return `
-                    \\    O
-                     \\   |\\
-                      \\  / \\
-                       \\/___\\
-                    `;
-                case "profile3":
-                    return `
-                    __
-                    ( o>
-                    /)__)
-                    - \\ \\
-                       / /
-                    `;
-                case "profile4":
-                    return `
-                    +----+
-                    |o o |
-                    | \\  |
-                    |  | |  
-                    +-----+
-                    `;
-                case "profile5":
-                    return `
-                    \\_o< 
-                    | \\ 
-                    <_/ 
-                    `;
-                default:
-                    return ""; // Set a default ASCII art or leave it empty
-            }
-        }
-          updateProfile();  
-          function updateSelectedProfile(profile) {
-                var selectedProfile = localStorage.setItem('selectedProfile', profile);
-                console.log(selectedProfile);
-            }
-            // Function to retrieve the selected profile from local storage
-            function getSelectedProfile() {
-                var storedProfile = localStorage.getItem('selectedProfile');
-                console.log(storedProfile);
-                return localStorage.getItem('selectedProfile');
-            }
+       // Initial update when the page loads
+function updateProfile() {
+    // Get the selected profile value
+    var selectedProfile = getSelectedProfile();
+    // Show the selected profile's ASCII art in the upper right corner
+    var selectedAscii = document.getElementById("selectedAscii");
+    selectedAscii.textContent = getProfileAscii(selectedProfile);
+    // Hide all profile options
+    var allOptions = document.getElementsByClassName("profileOption");
+    for (var i = 0; i < allOptions.length; i++) {
+        allOptions[i].style.display = "none";
+    }
+    // Show the selected profile's option
+    var selectedOption = document.getElementById(selectedProfile);
+    selectedOption.style.display = "block";
+}
+
+// ASCII art functions
+function getProfileAscii(profile) {
+    switch (profile) {
+        case "profile1":
+            return `
+            ________
+            |      |
+            |      O
+            |     /|\\
+            |     / \\
+            |_________
+            `;
+        case "profile2":
+            return `
+            \\    O
+             \\   |\\
+              \\  / \\
+               \\/___\\
+            `;
+        case "profile3":
+            return `
+            __
+            ( o>
+            /)__)
+            - \\ \\
+               / /
+            `;
+        case "profile4":
+            return `
+            +----+
+            |o o |
+            | \\  |
+            |  | |  
+            +-----+
+            `;
+        case "profile5":
+            return `
+            \\_o< 
+            | \\ 
+            <_/ 
+            `;
+        default:
+            return ""; // Set a default ASCII art or leave it empty
+    }
+}
+
+// Function to update and store the selected profile
+function updateSelectedProfile(profile) {
+    localStorage.setItem('selectedProfile', profile);
+    updateProfile(); // Update the profile immediately after setting it
+}
+
+// Function to retrieve the selected profile from local storage
+function getSelectedProfile() {
+    var storedProfile = localStorage.getItem('selectedProfile');
+}
+
+// Initial update when the page loads
+updateProfile();
+
     </script>
 </html>
