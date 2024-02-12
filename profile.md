@@ -56,9 +56,7 @@ permalink: /profile/
         <label for="newName">New Name:</label>
         <input type="text" id="newName" name="newName" required>
         <button type="button" onclick="updateName()">Update Name</button>
-
     <hr>
-    
     <div id="result"></div>
      <form class = 'purple-form'>
     <h2>Profile Picture</h2>
