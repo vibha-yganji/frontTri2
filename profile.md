@@ -82,7 +82,6 @@ function updateProfile() {
     var selectedOption = document.getElementById(selectedProfile);
     selectedOption.style.display = "block";
 }
-
 // ASCII art functions
 function getProfileAscii(profile) {
     switch (profile) {
@@ -128,7 +127,6 @@ function getProfileAscii(profile) {
             return ""; // Set a default ASCII art or leave it empty
     }
 }
-
 // Function to update and store the selected profile
 function updateSelectedProfile() {
     // Get the selected profile value from the select element
