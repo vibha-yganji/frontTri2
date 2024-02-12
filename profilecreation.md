@@ -89,11 +89,10 @@ permalink: /Profile_display/
          // Retrieve user information from localStorage
         const loggedInUserName = localStorage.getItem('loggedInUserName');
         const loggedInUserId = localStorage.getItem('loggedInUserId');
-        const loggedInUserId = localStorage.getItem('loggedInUserId');
 
-         // Display user information
-        if (loggedInUserName && loggedInUserFullName && loggedInUserId) {
-            document.getElementById('userDetails').textContent = `Logged in as: ${loggedInUserFullName} (${loggedInUserName}) - ID: ${loggedInUserId}`;
+        // Display user information
+        if (loggedInUserName) {
+            document.getElementById('userDetails').textContent = ` ${loggedInUserName} (ID: ${loggedInUserId})`;
         } else {
             document.getElementById('userDetails').textContent = "Not logged in.";
         }
