@@ -1,57 +1,101 @@
 ---
 layout: base
 title: Profile Creation
-permalink: /Profile/
+permalink: /Profile_display/
 ---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your website description here">
-    <meta name="keywords" content="your, keywords, here">
+    <title>Profile Picture Display</title>
 </head>
 <body>
+    <!-- Enclose the profile picture in a container div -->
+    <form class = 'purple-form'>
+    <h2>Profile Picture</h2>
+    <div id="profilePicture" class="profilePictureContainer"></div>
+    <h2> General Information </h2>
+     <div id="userDetails"></div>
+    </form>
 
-<div class="form_wrapper">
-    <div class="form_container">
-        <div class="title_container">
-            <h2> Profile</h2>
-        </div>
-        <div class="row clearfix">
-            <div class="">
-                <form class="purple-form">
-                    <h2> General Information </h2>
-                    <div class="input_field">
-                        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                        <input type="password" name="password" placeholder="Password" required />
-                    </div>
-                    <div class="input_field">
-                        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                        <input type="password" name="password" placeholder="Re-type Password" required />
-                    </div>
-                    <div class="">
-                        <div class="">
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                                <input type="text" name="name" placeholder="Preferred Name" />
-                            </div>
-                        </div>
-                        <div class="col_half">
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                                <input type="text" name="name" placeholder="Username" required />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input_field radio_option">
-                        <input type="radio" name="gender" id="male" checked>
-                        <label for="male">Male</label>
-                        <input type="radio" name="gender" id="female">
-                        <label for="female">Female</label>
-                    </div>
-                    <hr>
-                </form> <!-- Closing form tag added -->
-            </div>
-        </div>
-    </div>
-</div>
+    <script>
+        // Function to generate HTML img tag with the selected profile's ASCII art
+        function getProfileImage(profile) {
+            var asciiArt = getProfileAscii(profile);
+            return '<pre>' + asciiArt + '</pre>'; // Display ASCII art directly
+        }
+
+        // Function to update the profile picture
+        function updateProfilePicture() {
+            var selectedProfile = getSelectedProfile();
+            var profilePictureDiv = document.getElementById("profilePicture");
+            profilePictureDiv.innerHTML = getProfileImage(selectedProfile);
+        }
+
+        // Initial update when the page loads
+        updateProfilePicture();
+
+        // Functions for retrieving and updating the selected profile
+        function getSelectedProfile() {
+            var storedProfile = localStorage.getItem('selectedProfile');
+            return storedProfile || 'profile1'; // Default to 'profile1' if not found
+        }
+
+        function getProfileAscii(profile) {
+            switch (profile) {
+                case "profile1":
+                    return `
+            ________
+            |      |
+            |      O
+            |     /|\\
+            |     / \\
+            |_________
+            `;
+                case "profile2":
+                    return `
+            \\    O
+             \\   |\\
+              \\  / \\
+               \\/___\\
+            `;
+                case "profile3":
+                    return `
+            __
+            ( o>
+            /)__)
+            - \\ \\
+               / /
+            `;
+                case "profile4":
+                    return `
+            +----+
+            |o o |
+            | \\  |
+            |  | |  
+            +-----+
+            `;
+                case "profile5":
+                    return `
+            \\_o< 
+            | \\ 
+            <_/ 
+            `;
+                default:
+                    return ""; // Set a default ASCII art or leave it empty
+            }
+        }
+
+         // Retrieve user information from localStorage
+        const loggedInUserName = localStorage.getItem('loggedInUserName');
+        const loggedInUserId = localStorage.getItem('loggedInUserId');
+
+        // Display user information
+        if (loggedInUserName) {
+            document.getElementById('userDetails').textContent = `Logged in as: ${loggedInUserName} (ID: ${loggedInUserId})`;
+        } else {
+            document.getElementById('userDetails').textContent = "Not logged in.";
+        }
+    </script>
+</body>
+</html>

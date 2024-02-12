@@ -46,7 +46,7 @@ permalink: /profile/
     <div class="profileOption" id="profile5">
         \\_o< 
         | \\ 
-        <_/ 
+        <_/
     </div>
     <div id="selectedAscii"></div>
     <div id="profileAscii"></div>
@@ -143,6 +143,3 @@ updateProfile();
 
 
 
-
-
-</html>
