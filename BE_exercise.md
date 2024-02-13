@@ -51,7 +51,7 @@ permalink: /exercise/
                     const updatedExerciseData = [...originalExerciseData, exercise];
                     const data2 = {
                         "id": userIDFromLocalStorage,
-                        "name": userNameFromLocalStorage
+                        "name": userNameFromLocalStorage,
                         "uid": "life",
                         "dob": "10/12/13",
                         "age": "16",
