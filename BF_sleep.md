@@ -14,8 +14,6 @@ permalink: /sleep/
 <script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
 <div class="purple-form">
     <form id="sleepForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
         <label for="sleepHours">Hours of Sleep:</label>
         <input type="number" id="sleepHours" name="sleepHours" placeholder="Enter hours of sleep" required>
         <label for="quality">Quality of Sleep:</label>
@@ -34,10 +32,10 @@ permalink: /sleep/
 
 <script>
     const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
+    const userNameFromLocalStorage = localStorage.getItem('loggedInUserName');
     console.log(userIDFromLocalStorage);
     document.getElementById('sleepForm').addEventListener('submit', function (event) {
         event.preventDefault();
-        const name = document.getElementById('name').value;
         const sleepHours = document.getElementById('sleepHours').value;
         const quality = document.getElementById('quality').value;
         const sleepDate = document.getElementById('sleepDate').value;
@@ -53,7 +51,6 @@ permalink: /sleep/
                     console.log(originalSleepData)
                     const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
                     const sleep = {
-                        "name": name,
                         "sleepHours": sleepHours,
                         "quality": quality, 
                         "sleepDate": sleepDate
@@ -62,7 +59,7 @@ permalink: /sleep/
                     console.log(updatedSleepData);
                     const data2 = {
                         "id": userIDFromLocalStorage,
-                        "name": name,
+                        "name": userNameFromLocalStorage, 
                         "uid": "life",
                         "dob": "10/12/13",
                         "age": "16",
