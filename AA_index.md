@@ -32,34 +32,34 @@ search_exclude: false
 
 <html lang="en">
 <div id="selectedAscii"></div>
-  <a href="https://jplip.github.io/frontTri2/tracking/"><button class="btn">Daily</button></a>
-  <a href="https://jplip.github.io/frontTri2/login/"><button class="btn">Login</button></a>
-    <a href="https://jplip.github.io/frontTri2/Register/"><button class="btn">Register</button></a>
+  <a href="tracking"><button class="btn">Daily</button></a>
+  <a href="login"><button class="btn">Login</button></a>
+    <a href="Register"><button class="btn">Register</button></a>
     <div class="top-container">
         <div class="element">
-            <a href="https://jplip.github.io/frontTri2/exercise/">
+            <a href="exercise">
         <img src="images/ExerciseHome.png">
             </a>
         </div>
         <div class="element">
-            <a href="https://jplip.github.io/frontTri2/sleep/">
+            <a href="sleep">
         <img src="images/SleepHome.png">
             </a>
         </div>
     </div>
     <div class="bottom-container">
         <div class="element">
-            <a href="https://jplip.github.io/frontTri2/stress/">
+            <a href="stress">
         <img src="images/LessBlurryStress.png">
             </a>
         </div>
         <div class="element">
-            <a href="https://jplip.github.io/frontTri2/food/">
+            <a href="food">
         <img src="images/FoodHome.png">
             </a>
         </div>
         <div class="element">
-            <a href="https://jplip.github.io/frontTri2/water/">
+            <a href="water">
         <img src="images/WaterHome.png">
             </a>
         </div>
