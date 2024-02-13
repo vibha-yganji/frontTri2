@@ -64,19 +64,9 @@
                 `;
             case "profile5":
                 return `
-                (\__/)
-                (UwU)
-             ＿ノ ヽ ノ＼＿ 
-           /　`/ ⌒Ｙ⌒ Ｙ　 \
-         | 　(三ヽ人　 /　 　|
-          |　ﾉ⌒＼ ￣￣ヽ　 ノ
-           ヽ＿＿＿＞､＿＿／
-              ｜( 王 ﾉ〈 
-              /ﾐ`ー―彡\ 
-             |╰      ╯| 
-             |   /\   |  
-             |  |  |  |
-             |  |  |  |
+                \\_o< 
+                | \\ 
+                <_/ 
                 `;
             default:
                 return ""; // Set a default ASCII art or leave it empty
