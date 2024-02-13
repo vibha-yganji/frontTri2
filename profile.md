@@ -48,10 +48,9 @@ permalink: /profile/
     <div class="profileOption" id="profile5">
         \\_o< 
         | \\ 
-        <_/
+        <_/>
     </div>
     <div id="selectedAscii"></div>
-    <div id="profileAscii"></div>
     <div class="purple-form">
         <label for="newName">New Name:</label>
         <input type="text" id="newName" name="newName" required>
