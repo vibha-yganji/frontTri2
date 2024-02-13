@@ -15,8 +15,6 @@ permalink: /exercise/
 <div class="purple-form">
         <div id="binaryDurationBadge" class="binary-badge"></div>
         <form id="exerciseForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
             <label for="exerciseType">Exercise Type:</label>
             <input type="text" id="exerciseType" name="exerciseType" placeholder="Enter exercise type" required>
             <label for="duration">Duration (in minutes):</label>
@@ -29,9 +27,9 @@ permalink: /exercise/
     <script>
         const userIDFromLocalStorage = localStorage.getItem('loggedInUserId');
         console.log(userIDFromLocalStorage);
+        const userNameFromLocalStorage = localStorage.getItem('loggedInUserName');
         document.getElementById('exerciseForm').addEventListener('submit', function (event) {
             event.preventDefault();
-            const name = document.getElementById('name').value;
             const exerciseType = document.getElementById('exerciseType').value;
             const duration = document.getElementById('duration').value;
             const exerciseDate = document.getElementById('exerciseDate').value;
@@ -46,7 +44,6 @@ permalink: /exercise/
                     const originalExerciseData = Array.isArray(data.exercise) ? data.exercise : [];
                     const originalSleepData = Array.isArray(data.tracking) ? data.tracking : [];
                     const exercise = {
-                        "name": name,
                         "exerciseType": exerciseType,
                         "duration": duration,
                         "exerciseDate": exerciseDate
@@ -54,7 +51,7 @@ permalink: /exercise/
                     const updatedExerciseData = [...originalExerciseData, exercise];
                     const data2 = {
                         "id": userIDFromLocalStorage,
-                        "name": name,
+                        "name": userNameFromLocalStorage
                         "uid": "life",
                         "dob": "10/12/13",
                         "age": "16",
