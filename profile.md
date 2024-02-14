@@ -14,7 +14,7 @@ permalink: /profile/
     <option value="profile4">Profile 4</option>
     <option value="profile5">Profile 5</option>
 </select>
-    </div>
+    <!-- </div>
     <div class="profileOption" id="profile1">
         ________
         |      |
@@ -47,7 +47,39 @@ permalink: /profile/
         \\_o< 
         | \\ 
         <_/
+    </div> -->
     </div>
+    <div class="profileOption" id="profile1">
+             __
+    \ ______/ V\`-,
+    }        /~~
+    /_)^ --,r'
+    |b      |b
+    </div>
+    <div class="profileOption" id="profile2">
+        (\__/)
+        (UwU)
+    ＿ノ ヽ ノ＼＿ 
+ /　`/ ⌒Ｙ⌒ Ｙ　  \
+ | 　(三ヽ人　 /　 　|
+ |　ﾉ⌒＼ ￣￣ヽ　 ノ
+  ヽ＿＿＿＞､＿＿／
+      ｜( 王 ﾉ〈 
+      ﾐ\`ー―彡\\ 
+      |╰      ╯| 
+      |   /\   |  
+      |  |  |  |
+      |  |  |  |
+    </div>
+<div class="profileOption" id="profile3">
+    ╱|、
+   (˚ˎ 。7
+    |、˜〵
+   じしˍ,)ノ
+</div>
+<div class="profileOption" id="profile4">
+     [|━|]╭(♡･ㅂ･)و ̑̑
+</div>
     <div id="selectedAscii"></div>
     <div id="profileAscii"></div>
     <div class="purple-form">
