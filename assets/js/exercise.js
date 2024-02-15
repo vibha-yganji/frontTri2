@@ -32,7 +32,7 @@
         switch (profile) {
             case "profile1":
                 return `
-                __
+                         __
                 \ ______/ V\`-,
                 }        /~~
                 /_)^ --,r'
