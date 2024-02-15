@@ -8,6 +8,7 @@ permalink: /stress/
   body {
     align-items: center;
   }
+
   .container_stress {
     display: flex;
     flex-direction: column;
@@ -15,58 +16,60 @@ permalink: /stress/
     gap: 15px;
     background-color: #fff;
   }
-    .low-stress {
-      background-color: #4CAF50; /* Green */
-    }
 
-    .moderate-stress {
-      background-color: #FF9800; /* Orange */
-    }
+  .low-stress {
+    background-color: #4CAF50; /* Green */
+  }
 
-    .high-stress,
-    .very-high-stress {
-      background-color: #F44336; /* Red */
-    }
+  .moderate-stress {
+    background-color: #FF9800; /* Orange */
+  }
 
-    #progress-bar-container {
-      width: 100%;
-      background-color: #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-      height: 30px;
-      margin-top: 20px;
-    }
-      #progress-bar {
-        height: 100%;
-        text-align: center;
-        line-height: 30px;
-        color: #fff;
-        font-weight: bold;
-        transition: width 0.3s ease-in-out;
-      }
+  .high-stress,
+  .very-high-stress {
+    background-color: #F44336; /* Red */
+  }
 
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  #progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 30px;
+    margin-top: 20px;
+  }
 
-    form {
-      padding: 20px;
-    }
-      .question {
-        margin-bottom: 20px;
-      }
+  #progress-bar {
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+    transition: width 0.3s ease-in-out;
+  }
 
-      input[type="radio"] {
-        margin-right: 5px;
-      }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  .question {
+    margin-bottom: 20px;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
 </style>
 
-<div id="selectedAscii"></div>
 <div class="purple-form"> <!-- questions -->
   <h1>Stress Quiz</h1>
-  <form id="purple-form">
+  <form id="stressForm">
     <div class="question" id="question1">
       <label>
         <strong>1. How often do you feel overwhelmed?</strong><br>
