@@ -56,19 +56,16 @@ permalink: /profile/
     |b      |b
     </div>
     <div class="profileOption" id="profile2">
-        (\__/)
-        (UwU)
-    ＿ノ ヽ ノ＼＿ 
- /　`/ ⌒Ｙ⌒ Ｙ　  \
- | 　(三ヽ人　 /　 　|
- |　ﾉ⌒＼ ￣￣ヽ　 ノ
-  ヽ＿＿＿＞､＿＿／
-      ｜( 王 ﾉ〈 
-      ﾐ\`ー―彡\\ 
-      |╰      ╯| 
-      |   /\   |  
-      |  |  |  |
-      |  |  |  |
+                (\__/)
+                 (UwU)
+             ＿ノ ヽ ノ＼＿ 
+            /　\`/ ⌒Ｙ⌒ Ｙ　\
+            | 　(三ヽ人　 /　|
+            ヽ＿＿＿＞､＿＿／
+              ｜( 王 ﾉ〈 
+               ﾐ\`ー―彡\\ 
+              |╰      ╯| 
+              |   /\\  |   
     </div>
 <div class="profileOption" id="profile3">
     ╱|、
@@ -126,7 +123,7 @@ function getProfileAscii(profile) {
               ｜( 王 ﾉ〈 
                ﾐ\`ー―彡\\ 
               |╰      ╯| 
-              |   /\\   | 
+              |   /\\  | 
             `;
         case "profile3":
             return `
