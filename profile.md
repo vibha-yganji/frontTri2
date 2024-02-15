@@ -118,7 +118,6 @@ function getProfileAscii(profile) {
             return `
                 (\__/)
                 (UwU)
-
             `;
         case "profile3":
             return `
