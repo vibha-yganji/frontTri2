@@ -56,12 +56,19 @@ permalink: /profile/
                 |b      |b
     </div>
     <div class="profileOption" id="profile2">
-                 (\__/)
+                (\__/)
                  (UwU)
              ＿ノ ヽ ノ＼＿ 
-            /　\`/ ⌒Ｙ⌒ Ｙ　\
-            | 　(三ヽ人　 /　|
-            ヽ＿＿＿＞､＿＿／ 
+           /　`/ ⌒Ｙ⌒ Ｙ　 \
+          |　(三ヽ人　 /　 　|
+          |　ﾉ⌒＼ ￣￣ヽ　 ノ
+           ヽ＿＿＿＞､＿＿／
+              ｜( 王 ﾉ〈 
+              /ﾐ`ー―彡\ 
+             |╰      ╯| 
+             |   /\   |  
+             |  |  |  |
+             |  |  |  |
     </div>
 <div class="profileOption" id="profile3">
     ╱|、
