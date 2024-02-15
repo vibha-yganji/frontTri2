@@ -28,7 +28,7 @@ permalink: /water/
         }
         
         .emoji-pattern {
-            background-image: url('{{site.baseurl}}/images/SmileyFace.png'); /* Path to your emoji image */
+            background-image: url('{{site.baseurl}}/images/Exercise Background.png'); /* Path to your emoji image */
             opacity: 0.3; /* Adjust opacity to your liking */
             width: 100%;
             height: 100%;
@@ -36,16 +36,10 @@ permalink: /water/
             top: 0;
             left: 0;
             background-repeat: repeat; /* Repeat the emoji pattern */
-            background-size: 50px 50px; /* Adjust size of the emojis */
+            background-size: cover; /* Ensure image doesn't stretch from its original ratio */
         }
 
-        #selectedAscii {
-            /* Just making sure this element doesn't cover the emojis */
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 9999; /* Make sure it's above the emoji pattern */
-        }
+        /* Your existing styles */
         #progress-bar-container {
             width: 300px;
             height: 30px;
@@ -73,7 +67,6 @@ permalink: /water/
     </style>
 </head>
 <body>
-    <div id="selectedAscii"></div>
     <script src="https://jplip.github.io/frontTri2/assets/js/exercise.js" defer></script>
     <div class="purple-form">
         <label for="cupInput">Enter number of cups: </label>
