@@ -12,7 +12,6 @@ permalink: /profile/
     <option value="profile2">Profile 2</option>
     <option value="profile3">Profile 3</option>
     <option value="profile4">Profile 4</option>
-    <option value="profile5">Profile 5</option>
 </select>
     <!-- </div>
     <div class="profileOption" id="profile1">
@@ -105,47 +104,43 @@ function updateProfile() {
     var selectedOption = document.getElementById(selectedProfile);
     selectedOption.style.display = "block";
 }
-
 // ASCII art functions
 function getProfileAscii(profile) {
     switch (profile) {
         case "profile1":
             return `
-            ________
-            |      |
-            |      O
-            |     /|\\
-            |     / \\
-            |_________
+             __
+    \ ______/ V\`-,
+    }        /~~
+    /_)^ --,r'
+    |b      |b
             `;
         case "profile2":
             return `
-            \\    O
-             \\   |\\
-              \\  / \\
-               \\/___\\
+               (\__/)
+               (UwU)
+            ＿ノ ヽ ノ＼＿ 
+        /　`/ ⌒Ｙ⌒ Ｙ　  \
+        | 　(三ヽ人　 /　 　|
+        |　ﾉ⌒＼ ￣￣ヽ　 ノ
+        ヽ＿＿＿＞､＿＿／
+            ｜( 王 ﾉ〈 
+            ﾐ\`ー―彡\\ 
+            |╰      ╯| 
+            |   /\   |  
+            |  |  |  |
+            |  |  |  |
             `;
         case "profile3":
             return `
-            __
-            ( o>
-            /)__)
-            - \\ \\
-               / /
+            ╱|、
+           (˚ˎ 。7
+            |、˜〵
+           じしˍ,)ノ
             `;
         case "profile4":
             return `
-            +----+
-            |o o |
-            | \\  |
-            |  | |  
-            +-----+
-            `;
-        case "profile5":
-            return `
-            \\_o< 
-            | \\ 
-            <_/ 
+        [|━|]╭(♡･ㅂ･)و ̑̑
             `;
         default:
             return ""; // Set a default ASCII art or leave it empty
