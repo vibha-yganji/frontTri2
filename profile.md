@@ -117,19 +117,19 @@ function getProfileAscii(profile) {
             `;
         case "profile2":
             return `
-               (\__/)
-               (UwU)
-            ＿ノ ヽ ノ＼＿ 
-        /　`/ ⌒Ｙ⌒ Ｙ　  \
-        | 　(三ヽ人　 /　 　|
-        |　ﾉ⌒＼ ￣￣ヽ　 ノ
-        ヽ＿＿＿＞､＿＿／
-            ｜( 王 ﾉ〈 
-            ﾐ\`ー―彡\\ 
-            |╰      ╯| 
-            |   /\   |  
-            |  |  |  |
-            |  |  |  |
+                 (\__/)
+                 (UwU)
+             ＿ノ ヽ ノ＼＿ 
+            /　\`/ ⌒Ｙ⌒ Ｙ　  \
+            | 　(三ヽ人　 /　 　|
+            |　ﾉ⌒＼ ￣￣ヽ　 ノ
+            ヽ＿＿＿＞､＿＿／
+              ｜( 王 ﾉ〈 
+               ﾐ\`ー―彡\\ 
+             |╰      ╯| 
+             |   /\\   |  
+             |  |  |  |
+             |  |  |  |        
             `;
         case "profile3":
             return `
@@ -146,7 +146,6 @@ function getProfileAscii(profile) {
             return ""; // Set a default ASCII art or leave it empty
     }
 }
-
 // Function to update and store the selected profile
 function updateSelectedProfile() {
     // Get the selected profile value from the select element
@@ -156,17 +155,14 @@ function updateSelectedProfile() {
     // Update the profile immediately after setting it
     updateProfile();
 }
-
 // Function to retrieve the selected profile from local storage
 function getSelectedProfile() {
     var storedProfile = localStorage.getItem('selectedProfile');
     return storedProfile || 'profile1'; // Default to 'profile1' if not found
 }
-
 // Initial update when the page loads
 updateProfile();
-
-    </script>
+</script>
 
 
 
