@@ -51,15 +51,6 @@ permalink: /stress/
       align-items: center;
     }
 
-    #result {
-      background-color: #F2F2F2;
-      padding: 15px;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-    }
-
     form {
       padding: 20px;
     }
