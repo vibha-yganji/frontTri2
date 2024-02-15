@@ -80,7 +80,6 @@ permalink: /profile/
      [|━|]╭(♡･ㅂ･)و ̑̑
 </div>
     <div id="selectedAscii"></div>
-    <div id="profileAscii"></div>
     <div class="purple-form">
         <label for="newName">New Name:</label>
         <input type="text" id="newName" name="newName" required>
@@ -119,6 +118,7 @@ function getProfileAscii(profile) {
             return `
                 (\__/)
                 (UwU)
+
             `;
         case "profile3":
             return `
@@ -151,6 +151,16 @@ function getSelectedProfile() {
 }
 // Initial update when the page loads
 updateProfile();
+
+<form class = 'purple-form'>
+    <h2>Profile Picture</h2>
+    <div id="profilePicture" class="profilePictureContainer"></div>
+    <h2> General Information </h2>
+     <div id="userDetails"></div>
+</form>
+
+<script src="https://jplip.github.io/frontTri2/assets/js/profile.js" defer></script>
+
 </script>
 
 

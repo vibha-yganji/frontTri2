@@ -87,5 +87,6 @@ permalink: /Profile_Display/
             document.getElementById('userDetails').textContent = "Not logged in.";
         }
     </script>
+>>>>>>> 0a81555dc3f932c84240651654d2c68d203eda64
 </body>
 </html>
