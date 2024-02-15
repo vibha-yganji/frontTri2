@@ -8,10 +8,10 @@ permalink: /profile/
         <h2>Exercise Profiles</h2>
         <label for="profileSelect">Select Profile:</label>
         <select id="profileSelect" onchange="updateSelectedProfile()">
-    <option value="profile1">Profile 1</option>
-    <option value="profile2">Profile 2</option>
-    <option value="profile3">Profile 3</option>
-    <option value="profile4">Profile 4</option>
+    <option value="profile1">Django Dog</option>
+    <option value="profile2">Bunny Byte </option>
+    <option value="profile3">CLion</option>
+    <option value="profile4">You</option>
 </select>
     <!-- </div>
     <div class="profileOption" id="profile1">
