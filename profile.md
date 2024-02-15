@@ -49,14 +49,14 @@ permalink: /profile/
     </div> -->
     </div>
     <div class="profileOption" id="profile1">
-             __
-    \ ______/ V\`-,
-    }        /~~
-    /_)^ --,r'
-    |b      |b
+                         __
+                \ ______/ V\`-,
+                }        /~~
+                /_)^ --,r'
+                |b      |b
     </div>
     <div class="profileOption" id="profile2">
-                (\__/)
+                 (\__/)
                  (UwU)
              ＿ノ ヽ ノ＼＿ 
             /　\`/ ⌒Ｙ⌒ Ｙ　\
