@@ -152,6 +152,8 @@ function getSelectedProfile() {
 // Initial update when the page loads
 updateProfile();
 
+</script>
+
 <form class = 'purple-form'>
     <h2>Profile Picture</h2>
     <div id="profilePicture" class="profilePictureContainer"></div>
@@ -161,7 +163,7 @@ updateProfile();
 
 <script src="https://jplip.github.io/frontTri2/assets/js/profile.js" defer></script>
 
-</script>
+
 
 
 
