@@ -33,6 +33,25 @@ permalink: /water/
         #cup-info {
             margin-top: 10px;
         }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allow clicks to fall through to elements behind */
+            z-index: -1; /* Place behind other content */
+        }
+        .emoji-pattern {
+            opacity: 0.3; /* Adjust opacity to your liking */
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-repeat: repeat; /* Repeat the emoji pattern */
+            background-size: 50px 50px; /* Adjust size of the emojis */
+        }
     </style>
 </head>
 <body>
@@ -48,7 +67,9 @@ permalink: /water/
         <div id="progress-text">0 cups</div>
     </div>
     <div id="cup-info"></div>
-    <script src="https://cdn.jsdelivr.net/canvas-confetti/0.5.3/canvas-confetti.min.js"></script>
+<div class="overlay">
+  <img class="emoji-pattern" src="{{site.baseurl}}/images/SmileyFace.png" alt="Smiling face with sunglasses">
+</div>
     <script>
         let totalCups = 0;
         function updateProgressBar() {

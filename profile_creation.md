@@ -53,10 +53,10 @@ permalink: /Profile_Display/
                 ヽ＿＿＿＞､＿＿／
                     ｜ ( 王 ﾉ〈 
                     /ﾐ\`ー―彡 \\ 
-                    |╰       ╯| 
-                    |   /\\   |  
-                    |  |  |   |
-                    |  |  |   |
+                    |╰       ╯ | 
+                    |    /\\   |  
+                    |   |  |   |
+                    |   |  |   |
             `;
                 case "profile3":
                     return `
