@@ -112,10 +112,6 @@ function getProfileAscii(profile) {
             return `
                 (\__/)
                 (UwU)
-            ＿ノ ヽ ノ＼＿ 
-           /　\`/ ⌒Ｙ⌒ Ｙ　\
-             |　( 三ヽ /　|
-            ヽ＿＿＿＞､＿＿／
             `;
         case "profile3":
             return `

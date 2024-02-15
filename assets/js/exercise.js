@@ -42,9 +42,6 @@
                 return `
                 (\__/)
                 (UwU)
-            ＿ノ ヽ ノ＼＿ 
-           /　\`/ ⌒Ｙ⌒ Ｙ　\
-            ヽ＿＿＿＞､＿＿／
                 `;
             case "profile3":
                 return `
