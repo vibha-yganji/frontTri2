@@ -61,11 +61,7 @@ permalink: /profile/
              ＿ノ ヽ ノ＼＿ 
             /　\`/ ⌒Ｙ⌒ Ｙ　\
             | 　(三ヽ人　 /　|
-            ヽ＿＿＿＞､＿＿／
-              ｜( 王 ﾉ〈 
-               ﾐ\`ー―彡\\ 
-              |╰      ╯| 
-              |   /\\  |   
+            ヽ＿＿＿＞､＿＿／ 
     </div>
 <div class="profileOption" id="profile3">
     ╱|、
@@ -120,10 +116,6 @@ function getProfileAscii(profile) {
             /　\`/ ⌒Ｙ⌒ Ｙ　\
             | 　(三ヽ人　 /　|
             ヽ＿＿＿＞､＿＿／
-              ｜( 王 ﾉ〈 
-               ﾐ\`ー―彡\\ 
-              |╰      ╯| 
-              |   /\\  | 
             `;
         case "profile3":
             return `
