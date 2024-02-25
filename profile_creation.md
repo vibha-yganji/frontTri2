@@ -10,6 +10,12 @@ permalink: /Profile_Display/
     <title>Profile Picture Display</title>
 </head>
 <body>
+<form class = 'purple-form'>
+    <h2>Profile Picture</h2>
+    <div id="profilePicture" class="profilePictureContainer"></div>
+    <h2> General Information </h2>
+     <div id="userDetails"></div>
+</form>
     <script>
         // Function to generate HTML img tag with the selected profile's ASCII art
         function getProfileImage(profile) {
@@ -59,6 +65,14 @@ function getProfileAscii(profile) {
             return ""; // Set a default ASCII art or leave it empty
     }
 }
+ const loggedInUserName = localStorage.getItem('loggedInUserName');
+        const loggedInUserId = localStorage.getItem('loggedInUserId');
+        // Display user information
+        if (loggedInUserName) {
+            document.getElementById('userDetails').textContent = `Logged in as: ${loggedInUserName} (ID: ${loggedInUserId})`;
+        } else {
+            document.getElementById('userDetails').textContent = "Not logged in.";
+        }
     </script>
 
 </body>
