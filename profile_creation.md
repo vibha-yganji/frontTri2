@@ -36,47 +36,36 @@ permalink: /Profile_Display/
             var storedProfile = localStorage.getItem('selectedProfile');
             return storedProfile || 'profile1'; // Default to 'profile1' if not found
         }
-        function getProfileAscii(profile) {
-            switch (profile) {
-                case "profile1":
-                    return `
-            [|━|]╭(♡･ㅂ･)و ̑̑
+function getProfileAscii(profile) {
+    switch (profile) {
+        case "profile1":
+            return `
+             __
+    \ ______/ V\`-,
+    }        /~~
+    /_)^ --,r'
+    |b      |b
             `;
-                case "profile2":
-                    return `
-                       (\\__/)
-                        (UwU)
-                    ＿ノ ヽ ノ＼＿ 
-                 / \`/ ⌒Ｙ⌒ Ｙ　 \\
-                | 　(三ヽ人　 /　 　|
-                |　ﾉ⌒＼ ￣￣ヽ　 ノ
-                ヽ＿＿＿＞､＿＿／
-                    ｜ ( 王 ﾉ〈 
-                    /ﾐ\`ー―彡 \\ 
-                    |╰       ╯ | 
-                    |    /\\   |  
-                    |   |  |   |
-                    |   |  |   |
+        case "profile2":
+            return `
+                (\__/)
+                (UwU)
             `;
-                case "profile3":
-                    return `
-                  __
-        \\ ______/ V\`-,
-        }        /~~
-        /_^ --,r'
-        |b    |b
+        case "profile3":
+            return `
+            ╱|、
+           (˚ˎ 。7
+            |、˜〵
+           じしˍ,)ノ
             `;
-                case "profile4":
-                    return `
-                ╱|、
-                (˚ˎ 。7
-                |、˜〵
-                じしˍ,)ノ
+        case "profile4":
+            return `
+        [|━|]╭(♡･ㅂ･)و ̑̑
             `;
-                default:
-                    return ""; // Set a default ASCII art or leave it empty
-            }
-        }
+        default:
+            return ""; // Set a default ASCII art or leave it empty
+    }
+}
          // Retrieve user information from localStorage
         const loggedInUserName = localStorage.getItem('loggedInUserName');
         const loggedInUserId = localStorage.getItem('loggedInUserId');
