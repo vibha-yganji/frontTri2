@@ -69,6 +69,7 @@ permalink: /sleep/
                     var jsonData = JSON.stringify(data2);
                     fetch(`https://fitness-back.stu.nighthawkcodingsociety.com/api/users/${userIDFromLocalStorage}`, {
                         method: 'PUT',
+                        mode: 'cors',
                         headers: {
                             'Content-Type': 'application/json'
                         },

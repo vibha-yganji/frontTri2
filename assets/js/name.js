@@ -8,6 +8,7 @@ async function updateName() {
     try {
         const response = await fetch(`https://fitness-back.stu.nighthawkcodingsociety.com/api/users/${userIDFromLocalStorage}`, {
             method: 'PATCH',
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
             },
