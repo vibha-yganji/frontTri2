@@ -61,7 +61,7 @@ permalink: /exercise/
                     var jsonData = JSON.stringify(data2);
                     fetch(`https://fitness-back.stu.nighthawkcodingsociety.com/api/users/${userIDFromLocalStorage}`, {
                         method: 'PUT',
-                        mode: 'cors',
+                        mode: 'no-cors',
                         headers: {
                             'Content-Type': 'application/json'
                         },

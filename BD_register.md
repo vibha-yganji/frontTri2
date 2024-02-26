@@ -43,7 +43,7 @@ permalink: /Register/
             };            
             fetch('https://fitness-back.stu.nighthawkcodingsociety.com/api/users/create', {
                 method: 'POST',
-                mode: 'cors',
+                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json'
                 },

@@ -31,7 +31,7 @@ permalink: /login/
             };
             fetch('https://fitness-back.stu.nighthawkcodingsociety.com/api/users/authenticate', {
                 method: 'POST',
-                mode: 'cors',
+                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json'
                 },
