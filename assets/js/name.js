@@ -6,7 +6,7 @@ async function updateName() {
     console.log(userIDFromLocalStorage)
 
     try {
-        const response = await fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
+        const response = await fetch(`https://fitness-back.stu.nighthawkcodingsociety.com/api/users/${userIDFromLocalStorage}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

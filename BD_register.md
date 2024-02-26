@@ -41,7 +41,7 @@ permalink: /Register/
                 "dob": dob
                 // Add other form fields as needed
             };            
-            fetch('http://127.0.0.1:8240/api/users/create', {
+            fetch('https://fitness-back.stu.nighthawkcodingsociety.com/api/users/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

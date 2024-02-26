@@ -59,7 +59,7 @@ permalink: /exercise/
                         "tracking": originalSleepData
                     };
                     var jsonData = JSON.stringify(data2);
-                    fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`, {
+                    fetch(`https://fitness-back.stu.nighthawkcodingsociety.com/api/users/${userIDFromLocalStorage}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'

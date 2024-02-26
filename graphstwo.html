@@ -30,7 +30,7 @@ search_exclude: true
         const userIDFromLocalStorage = localStorage.getItem('loggedInUserId'); // Replace 'user123' with an actual user ID
 
         // Fetch exercise data for the specific user from the server API
-        fetch(`http://127.0.0.1:8240/api/users/${userIDFromLocalStorage}`)
+        fetch(`https://fitness-back.stu.nighthawkcodingsociety.com/api/users/${userIDFromLocalStorage}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
