@@ -70,7 +70,7 @@ permalink: /update/
 </div>
 
 <script>
-	const apiUrl = "http://127.0.0.1:8240/api/users/";
+	const apiUrl = "http://127.0.0.1:8340/api/users/";
 	// const apiUrl = "http://127.0.0.1:8240/api/users/";
     // const apiUrl = "https://devops.nighthawkcodingsociety.com/api/users/";
 	let users = [];
