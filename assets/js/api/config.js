@@ -4,7 +4,7 @@ if (location.hostname === "localhost") {
 } else if (location.hostname === "127.0.0.1") {
         uri = "http://127.0.0.1:8340";
 } else {
-        uri = "https://flask2.nighthawkcodingsociety.com";
+        uri = "https://fitness-back.stu.nighthawkcodingsociety.com/";
 }
 
 export const options = {
