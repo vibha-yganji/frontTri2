@@ -54,7 +54,7 @@ permalink: /Register/
             "dob": dob,
             // Add other form fields as needed
         };            
-        fetch('https://fitness-back.stu.nighthawkcodingsociety.com/api/users/', {
+        fetch('http://127.0.0.1:8340/api/users/', {
             // https://fitness-back.stu.nighthawkcodingsociety.com/api/users
             // http://127.0.0.1:8340/api/users/
             method: 'POST',

@@ -70,9 +70,9 @@ permalink: /update/
 </div>
 
 <script>
-	const apiUrl = "https://fitness-back.stu.nighthawkcodingsociety.com/api/users/";
+	const apiUrl = "http://127.0.0.1:8340/api/users/";
 	// const apiUrl = "https://fitness-back.stu.nighthawkcodingsociety.com/api/users/";
-	// const apiUrl = "http://127.0.0.1:8340/api/users/"
+	// const apiUrl = "http://127.0.0.1:8340/api/users/";
 	let users = [];
 
 	function fetchUsers() {
